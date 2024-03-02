@@ -39,3 +39,29 @@ void shrinkToFit(vector *v){
 void deleteVector(vector *v){
     free(v->data);
 }
+
+bool isEmpty(vector *v){
+    return v->size == 0;
+}
+
+bool isFull(vector *v){
+    return v->size == v->capacity;
+}
+
+void pushBack(vector *v, int x){
+    if (isEmpty(v)){
+        reserve(v, 1);
+    }
+    if(isFull(v)){
+        reserve(v, v->capacity*2);
+    }
+    append_(v->data, &v->size, x);
+}
+
+void popBack(vector *v){
+    if (isEmpty(v)){
+        fprintf(stderr, "vector is empty");
+        exit(1);
+    }
+    deleteByPosUnsaveOrder_(v->data, &v->size, v->size-1);
+}
