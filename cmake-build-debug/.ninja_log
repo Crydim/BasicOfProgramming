@@ -19,3 +19,6 @@
 4	229	7311230922873171	CMakeFiles/vectors.dir/main.c.obj	f99cde7533f8ae4
 13	233	7311230922913179	CMakeFiles/vectors.dir/libs/data_structures/vector/vector.c.obj	f2b1dc81b9c1c0fd
 233	644	7311230927034114	vectors.exe	1c61d350b83d7290
+3	152	7311241732124561	CMakeFiles/vectors.dir/libs/data_structures/vector/vector.c.obj	f2b1dc81b9c1c0fd
+12	159	7311241732194589	CMakeFiles/vectors.dir/main.c.obj	f99cde7533f8ae4
+159	380	7311241734385078	vectors.exe	1c61d350b83d7290
