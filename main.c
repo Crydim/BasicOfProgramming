@@ -1,6 +1,8 @@
 #include <stdio.h>
+#include "vector.h"
 
 int main() {
-    printf("Hello, World!\n");
+    vector a = createVector(5);
+    reserve(&a, 0);
     return 0;
 }
