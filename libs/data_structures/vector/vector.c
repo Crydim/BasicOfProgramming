@@ -17,15 +17,12 @@ void reserve (vector *v, size_t newCapacity){
     if (newCapacity < v->size){
         v->size = newCapacity;
     }
-    v->data = malloc(sizeof (int) * newCapacity);
-    if (v->data == NULL){
+    realloc(v->data, newCapacity);
+    if (v->data == NULL && newCapacity != 0){
         fprintf(stderr, "bad alloc");
         exit(1);
     }
     v->capacity = newCapacity;
-    if (newCapacity == 0){
-        v->data = NULL;
-    }
 }
 
 void clear(vector *v){

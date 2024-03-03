@@ -63,7 +63,7 @@ void test() {
 
 int main() {
     vector a = createVector(5);
-    reserve(&a, 0);
+    reserve(&a, 5);
     test();
     return 0;
 }
