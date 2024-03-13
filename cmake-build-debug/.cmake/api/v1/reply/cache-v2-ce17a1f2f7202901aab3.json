@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "d:/Clion/11/vectors/cmake-build-debug"
+			"value" : "d:/Clion/11/structures/cmake-build-debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -431,7 +431,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "D:/Clion/11/vectors/cmake-build-debug/CMakeFiles/pkgRedirects"
+			"value" : "D:/Clion/11/structures/cmake-build-debug/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -503,7 +503,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "D:/Clion/11/vectors"
+			"value" : "D:/Clion/11/structures"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -731,7 +731,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "vectors"
+			"value" : "structures"
 		},
 		{
 			"name" : "CMAKE_RANLIB",
@@ -1138,6 +1138,42 @@
 			"value" : "TRUE"
 		},
 		{
+			"name" : "structures_BINARY_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "D:/Clion/11/structures/cmake-build-debug"
+		},
+		{
+			"name" : "structures_IS_TOP_LEVEL",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "ON"
+		},
+		{
+			"name" : "structures_SOURCE_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "D:/Clion/11/structures"
+		},
+		{
 			"name" : "vectors_BINARY_DIR",
 			"properties" : 
 			[
@@ -1147,7 +1183,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "D:/Clion/11/vectors/cmake-build-debug"
+			"value" : "D:/Clion/11/structures/cmake-build-debug"
 		},
 		{
 			"name" : "vectors_IS_TOP_LEVEL",
@@ -1171,7 +1207,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "D:/Clion/11/vectors"
+			"value" : "D:/Clion/11/structures"
 		}
 	],
 	"kind" : "cache",

@@ -11,7 +11,7 @@
 # =============================================================================
 
 # =============================================================================
-# Project: vectors
+# Project: structures
 # Configurations: Debug
 # =============================================================================
 
@@ -39,61 +39,68 @@ include CMakeFiles/rules.ninja
 #############################################
 # Logical path to working directory; prefix for absolute paths.
 
-cmake_ninja_workdir = D$:/Clion/11/vectors/cmake-build-debug/
+cmake_ninja_workdir = D$:/Clion/11/structures/cmake-build-debug/
 # =============================================================================
-# Object build statements for EXECUTABLE target vectors
+# Object build statements for EXECUTABLE target structures
 
 
 #############################################
-# Order-only phony target for vectors
+# Order-only phony target for structures
 
-build cmake_object_order_depends_target_vectors: phony || CMakeFiles/vectors.dir
+build cmake_object_order_depends_target_structures: phony || CMakeFiles/structures.dir
 
-build CMakeFiles/vectors.dir/main.c.obj: C_COMPILER__vectors_unscanned_Debug D$:/Clion/11/vectors/main.c || cmake_object_order_depends_target_vectors
-  DEP_FILE = CMakeFiles\vectors.dir\main.c.obj.d
+build CMakeFiles/structures.dir/main.c.obj: C_COMPILER__structures_unscanned_Debug D$:/Clion/11/structures/main.c || cmake_object_order_depends_target_structures
+  DEP_FILE = CMakeFiles\structures.dir\main.c.obj.d
   FLAGS = -g -std=gnu11 -fdiagnostics-color=always
-  INCLUDES = -ID:/Clion/11/vectors/libs/algorithm/array -ID:/Clion/11/vectors/libs/data_structures/vector
-  OBJECT_DIR = CMakeFiles\vectors.dir
-  OBJECT_FILE_DIR = CMakeFiles\vectors.dir
+  INCLUDES = -ID:/Clion/11/structures/libs/algorithm/array -ID:/Clion/11/structures/libs/data_structures/vector
+  OBJECT_DIR = CMakeFiles\structures.dir
+  OBJECT_FILE_DIR = CMakeFiles\structures.dir
 
-build CMakeFiles/vectors.dir/libs/data_structures/vector/vector.c.obj: C_COMPILER__vectors_unscanned_Debug D$:/Clion/11/vectors/libs/data_structures/vector/vector.c || cmake_object_order_depends_target_vectors
-  DEP_FILE = CMakeFiles\vectors.dir\libs\data_structures\vector\vector.c.obj.d
+build CMakeFiles/structures.dir/libs/data_structures/vector/vector.c.obj: C_COMPILER__structures_unscanned_Debug D$:/Clion/11/structures/libs/data_structures/vector/vector.c || cmake_object_order_depends_target_structures
+  DEP_FILE = CMakeFiles\structures.dir\libs\data_structures\vector\vector.c.obj.d
   FLAGS = -g -std=gnu11 -fdiagnostics-color=always
-  INCLUDES = -ID:/Clion/11/vectors/libs/algorithm/array -ID:/Clion/11/vectors/libs/data_structures/vector
-  OBJECT_DIR = CMakeFiles\vectors.dir
-  OBJECT_FILE_DIR = CMakeFiles\vectors.dir\libs\data_structures\vector
+  INCLUDES = -ID:/Clion/11/structures/libs/algorithm/array -ID:/Clion/11/structures/libs/data_structures/vector
+  OBJECT_DIR = CMakeFiles\structures.dir
+  OBJECT_FILE_DIR = CMakeFiles\structures.dir\libs\data_structures\vector
 
-build CMakeFiles/vectors.dir/libs/algorithm/array/array.c.obj: C_COMPILER__vectors_unscanned_Debug D$:/Clion/11/vectors/libs/algorithm/array/array.c || cmake_object_order_depends_target_vectors
-  DEP_FILE = CMakeFiles\vectors.dir\libs\algorithm\array\array.c.obj.d
+build CMakeFiles/structures.dir/libs/algorithm/array/array.c.obj: C_COMPILER__structures_unscanned_Debug D$:/Clion/11/structures/libs/algorithm/array/array.c || cmake_object_order_depends_target_structures
+  DEP_FILE = CMakeFiles\structures.dir\libs\algorithm\array\array.c.obj.d
   FLAGS = -g -std=gnu11 -fdiagnostics-color=always
-  INCLUDES = -ID:/Clion/11/vectors/libs/algorithm/array -ID:/Clion/11/vectors/libs/data_structures/vector
-  OBJECT_DIR = CMakeFiles\vectors.dir
-  OBJECT_FILE_DIR = CMakeFiles\vectors.dir\libs\algorithm\array
+  INCLUDES = -ID:/Clion/11/structures/libs/algorithm/array -ID:/Clion/11/structures/libs/data_structures/vector
+  OBJECT_DIR = CMakeFiles\structures.dir
+  OBJECT_FILE_DIR = CMakeFiles\structures.dir\libs\algorithm\array
+
+build CMakeFiles/structures.dir/libs/data_structures/Matrix/matrix.c.obj: C_COMPILER__structures_unscanned_Debug D$:/Clion/11/structures/libs/data_structures/Matrix/matrix.c || cmake_object_order_depends_target_structures
+  DEP_FILE = CMakeFiles\structures.dir\libs\data_structures\Matrix\matrix.c.obj.d
+  FLAGS = -g -std=gnu11 -fdiagnostics-color=always
+  INCLUDES = -ID:/Clion/11/structures/libs/algorithm/array -ID:/Clion/11/structures/libs/data_structures/vector
+  OBJECT_DIR = CMakeFiles\structures.dir
+  OBJECT_FILE_DIR = CMakeFiles\structures.dir\libs\data_structures\Matrix
 
 
 # =============================================================================
-# Link build statements for EXECUTABLE target vectors
+# Link build statements for EXECUTABLE target structures
 
 
 #############################################
-# Link the executable vectors.exe
+# Link the executable structures.exe
 
-build vectors.exe: C_EXECUTABLE_LINKER__vectors_Debug CMakeFiles/vectors.dir/main.c.obj CMakeFiles/vectors.dir/libs/data_structures/vector/vector.c.obj CMakeFiles/vectors.dir/libs/algorithm/array/array.c.obj
+build structures.exe: C_EXECUTABLE_LINKER__structures_Debug CMakeFiles/structures.dir/main.c.obj CMakeFiles/structures.dir/libs/data_structures/vector/vector.c.obj CMakeFiles/structures.dir/libs/algorithm/array/array.c.obj CMakeFiles/structures.dir/libs/data_structures/Matrix/matrix.c.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
-  OBJECT_DIR = CMakeFiles\vectors.dir
+  OBJECT_DIR = CMakeFiles\structures.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
-  TARGET_FILE = vectors.exe
-  TARGET_IMPLIB = libvectors.dll.a
-  TARGET_PDB = vectors.exe.dbg
+  TARGET_FILE = structures.exe
+  TARGET_IMPLIB = libstructures.dll.a
+  TARGET_PDB = structures.exe.dbg
 
 
 #############################################
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D D:\Clion\11\vectors\cmake-build-debug && "D:\CLion 2023.3.2\bin\cmake\win\x64\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+  COMMAND = cmd.exe /C "cd /D D:\Clion\11\structures\cmake-build-debug && "D:\CLion 2023.3.2\bin\cmake\win\x64\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -104,7 +111,7 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D D:\Clion\11\vectors\cmake-build-debug && "D:\CLion 2023.3.2\bin\cmake\win\x64\bin\cmake.exe" --regenerate-during-build -SD:\Clion\11\vectors -BD:\Clion\11\vectors\cmake-build-debug"
+  COMMAND = cmd.exe /C "cd /D D:\Clion\11\structures\cmake-build-debug && "D:\CLion 2023.3.2\bin\cmake\win\x64\bin\cmake.exe" --regenerate-during-build -SD:\Clion\11\structures -BD:\Clion\11\structures\cmake-build-debug"
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -114,7 +121,7 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 # =============================================================================
 # Target aliases.
 
-build vectors: phony vectors.exe
+build structures: phony structures.exe
 
 # =============================================================================
 # Folder targets.
@@ -122,9 +129,9 @@ build vectors: phony vectors.exe
 # =============================================================================
 
 #############################################
-# Folder: D:/Clion/11/vectors/cmake-build-debug
+# Folder: D:/Clion/11/structures/cmake-build-debug
 
-build all: phony vectors.exe
+build all: phony structures.exe
 
 # =============================================================================
 # Built-in targets
@@ -133,14 +140,14 @@ build all: phony vectors.exe
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | CMakeCache.txt CMakeFiles/3.27.8/CMakeCCompiler.cmake CMakeFiles/3.27.8/CMakeRCCompiler.cmake CMakeFiles/3.27.8/CMakeSystem.cmake D$:/CLion$ 2023.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeCInformation.cmake D$:/CLion$ 2023.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeCommonLanguageInclude.cmake D$:/CLion$ 2023.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeGenericSystem.cmake D$:/CLion$ 2023.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeInitializeConfigs.cmake D$:/CLion$ 2023.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeLanguageInformation.cmake D$:/CLion$ 2023.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeRCInformation.cmake D$:/CLion$ 2023.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeSystemSpecificInformation.cmake D$:/CLion$ 2023.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeSystemSpecificInitialize.cmake D$:/CLion$ 2023.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/CMakeCommonCompilerMacros.cmake D$:/CLion$ 2023.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/GNU-C.cmake D$:/CLion$ 2023.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/GNU.cmake D$:/CLion$ 2023.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU-C-ABI.cmake D$:/CLion$ 2023.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU-C.cmake D$:/CLion$ 2023.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU.cmake D$:/CLion$ 2023.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-Initialize.cmake D$:/CLion$ 2023.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-windres.cmake D$:/CLion$ 2023.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows.cmake D$:/CLion$ 2023.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/WindowsPaths.cmake D$:/Clion/11/vectors/CMakeLists.txt
+build build.ninja: RERUN_CMAKE | CMakeCache.txt CMakeFiles/3.27.8/CMakeCCompiler.cmake CMakeFiles/3.27.8/CMakeRCCompiler.cmake CMakeFiles/3.27.8/CMakeSystem.cmake D$:/CLion$ 2023.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeCInformation.cmake D$:/CLion$ 2023.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeCommonLanguageInclude.cmake D$:/CLion$ 2023.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeGenericSystem.cmake D$:/CLion$ 2023.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeInitializeConfigs.cmake D$:/CLion$ 2023.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeLanguageInformation.cmake D$:/CLion$ 2023.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeRCInformation.cmake D$:/CLion$ 2023.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeSystemSpecificInformation.cmake D$:/CLion$ 2023.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeSystemSpecificInitialize.cmake D$:/CLion$ 2023.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/CMakeCommonCompilerMacros.cmake D$:/CLion$ 2023.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/GNU-C.cmake D$:/CLion$ 2023.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/GNU.cmake D$:/CLion$ 2023.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU-C-ABI.cmake D$:/CLion$ 2023.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU-C.cmake D$:/CLion$ 2023.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU.cmake D$:/CLion$ 2023.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-Initialize.cmake D$:/CLion$ 2023.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-windres.cmake D$:/CLion$ 2023.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows.cmake D$:/CLion$ 2023.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/WindowsPaths.cmake D$:/Clion/11/structures/CMakeLists.txt
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build CMakeCache.txt CMakeFiles/3.27.8/CMakeCCompiler.cmake CMakeFiles/3.27.8/CMakeRCCompiler.cmake CMakeFiles/3.27.8/CMakeSystem.cmake D$:/CLion$ 2023.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeCInformation.cmake D$:/CLion$ 2023.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeCommonLanguageInclude.cmake D$:/CLion$ 2023.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeGenericSystem.cmake D$:/CLion$ 2023.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeInitializeConfigs.cmake D$:/CLion$ 2023.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeLanguageInformation.cmake D$:/CLion$ 2023.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeRCInformation.cmake D$:/CLion$ 2023.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeSystemSpecificInformation.cmake D$:/CLion$ 2023.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeSystemSpecificInitialize.cmake D$:/CLion$ 2023.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/CMakeCommonCompilerMacros.cmake D$:/CLion$ 2023.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/GNU-C.cmake D$:/CLion$ 2023.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/GNU.cmake D$:/CLion$ 2023.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU-C-ABI.cmake D$:/CLion$ 2023.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU-C.cmake D$:/CLion$ 2023.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU.cmake D$:/CLion$ 2023.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-Initialize.cmake D$:/CLion$ 2023.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-windres.cmake D$:/CLion$ 2023.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows.cmake D$:/CLion$ 2023.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/WindowsPaths.cmake D$:/Clion/11/vectors/CMakeLists.txt: phony
+build CMakeCache.txt CMakeFiles/3.27.8/CMakeCCompiler.cmake CMakeFiles/3.27.8/CMakeRCCompiler.cmake CMakeFiles/3.27.8/CMakeSystem.cmake D$:/CLion$ 2023.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeCInformation.cmake D$:/CLion$ 2023.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeCommonLanguageInclude.cmake D$:/CLion$ 2023.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeGenericSystem.cmake D$:/CLion$ 2023.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeInitializeConfigs.cmake D$:/CLion$ 2023.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeLanguageInformation.cmake D$:/CLion$ 2023.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeRCInformation.cmake D$:/CLion$ 2023.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeSystemSpecificInformation.cmake D$:/CLion$ 2023.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeSystemSpecificInitialize.cmake D$:/CLion$ 2023.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/CMakeCommonCompilerMacros.cmake D$:/CLion$ 2023.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/GNU-C.cmake D$:/CLion$ 2023.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/GNU.cmake D$:/CLion$ 2023.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU-C-ABI.cmake D$:/CLion$ 2023.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU-C.cmake D$:/CLion$ 2023.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU.cmake D$:/CLion$ 2023.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-Initialize.cmake D$:/CLion$ 2023.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-windres.cmake D$:/CLion$ 2023.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows.cmake D$:/CLion$ 2023.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/WindowsPaths.cmake D$:/Clion/11/structures/CMakeLists.txt: phony
 
 
 #############################################
