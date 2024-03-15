@@ -52,28 +52,28 @@ build cmake_object_order_depends_target_structures: phony || CMakeFiles/structur
 build CMakeFiles/structures.dir/main.c.obj: C_COMPILER__structures_unscanned_Debug D$:/Clion/11/structures/main.c || cmake_object_order_depends_target_structures
   DEP_FILE = CMakeFiles\structures.dir\main.c.obj.d
   FLAGS = -g -std=gnu11 -fdiagnostics-color=always
-  INCLUDES = -ID:/Clion/11/structures/libs/algorithm/array -ID:/Clion/11/structures/libs/data_structures/vector
+  INCLUDES = -ID:/Clion/11/structures/libs/algorithm/array -ID:/Clion/11/structures/libs/data_structures/vector -ID:/Clion/11/structures/libs/data_structures/Matrix
   OBJECT_DIR = CMakeFiles\structures.dir
   OBJECT_FILE_DIR = CMakeFiles\structures.dir
 
 build CMakeFiles/structures.dir/libs/data_structures/vector/vector.c.obj: C_COMPILER__structures_unscanned_Debug D$:/Clion/11/structures/libs/data_structures/vector/vector.c || cmake_object_order_depends_target_structures
   DEP_FILE = CMakeFiles\structures.dir\libs\data_structures\vector\vector.c.obj.d
   FLAGS = -g -std=gnu11 -fdiagnostics-color=always
-  INCLUDES = -ID:/Clion/11/structures/libs/algorithm/array -ID:/Clion/11/structures/libs/data_structures/vector
+  INCLUDES = -ID:/Clion/11/structures/libs/algorithm/array -ID:/Clion/11/structures/libs/data_structures/vector -ID:/Clion/11/structures/libs/data_structures/Matrix
   OBJECT_DIR = CMakeFiles\structures.dir
   OBJECT_FILE_DIR = CMakeFiles\structures.dir\libs\data_structures\vector
 
 build CMakeFiles/structures.dir/libs/algorithm/array/array.c.obj: C_COMPILER__structures_unscanned_Debug D$:/Clion/11/structures/libs/algorithm/array/array.c || cmake_object_order_depends_target_structures
   DEP_FILE = CMakeFiles\structures.dir\libs\algorithm\array\array.c.obj.d
   FLAGS = -g -std=gnu11 -fdiagnostics-color=always
-  INCLUDES = -ID:/Clion/11/structures/libs/algorithm/array -ID:/Clion/11/structures/libs/data_structures/vector
+  INCLUDES = -ID:/Clion/11/structures/libs/algorithm/array -ID:/Clion/11/structures/libs/data_structures/vector -ID:/Clion/11/structures/libs/data_structures/Matrix
   OBJECT_DIR = CMakeFiles\structures.dir
   OBJECT_FILE_DIR = CMakeFiles\structures.dir\libs\algorithm\array
 
 build CMakeFiles/structures.dir/libs/data_structures/Matrix/matrix.c.obj: C_COMPILER__structures_unscanned_Debug D$:/Clion/11/structures/libs/data_structures/Matrix/matrix.c || cmake_object_order_depends_target_structures
   DEP_FILE = CMakeFiles\structures.dir\libs\data_structures\Matrix\matrix.c.obj.d
   FLAGS = -g -std=gnu11 -fdiagnostics-color=always
-  INCLUDES = -ID:/Clion/11/structures/libs/algorithm/array -ID:/Clion/11/structures/libs/data_structures/vector
+  INCLUDES = -ID:/Clion/11/structures/libs/algorithm/array -ID:/Clion/11/structures/libs/data_structures/vector -ID:/Clion/11/structures/libs/data_structures/Matrix
   OBJECT_DIR = CMakeFiles\structures.dir
   OBJECT_FILE_DIR = CMakeFiles\structures.dir\libs\data_structures\Matrix
 
