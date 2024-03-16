@@ -51,7 +51,7 @@ void test_pushBack_fullVector(){
     assert(v.data[4] == 4);
 }
 
-void test() {
+void test_vector() {
     test_pushBack_emptyVector();
     test_pushBack_fullVector();
     test_popBack_notEmptyVector();
@@ -61,9 +61,17 @@ void test() {
     test_front_oneElementInVector();
 }
 
+int getSum(int *a, int n){
+    int s = 0;
+    for (int i = 0; i < n; i++){
+        s += a[i];
+    }
+    return s;
+}
+
 int main() {
     vector a = createVector(5);
     reserve(&a, 5);
-    test();
+    test_vector();
     return 0;
 }
