@@ -1,12 +1,9 @@
 # ninja log v5
 150	329	7311934255462984	vectors.exe	1c61d350b83d7290
-1	145	7324001095160601	build.ninja	b80a7826c50e7589
-4	153	7323337895979531	CMakeFiles/structures.dir/main.c.obj	7e0a2b405dedaacd
-174	396	7323340400391888	structures.exe	6c47c3558a0ebd7e
+1	145	7324068793338313	build.ninja	b80a7826c50e7589
+3	3033	7324031271333601	CMakeFiles/structures.dir/main.c.obj	7e0a2b405dedaacd
+3037	5232	7324031293154014	structures.exe	6c47c3558a0ebd7e
 3	213	7322460971077864	CMakeFiles/structures.dir/libs/data_structures/vector/vector.c.obj	20071b5eb328039
-4	173	7323340398473302	CMakeFiles/structures.dir/libs/data_structures/Matrix/matrix.c.obj	2a8daa8186d036da
+11	3037	7324031271333601	CMakeFiles/structures.dir/libs/data_structures/Matrix/matrix.c.obj	2a8daa8186d036da
 10	252	7322460971496899	CMakeFiles/structures.dir/libs/algorithm/array/array.c.obj	f5741ae248b5da5
 12	172	7322466801079721	CMakeFiles/structures.dir/test_matrix.c.obj	34ede163c70a16f
-3	3033	7324031271333601	CMakeFiles/structures.dir/main.c.obj	7e0a2b405dedaacd
-11	3037	7324031271333601	CMakeFiles/structures.dir/libs/data_structures/Matrix/matrix.c.obj	2a8daa8186d036da
-3037	5232	7324031293154014	structures.exe	6c47c3558a0ebd7e

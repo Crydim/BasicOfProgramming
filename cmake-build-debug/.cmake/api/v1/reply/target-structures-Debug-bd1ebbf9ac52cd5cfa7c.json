@@ -72,7 +72,7 @@
 				},
 				{
 					"backtrace" : 4,
-					"path" : "D:/Clion/11/structures/libs/data_structures/Matrix"
+					"path" : "D:/Clion/11/structures/libs/data_structures/matrix"
 				}
 			],
 			"language" : "C",
@@ -156,7 +156,7 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "libs/data_structures/Matrix/matrix.c",
+			"path" : "libs/data_structures/matrix/matrix.c",
 			"sourceGroupIndex" : 0
 		}
 	],

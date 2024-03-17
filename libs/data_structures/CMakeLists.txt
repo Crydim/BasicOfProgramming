@@ -3,5 +3,5 @@ add_library(data_structures
 )
 
 add_library(data_structures
-        Matrix/matrix.c
+        matrix/matrix.c
 )
