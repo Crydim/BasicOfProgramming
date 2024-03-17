@@ -27,6 +27,9 @@ bool areTwoMatricesEqual(matrix *m1, matrix *m2){
 }
 
 bool isEMatrix(matrix *m){
+    if (!isSquareMatrix(m)){
+        return false;
+    }
     for (int i = 0; i < m->nRows; i++){
         for (int j = 0; j < m->nCols; j++){
             if ((j == i && m->values[i][j] != 1) || ((j != i && m->values[i][j] != 0))){
