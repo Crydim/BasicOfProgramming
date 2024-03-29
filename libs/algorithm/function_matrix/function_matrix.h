@@ -43,4 +43,7 @@ int max(int a, int b);
 //Задание 7
 long long findSumOfMaxesOfPseudoDiagonal(matrix m);
 
+//Задание 8
+int getMinInArea(matrix m);
+
 #endif //STRUCTURES_FUNCTION_MATRIX_H

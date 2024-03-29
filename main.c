@@ -641,7 +641,6 @@ void test_findSumOfMaxesOfPseudoDiagonal2(){
             5, 3
     );
     long long res = findSumOfMaxesOfPseudoDiagonal(A);
-    printf("%lld", res);
     long long expected = 87;
     assert(res == expected);
     freeMemMatrix(&A);
@@ -652,6 +651,61 @@ void test_findSumOfMaxesOfPseudoDiagonal(){
     test_findSumOfMaxesOfPseudoDiagonal2();
 }
 
+void test_getMinInArea1(){
+    matrix A = createMatrixFromArray(
+            (int []) {
+                    3, 5, 4,
+                    15, 42, 6,
+                    3,16, 7,
+                    15, 12, 6,
+                    5, 1, 15,
+            },
+            5, 3
+    );
+    int res = getMinInArea(A);
+    int expected = 3;
+    assert(res == expected);
+    freeMemMatrix(&A);
+}
+
+void test_getMinInArea2(){
+    matrix A = createMatrixFromArray(
+            (int []) {
+                    3, 15, 4,
+                    11, 2, 1,
+                    3,13, 9,
+                    14, 12, 6,
+                    5, 1, 14,
+            },
+            5, 3
+    );
+    int res = getMinInArea(A);
+    int expected = 15;
+    assert(res == expected);
+    freeMemMatrix(&A);
+}
+
+void test_getMinInArea3(){
+    matrix A = createMatrixFromArray(
+            (int []) {
+                    5, 3, 2, 9, 4,
+                    1, 12, 7, 3, 6,
+                    15,4, 45, 6, 9
+            },
+            3, 5
+    );
+    int res = getMinInArea(A);
+    int expected = 2;
+    assert(res == expected);
+    freeMemMatrix(&A);
+}
+
+void test_getMinInArea(){
+    test_getMinInArea1();
+    test_getMinInArea2();
+    test_getMinInArea3();
+}
+
 void test_function_matrix(){
     test_swapRowsWithMaxAndMinElements();
     test_sortRowsByMaxElement();
@@ -660,6 +714,7 @@ void test_function_matrix(){
     test_transposeIfMatrixHasNotEqualSumOfRows();
     test_isMutuallyInverseMatrices();
     test_findSumOfMaxesOfPseudoDiagonal();
+    test_getMinInArea();
 }
 
 
