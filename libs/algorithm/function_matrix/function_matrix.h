@@ -13,4 +13,10 @@ int getMax(int *a, int n);
 //Задание 2
 void sortRowsByMaxElement(matrix m);
 
+//Задание 3
+int getMin(int *a, int n);
+
+//Задание 3
+void sortColsByMinElement(matrix m);
+
 #endif //STRUCTURES_FUNCTION_MATRIX_H

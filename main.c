@@ -387,9 +387,89 @@ void test_sortRowsByMaxElement(){
     test_sortRowsByMaxElement2;
 }
 
+void test_sortColsByMinElement1(){
+    matrix A = createMatrixFromArray(
+            (int []) {
+                    3, 5, 4, 9, 2,
+                    2, 1, 6, 3, 45,
+                    4,15, 9, 6, 12
+            },
+            3, 5
+    );
+    sortRowsByMaxElement(A);
+    matrix res = createMatrixFromArray(
+            (int []) {
+                    5, 3, 2, 9, 4,
+                    1, 2, 45, 3, 6,
+                    15,4,12, 6, 9
+            },
+            3, 5
+    );
+    assert(areTwoMatricesEqual(&A, &res));
+    freeMemMatrix(&A);
+    freeMemMatrix(&res);
+}
+
+void test_sortColsByMinElement2(){
+    matrix A = createMatrixFromArray(
+            (int []) {
+                    5, 3, 2, 9, 4,
+                    1, 2, 45, 3, 6,
+                    15,4, 12, 6, 9
+            },
+            3, 5
+    );
+    sortRowsByMaxElement(A);
+    matrix res = createMatrixFromArray(
+            (int []) {
+                    5, 3, 2, 9, 4,
+                    1, 2, 45, 3, 6,
+                    15,4,12, 6, 9
+            },
+            3, 5
+    );
+    assert(areTwoMatricesEqual(&A, &res));
+    freeMemMatrix(&A);
+    freeMemMatrix(&res);
+}
+
+void test_sortColsByMinElement3(){
+    matrix A = createMatrixFromArray(
+            (int []) {
+                    3, 5, 4,
+                    2, 1, 6,
+                    4,15, 9,
+                    15, 42, 4,
+                    5, 2, 12,
+            },
+            5, 3
+    );
+    sortRowsByMaxElement(A);
+    matrix res = createMatrixFromArray(
+            (int []) {
+                    2, 1, 6,
+                    5, 2, 12,
+                    3,5, 4,
+                    4, 15, 9,
+                    15, 42, 4,
+            },
+            5, 3
+    );
+    assert(areTwoMatricesEqual(&A, &res));
+    freeMemMatrix(&A);
+    freeMemMatrix(&res);
+}
+
+void test_sortColsByMinElement(){
+    test_sortColsByMinElement1;
+    test_sortColsByMinElement2;
+    test_sortColsByMinElement3;
+}
+
 void test_function_matrix(){
     test_swapRowsWithMaxAndMinElements;
     test_sortRowsByMaxElement;
+    test_sortColsByMinElement;
 }
 
 
