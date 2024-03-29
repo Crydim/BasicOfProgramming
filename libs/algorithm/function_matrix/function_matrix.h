@@ -37,4 +37,10 @@ void transposeIfMatrixHasNotEqualSumOfRows(matrix m);
 //Задание 6
 bool isMutuallyInverseMatrices(matrix m1, matrix m2);
 
+//Задание 7
+int max(int a, int b);
+
+//Задание 7
+long long findSumOfMaxesOfPseudoDiagonal(matrix m);
+
 #endif //STRUCTURES_FUNCTION_MATRIX_H

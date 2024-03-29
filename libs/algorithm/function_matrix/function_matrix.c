@@ -101,3 +101,40 @@ bool isMutuallyInverseMatrices(matrix m1, matrix m2){
     freeMemMatrix(&res);
     return t;
 }
+
+int max(int a, int b){
+    return a > b ? a : b;
+}
+
+long long findSumOfMaxesOfPseudoDiagonal(matrix m){
+    long long sum = 0;
+    position *a = (position *) malloc(sizeof (position) * (m.nCols+m.nRows-1));
+    int amount_diagonals = 0;
+    for (int i = 0; i < m.nRows; i++){
+        for (int j = 0; j < m.nCols; j++){
+            if (i != j){
+                if (i == 0 || j == 0){
+                    position t = {i, j};
+                    a[amount_diagonals] = t;
+                    amount_diagonals++;
+                } else {
+                    for (int y = 0; y < amount_diagonals; y++){
+                        if (a[y].colIndex  == i-1 && a[y].rowIndex == j-1){
+                            if (m.values[i][j] > m.values[a[y].rowIndex][a[y].colIndex]){
+                                position t = {i, j};
+                                a[y] = t;
+                                break;
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+    for (int i = 0; i < amount_diagonals; i++){
+        sum += m.values[a[i].rowIndex][a[i].colIndex];
+    }
+    free(a);
+    return sum;
+}
