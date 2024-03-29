@@ -1,4 +1,5 @@
 #include "function_matrix.h"
+#include <stdlib.h>
 
 void swapRowsWithMaxAndMinElements(matrix m){
     position max = getMaxValuePos(m);
@@ -62,4 +63,34 @@ void getSquareOfMatrixIfSymmetric(matrix *m){
         m->nCols = res_m.nCols;
         m->values = res_m.values;
     }
+}
+
+long long getSum1(int *a, int n){
+    long long sum = 0;
+    for(int i = 0 ; i < n; i++){
+        sum += a[i];
+    }
+    return sum;
+}
+
+bool isUnique(long long *a, int n){
+    for (int i = 0; i < n; i++){
+        for(int j = i+1; j < n; j++){
+            if (a[i] == a[j]){
+                return false;
+            }
+        }
+    }
+    return true;
+}
+
+void transposeIfMatrixHasNotEqualSumOfRows(matrix m){
+    long long *array_sum = (long long *) malloc(sizeof (long long ) * m.nRows);
+    for (int i = 0; i < m.nRows; i++){
+        array_sum[i] = getSum1(m.values[i], m.nCols);
+    }
+    if (isUnique(array_sum, m.nRows)){
+        transposeSquareMatrix(&m);
+    }
+    free(array_sum);
 }

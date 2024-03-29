@@ -517,12 +517,63 @@ void test_getSquareOfMatrixIfSymmetric(){
     test_getSquareOfMatrixIfSymmetric2;
 }
 
+void test_transposeIfMatrixHasNotEqualSumOfRows1(){
+    matrix A = createMatrixFromArray(
+            (int []) {
+                    10, 5, 9,
+                    4, 9, 1,
+                    19,15, 1
+            },
+            3, 3
+    );
+    sortRowsByMaxElement(A);
+    matrix res = createMatrixFromArray(
+            (int []) {
+                    10, 4, 19,
+                    5, 9, 15,
+                    9,1, 1
+            },
+            3, 3
+    );
+    assert(areTwoMatricesEqual(&A, &res));
+    freeMemMatrix(&A);
+    freeMemMatrix(&res);
+}
+
+void test_transposeIfMatrixHasNotEqualSumOfRows2(){
+    matrix A = createMatrixFromArray(
+            (int []) {
+                    10, 15, 9,
+                    4, 17, 1,
+                    6,15, 1
+            },
+            3, 3
+    );
+    sortRowsByMaxElement(A);
+    matrix res = createMatrixFromArray(
+            (int []) {
+                    10, 15, 9,
+                    4, 17, 1,
+                    6,15, 1
+            },
+            3, 3
+    );
+    assert(areTwoMatricesEqual(&A, &res));
+    freeMemMatrix(&A);
+    freeMemMatrix(&res);
+}
+
+void test_transposeIfMatrixHasNotEqualSumOfRows(){
+    test_transposeIfMatrixHasNotEqualSumOfRows1;
+    test_transposeIfMatrixHasNotEqualSumOfRows2;
+}
 
 void test_function_matrix(){
     test_swapRowsWithMaxAndMinElements;
     test_sortRowsByMaxElement;
     test_sortColsByMinElement;
     test_getSquareOfMatrixIfSymmetric;
+    test_transposeIfMatrixHasNotEqualSumOfRows;
 }
 
 

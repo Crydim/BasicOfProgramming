@@ -25,4 +25,13 @@ matrix mulMatrices(matrix m1, matrix m2);
 //Задание 4
 void getSquareOfMatrixIfSymmetric(matrix *m);
 
+//Задание 5
+long long getSum1(int *a, int n);
+
+//Задание 5
+bool isUnique(long long *a, int n);
+
+//Задание 5
+void transposeIfMatrixHasNotEqualSumOfRows(matrix m);
+
 #endif //STRUCTURES_FUNCTION_MATRIX_H
