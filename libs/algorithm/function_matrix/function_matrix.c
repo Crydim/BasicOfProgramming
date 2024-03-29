@@ -119,7 +119,7 @@ long long findSumOfMaxesOfPseudoDiagonal(matrix m){
                     amount_diagonals++;
                 } else {
                     for (int y = 0; y < amount_diagonals; y++){
-                        if (a[y].colIndex  == i-1 && a[y].rowIndex == j-1){
+                        if (a[y].rowIndex  == i-1 && a[y].colIndex == j-1){
                             if (m.values[i][j] > m.values[a[y].rowIndex][a[y].colIndex]){
                                 position t = {i, j};
                                 a[y] = t;

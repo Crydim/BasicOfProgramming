@@ -1,6 +1,7 @@
 #include "vector.h"
 #include "matrix.h"
 #include "function_matrix.h"
+#include <stdio.h>
 
 void test_pushBack_emptyVector(){
     vector v = createVector(0);
@@ -332,8 +333,8 @@ void test_swapRowsWithMaxAndMinElements2(){
 }
 
 void test_swapRowsWithMaxAndMinElements(){
-    test_swapRowsWithMaxAndMinElements1;
-    test_swapRowsWithMaxAndMinElements2;
+    test_swapRowsWithMaxAndMinElements1();
+    test_swapRowsWithMaxAndMinElements2();
 }
 
 void test_sortRowsByMaxElement1(){
@@ -383,8 +384,8 @@ void test_sortRowsByMaxElement2(){
 }
 
 void test_sortRowsByMaxElement(){
-    test_sortRowsByMaxElement1;
-    test_sortRowsByMaxElement2;
+    test_sortRowsByMaxElement1();
+    test_sortRowsByMaxElement2();
 }
 
 void test_sortColsByMinElement1(){
@@ -396,7 +397,7 @@ void test_sortColsByMinElement1(){
             },
             3, 5
     );
-    sortRowsByMaxElement(A);
+    sortColsByMinElement(A);
     matrix res = createMatrixFromArray(
             (int []) {
                     5, 3, 2, 9, 4,
@@ -419,7 +420,7 @@ void test_sortColsByMinElement2(){
             },
             3, 5
     );
-    sortRowsByMaxElement(A);
+    sortColsByMinElement(A);
     matrix res = createMatrixFromArray(
             (int []) {
                     5, 3, 2, 9, 4,
@@ -444,14 +445,14 @@ void test_sortColsByMinElement3(){
             },
             5, 3
     );
-    sortRowsByMaxElement(A);
+    sortColsByMinElement(A);
     matrix res = createMatrixFromArray(
             (int []) {
-                    2, 1, 6,
-                    5, 2, 12,
-                    3,5, 4,
-                    4, 15, 9,
-                    15, 42, 4,
+                    5, 3, 4,
+                    1, 2, 6,
+                    15,4, 9,
+                    42, 15, 4,
+                    2, 5, 12,
             },
             5, 3
     );
@@ -461,9 +462,9 @@ void test_sortColsByMinElement3(){
 }
 
 void test_sortColsByMinElement(){
-    test_sortColsByMinElement1;
-    test_sortColsByMinElement2;
-    test_sortColsByMinElement3;
+    test_sortColsByMinElement1();
+    test_sortColsByMinElement2();
+    test_sortColsByMinElement3();
 }
 
 void test_getSquareOfMatrixIfSymmetric1(){
@@ -475,7 +476,7 @@ void test_getSquareOfMatrixIfSymmetric1(){
             },
             3, 3
     );
-    sortRowsByMaxElement(A);
+    getSquareOfMatrixIfSymmetric(&A);
     matrix res = createMatrixFromArray(
             (int []) {
                     9, 3, 2,
@@ -498,7 +499,7 @@ void test_getSquareOfMatrixIfSymmetric2(){
             },
             3, 3
     );
-    sortRowsByMaxElement(A);
+    getSquareOfMatrixIfSymmetric(&A);
     matrix res = createMatrixFromArray(
             (int []) {
                     161, 80, 92,
@@ -513,8 +514,8 @@ void test_getSquareOfMatrixIfSymmetric2(){
 }
 
 void test_getSquareOfMatrixIfSymmetric(){
-    test_getSquareOfMatrixIfSymmetric1;
-    test_getSquareOfMatrixIfSymmetric2;
+    test_getSquareOfMatrixIfSymmetric1();
+    test_getSquareOfMatrixIfSymmetric2();
 }
 
 void test_transposeIfMatrixHasNotEqualSumOfRows1(){
@@ -526,7 +527,7 @@ void test_transposeIfMatrixHasNotEqualSumOfRows1(){
             },
             3, 3
     );
-    sortRowsByMaxElement(A);
+    transposeIfMatrixHasNotEqualSumOfRows(A);
     matrix res = createMatrixFromArray(
             (int []) {
                     10, 4, 19,
@@ -549,7 +550,7 @@ void test_transposeIfMatrixHasNotEqualSumOfRows2(){
             },
             3, 3
     );
-    sortRowsByMaxElement(A);
+    transposeIfMatrixHasNotEqualSumOfRows(A);
     matrix res = createMatrixFromArray(
             (int []) {
                     10, 15, 9,
@@ -564,8 +565,8 @@ void test_transposeIfMatrixHasNotEqualSumOfRows2(){
 }
 
 void test_transposeIfMatrixHasNotEqualSumOfRows(){
-    test_transposeIfMatrixHasNotEqualSumOfRows1;
-    test_transposeIfMatrixHasNotEqualSumOfRows2;
+    test_transposeIfMatrixHasNotEqualSumOfRows1();
+    test_transposeIfMatrixHasNotEqualSumOfRows2();
 }
 
 void test_isMutuallyInverseMatrices1(){
@@ -609,8 +610,8 @@ void test_isMutuallyInverseMatrices2(){
 }
 
 void test_isMutuallyInverseMatrices(){
-    test_isMutuallyInverseMatrices1;
-    test_isMutuallyInverseMatrices2;
+    test_isMutuallyInverseMatrices1();
+    test_isMutuallyInverseMatrices2();
 }
 
 void test_findSumOfMaxesOfPseudoDiagonal1(){
@@ -640,24 +641,25 @@ void test_findSumOfMaxesOfPseudoDiagonal2(){
             5, 3
     );
     long long res = findSumOfMaxesOfPseudoDiagonal(A);
+    printf("%lld", res);
     long long expected = 87;
     assert(res == expected);
     freeMemMatrix(&A);
 }
 
 void test_findSumOfMaxesOfPseudoDiagonal(){
-    test_findSumOfMaxesOfPseudoDiagonal1;
-    test_findSumOfMaxesOfPseudoDiagonal2;
+    test_findSumOfMaxesOfPseudoDiagonal1();
+    test_findSumOfMaxesOfPseudoDiagonal2();
 }
 
 void test_function_matrix(){
-    test_swapRowsWithMaxAndMinElements;
-    test_sortRowsByMaxElement;
-    test_sortColsByMinElement;
-    test_getSquareOfMatrixIfSymmetric;
-    test_transposeIfMatrixHasNotEqualSumOfRows;
-    test_isMutuallyInverseMatrices;
-    test_findSumOfMaxesOfPseudoDiagonal;
+    test_swapRowsWithMaxAndMinElements();
+    test_sortRowsByMaxElement();
+    test_sortColsByMinElement();
+    test_getSquareOfMatrixIfSymmetric();
+    test_transposeIfMatrixHasNotEqualSumOfRows();
+    test_isMutuallyInverseMatrices();
+    test_findSumOfMaxesOfPseudoDiagonal();
 }
 
 
