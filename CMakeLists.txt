@@ -7,7 +7,6 @@ add_executable(structures main.c
         libs/data_structures/vector/vector.c
         libs/algorithm/array/array.c
         libs/data_structures/matrix/matrix.c
-        libs/algorithm/function_matrix/function_matrix.h
         libs/algorithm/function_matrix/function_matrix.c
 )
 
