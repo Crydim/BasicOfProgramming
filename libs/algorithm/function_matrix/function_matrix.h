@@ -34,4 +34,7 @@ bool isUnique(long long *a, int n);
 //Задание 5
 void transposeIfMatrixHasNotEqualSumOfRows(matrix m);
 
+//Задание 6
+bool isMutuallyInverseMatrices(matrix m1, matrix m2);
+
 #endif //STRUCTURES_FUNCTION_MATRIX_H

@@ -94,3 +94,10 @@ void transposeIfMatrixHasNotEqualSumOfRows(matrix m){
     }
     free(array_sum);
 }
+
+bool isMutuallyInverseMatrices(matrix m1, matrix m2){
+    matrix res = mulMatrices(m1, m2);
+    bool t = isEMatrix(&res);
+    freeMemMatrix(&res);
+    return t;
+}
