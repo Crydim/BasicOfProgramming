@@ -2,7 +2,6 @@
 #include <stdbool.h>
 #include <stdlib.h>
 #include <string.h>
-#include <stdio.h>
 
 void swap (int *a, int *b){
     int t = *a;
@@ -39,6 +38,7 @@ bool isEMatrix(matrix *m){
     }
     return true;
 }
+
 
 bool isSymmetricMatrix(matrix *m){
     if (!isSquareMatrix(m)){
@@ -90,6 +90,8 @@ void freeMemMatrix(matrix *m){
             m->values[i] = NULL;
         }
     }
+    m->nCols= 0;
+    m->nRows = 0;
 }
 
 void freeMemMatrices(matrix *ms, int nMatrices) {

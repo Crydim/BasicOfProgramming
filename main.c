@@ -1,10 +1,12 @@
 #include "vector.h"
 #include "matrix.h"
+#include "function_matrix.h"
 
 void test_pushBack_emptyVector(){
     vector v = createVector(0);
     pushBack(&v, 1);
     assert(v.data[0] == 1);
+    deleteVector(&v);
 }
 
 void test_popBack_notEmptyVector() {
@@ -14,12 +16,14 @@ void test_popBack_notEmptyVector() {
     popBack(&v);
     assert(v.size == 0);
     assert(v.capacity == 1);
+    deleteVector(&v);
 }
 
 void test_atVector_notEmptyVector(){
     vector v = createVector(0);
     pushBack(&v, 9);
     assert(atVector(&v, 0) != NULL);
+    deleteVector(&v);
 }
 
 void test_atVector_requestToLastElement(){
@@ -27,6 +31,7 @@ void test_atVector_requestToLastElement(){
     pushBack(&v, 9);
     pushBack(&v, 8);
     assert(atVector(&v, v.size-1) != NULL);
+    deleteVector(&v);
 }
 
 void test_back_oneElementInVector(){
@@ -34,6 +39,7 @@ void test_back_oneElementInVector(){
     pushBack(&v, 9);
     pushBack(&v, 8);
     assert(back(&v) != NULL);
+    deleteVector(&v);
 }
 
 void test_front_oneElementInVector(){
@@ -41,6 +47,7 @@ void test_front_oneElementInVector(){
     pushBack(&v, 9);
     pushBack(&v, 8);
     assert(front(&v) != NULL);
+    deleteVector(&v);
 }
 
 void test_pushBack_fullVector(){
@@ -49,6 +56,7 @@ void test_pushBack_fullVector(){
         pushBack(&v, i);
     }
     assert(v.data[4] == 4);
+    deleteVector(&v);
 }
 
 void test_vector() {
@@ -277,10 +285,66 @@ void test_matrix(){
     test_transposeMatrix();
 }
 
+void test_swapRowsWithMaxAndMinElements1(){
+    matrix A = createMatrixFromArray(
+            (int []) {
+                    3, 5, 4,
+                    2, 1, 6,
+                    4,15, 9
+            },
+            3, 3
+    );
+    swapRowsWithMaxAndMinElements(A);
+    matrix res = createMatrixFromArray(
+            (int []) {
+                    3, 5, 4,
+                    4, 15, 9,
+                    2,1, 6
+            },
+            3, 3
+    );
+    assert(areTwoMatricesEqual(&A, &res));
+    freeMemMatrix(&A);
+    freeMemMatrix(&res);
+}
+
+void test_swapRowsWithMaxAndMinElements2(){
+    matrix A = createMatrixFromArray(
+            (int []) {
+                    7, 3, 2,
+                    1, 48, 9,
+                    8,15, 13
+            },
+            3, 3
+    );
+    swapRowsWithMaxAndMinElements(A);
+    matrix res = createMatrixFromArray(
+            (int []) {
+                    7, 3, 2,
+                    1, 48, 9,
+                    8,15, 13
+            },
+            3, 3
+    );
+    assert(areTwoMatricesEqual(&A, &res));
+    freeMemMatrix(&A);
+    freeMemMatrix(&res);
+}
+
+void test_swapRowsWithMaxAndMinElements(){
+    test_swapRowsWithMaxAndMinElements1;
+    test_swapRowsWithMaxAndMinElements2;
+}
+
+void test_function_matrix(){
+    test_swapRowsWithMaxAndMinElements;
+}
+
 int main() {
     vector a = createVector(5);
     reserve(&a, 5);
     test_vector();
     test_matrix();
+    test_function_matrix();
     return 0;
 }

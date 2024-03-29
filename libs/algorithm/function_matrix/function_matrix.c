@@ -1,3 +1,7 @@
-//
-// Created by Professional on 30.03.2024.
-//
+#include "function_matrix.h"
+
+void swapRowsWithMaxAndMinElements(matrix m){
+    position max = getMaxValuePos(m);
+    position min = getMinValuePos(m);
+    swapRows(m, max.rowIndex, min.rowIndex);
+}
