@@ -7,4 +7,10 @@
 //Задание 1
 void swapRowsWithMaxAndMinElements(matrix m);
 
+//Задание 2
+int getMax(int *a, int n);
+
+//Задание 2
+void sortRowsByMaxElement(matrix m);
+
 #endif //STRUCTURES_FUNCTION_MATRIX_H

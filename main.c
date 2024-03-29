@@ -336,9 +336,62 @@ void test_swapRowsWithMaxAndMinElements(){
     test_swapRowsWithMaxAndMinElements2;
 }
 
+void test_sortRowsByMaxElement1(){
+    matrix A = createMatrixFromArray(
+            (int []) {
+                    3, 5, 4,
+                    2, 1, 6,
+                    4,15, 9
+            },
+            3, 3
+    );
+    sortRowsByMaxElement(A);
+    matrix res = createMatrixFromArray(
+            (int []) {
+                    3, 5, 4,
+                    2, 1, 6,
+                    4,15, 9
+            },
+            3, 3
+    );
+    assert(areTwoMatricesEqual(&A, &res));
+    freeMemMatrix(&A);
+    freeMemMatrix(&res);
+}
+
+void test_sortRowsByMaxElement2(){
+    matrix A = createMatrixFromArray(
+            (int []) {
+                    20, 3, 2,
+                    1, 48, 9,
+                    8,15, 13
+            },
+            3, 3
+    );
+    sortRowsByMaxElement(A);
+    matrix res = createMatrixFromArray(
+            (int []) {
+                    8, 15, 13,
+                    20, 3, 2,
+                    1,48, 9
+            },
+            3, 3
+    );
+    assert(areTwoMatricesEqual(&A, &res));
+    freeMemMatrix(&A);
+    freeMemMatrix(&res);
+}
+
+void test_sortRowsByMaxElement(){
+    test_sortRowsByMaxElement1;
+    test_sortRowsByMaxElement2;
+}
+
 void test_function_matrix(){
     test_swapRowsWithMaxAndMinElements;
+    test_sortRowsByMaxElement;
 }
+
 
 int main() {
     vector a = createVector(5);
