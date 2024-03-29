@@ -19,4 +19,10 @@ int getMin(int *a, int n);
 //Задание 3
 void sortColsByMinElement(matrix m);
 
+//Задание 4
+matrix mulMatrices(matrix m1, matrix m2);
+
+//Задание 4
+void getSquareOfMatrixIfSymmetric(matrix *m);
+
 #endif //STRUCTURES_FUNCTION_MATRIX_H

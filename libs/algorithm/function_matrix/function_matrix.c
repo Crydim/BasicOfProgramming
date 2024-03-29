@@ -33,3 +33,33 @@ int getMin(int *a, int n){
 void sortColsByMinElement(matrix m){
     selectionSortColsMatrixByColCriteria(m, getMin);
 }
+
+matrix mulMatrices(matrix m1, matrix m2){
+    matrix result_matrix = getMemMatrix(m1.nRows, m1.nCols);
+    int row = 0;
+    int col = 0;
+    while(row < result_matrix.nRows && col < result_matrix.nCols){
+        int sum = 0;
+        for(int i = 0; i < result_matrix.nRows; i++){
+            sum += m1.values[row][i]*m2.values[i][col];
+        }
+        result_matrix.values[row][col] = sum;
+        if (col+1 != result_matrix.nCols){
+            col++;
+        } else {
+            col = 0;
+            row++;
+        }
+    }
+    return result_matrix;
+}
+
+void getSquareOfMatrixIfSymmetric(matrix *m){
+    if (isSymmetricMatrix(m)){
+        matrix res_m = mulMatrices(*m, *m);
+        freeMemMatrix(m);
+        m->nRows = res_m.nRows;
+        m->nCols = res_m.nCols;
+        m->values = res_m.values;
+    }
+}

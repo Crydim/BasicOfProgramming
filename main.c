@@ -466,10 +466,63 @@ void test_sortColsByMinElement(){
     test_sortColsByMinElement3;
 }
 
+void test_getSquareOfMatrixIfSymmetric1(){
+    matrix A = createMatrixFromArray(
+            (int []) {
+                    9, 3, 2,
+                    1, 5, 2,
+                    8,3, 1
+            },
+            3, 3
+    );
+    sortRowsByMaxElement(A);
+    matrix res = createMatrixFromArray(
+            (int []) {
+                    9, 3, 2,
+                    1, 5, 2,
+                    8,3, 1
+            },
+            3, 3
+    );
+    assert(areTwoMatricesEqual(&A, &res));
+    freeMemMatrix(&A);
+    freeMemMatrix(&res);
+}
+
+void test_getSquareOfMatrixIfSymmetric2(){
+    matrix A = createMatrixFromArray(
+            (int []) {
+                    9, 4, 8,
+                    4, 5, 3,
+                    8,3, 1
+            },
+            3, 3
+    );
+    sortRowsByMaxElement(A);
+    matrix res = createMatrixFromArray(
+            (int []) {
+                    161, 80, 92,
+                    80, 50, 50,
+                    92,50, 74
+            },
+            3, 3
+    );
+    assert(areTwoMatricesEqual(&A, &res));
+    freeMemMatrix(&A);
+    freeMemMatrix(&res);
+}
+
+void test_getSquareOfMatrixIfSymmetric(){
+    test_getSquareOfMatrixIfSymmetric1;
+    test_getSquareOfMatrixIfSymmetric2;
+}
+
+
 void test_function_matrix(){
     test_swapRowsWithMaxAndMinElements;
     test_sortRowsByMaxElement;
     test_sortColsByMinElement;
+    test_getSquareOfMatrixIfSymmetric;
 }
 
 
