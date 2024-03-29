@@ -1,0 +1,8 @@
+//
+// Created by Professional on 30.03.2024.
+//
+
+#ifndef STRUCTURES_FUNCTION_MATRIX_H
+#define STRUCTURES_FUNCTION_MATRIX_H
+
+#endif //STRUCTURES_FUNCTION_MATRIX_H
