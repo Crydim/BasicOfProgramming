@@ -55,4 +55,13 @@ void insertionSortRowsMatrixByRowCriteriaF(matrix m, float (*criteria)(int *, in
 //Задание 9
 void sortByDistances(matrix m);
 
+//Задание 10
+int cmp_int(const void *pa, const void *pb);
+
+//Задание 10
+int countNUnique(const int *a, int n);
+
+//Задание 10
+int countEqClassesByRowsSum(matrix m);
+
 #endif //STRUCTURES_FUNCTION_MATRIX_H
