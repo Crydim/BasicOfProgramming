@@ -64,4 +64,7 @@ int countNUnique(const int *a, int n);
 //Задание 10
 int countEqClassesByRowsSum(matrix m);
 
+//Задание 11
+int getNSpecialElement(matrix m);
+
 #endif //STRUCTURES_FUNCTION_MATRIX_H

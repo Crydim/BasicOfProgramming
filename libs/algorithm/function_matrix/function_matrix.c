@@ -222,3 +222,23 @@ int countEqClassesByRowsSum(matrix m){
     free(a);
     return amount_eq_classes;
 }
+
+int getNSpecialElement(matrix m){
+    int counter = 0;
+    for(int j = 0; j < m.nCols; j++){
+        int sum = 0;
+        int max = m.values[0][j];
+        for(int i = 1; i < m.nRows; i++){
+            if (m.values[i][j] > max){
+                sum += max;
+                max = m.values[i][j];
+            } else {
+                sum += m.values[i][j];
+            }
+        }
+        if (max > sum){
+            counter++;
+        }
+    }
+    return counter;
+}

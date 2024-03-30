@@ -840,6 +840,59 @@ void test_countEqClassesByRowsSum(){
     test_countEqClassesByRowsSum3();
 }
 
+void test_getNSpecialElement1(){
+    matrix A = createMatrixFromArray(
+            (int []) {
+                    3, 15, 4,
+                    11, 2, 1,
+                    3,34, 9,
+                    25, 12, 6,
+                    5, 1, 14,
+            },
+            5, 3
+    );
+    int res = getNSpecialElement(A);
+    int expected = 2;
+    assert(res == expected);
+    freeMemMatrix(&A);
+}
+
+void test_getNSpecialElement2(){
+    matrix A = createMatrixFromArray(
+            (int []) {
+                    3, 7, 4, 8, 7,
+                    4, 6, 5, 9, 5,
+                    4,6, 1,  6, 12
+            },
+            3, 5
+    );
+    int res = getNSpecialElement(A);
+    int expected = 0;
+    assert(res == expected);
+    freeMemMatrix(&A);
+}
+
+void test_getNSpecialElement3(){
+    matrix A = createMatrixFromArray(
+            (int []) {
+                    1, 15, 3, 2, 4,
+                    5, 6, 7, 9, 2,
+                    9,3, 17, 5, 12
+            },
+            3, 5
+    );
+    int res = getNSpecialElement(A);
+    int expected = 5;
+    assert(res == expected);
+    freeMemMatrix(&A);
+}
+
+void test_getNSpecialElement(){
+    test_getNSpecialElement1();
+    test_getNSpecialElement2();
+    test_getNSpecialElement3();
+}
+
 void test_function_matrix(){
     test_swapRowsWithMaxAndMinElements();
     test_sortRowsByMaxElement();
@@ -851,6 +904,7 @@ void test_function_matrix(){
     test_getMinInArea();
     test_sortByDistances();
     test_countEqClassesByRowsSum();
+    test_getNSpecialElement();
 }
 
 
