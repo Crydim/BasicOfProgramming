@@ -67,4 +67,10 @@ int countEqClassesByRowsSum(matrix m);
 //Задание 11
 int getNSpecialElement(matrix m);
 
+//Задание 12
+position getLeftMin(matrix m);
+
+//Задание 12
+void swapPenultimateRow(matrix m, int n);
+
 #endif //STRUCTURES_FUNCTION_MATRIX_H

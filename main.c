@@ -893,6 +893,57 @@ void test_getNSpecialElement(){
     test_getNSpecialElement3();
 }
 
+void test_swapPenultimateRow1(){
+    matrix A = createMatrixFromArray(
+            (int []) {
+                    10, 1, 9,
+                    4, 17, 5,
+                    6,15, 9
+            },
+            3, 3
+    );
+    swapPenultimateRow(A, getLeftMin(A).colIndex);
+    matrix res = createMatrixFromArray(
+            (int []) {
+                    10, 1, 9,
+                    1, 17, 15,
+                    6,15, 9
+            },
+            3, 3
+    );
+    assert(areTwoMatricesEqual(&A, &res));
+    freeMemMatrix(&A);
+    freeMemMatrix(&res);
+}
+
+void test_swapPenultimateRow2(){
+    matrix A = createMatrixFromArray(
+            (int []) {
+                    10, 15, 1,
+                    4, 17, 6,
+                    1,15, 7
+            },
+            3, 3
+    );
+    swapPenultimateRow(A, getLeftMin(A).colIndex);
+    matrix res = createMatrixFromArray(
+            (int []) {
+                    10, 15, 1,
+                    10, 4, 1,
+                    1,15, 7
+            },
+            3, 3
+    );
+    assert(areTwoMatricesEqual(&A, &res));
+    freeMemMatrix(&A);
+    freeMemMatrix(&res);
+}
+
+void test_swapPenultimateRow(){
+    test_swapPenultimateRow1();
+    test_swapPenultimateRow2();
+}
+
 void test_function_matrix(){
     test_swapRowsWithMaxAndMinElements();
     test_sortRowsByMaxElement();
@@ -905,6 +956,7 @@ void test_function_matrix(){
     test_sortByDistances();
     test_countEqClassesByRowsSum();
     test_getNSpecialElement();
+    test_swapPenultimateRow();
 }
 
 
