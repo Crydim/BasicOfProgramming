@@ -944,6 +944,65 @@ void test_swapPenultimateRow(){
     test_swapPenultimateRow2();
 }
 
+void test_countNonDescendingRowsMatrices1(){
+    matrix *A = createArrayOfMatrixFromArray(
+            (int []) {
+                    1, 2, 3,
+                    5, 6, 7,
+                    1,3, 17,
+
+                    1, 15, 4,
+                    9, 6, 12,
+                    5,3, 11,
+
+                    9, 51, 53,
+                    5, 15, 17,
+                    1,2, 17,
+
+                    1, 15, 3,
+                    10, 14, 7,
+                    98,74, 17,
+            },
+            4, 3, 3
+    );
+    int res = countNonDescendingRowsMatrices(A, 4);
+    int expected = 2;
+    assert(res == expected);
+    freeMemMatrices(A, 4);
+}
+
+void test_countNonDescendingRowsMatrices2(){
+    matrix *A = createArrayOfMatrixFromArray(
+            (int []) {
+                    1, 15, 3,
+                    5, 6, 7,
+                    1,45, 17,
+
+                    1, 15, 4,
+                    9, 1, 12,
+                    5,3, 11,
+
+                    9, 51, 53,
+                    5, 74, 17,
+                    1,2, 17,
+
+                    1, 123, 3,
+                    10, 14, 7,
+                    98,74, 17,
+            },
+            4, 3, 3
+    );
+    int res = countNonDescendingRowsMatrices(A, 4);
+    int expected = 0;
+    assert(res == expected);
+    freeMemMatrices(A, 4);
+}
+void test_countNonDescendingRowsMatrices(){
+    test_countNonDescendingRowsMatrices1();
+    test_countNonDescendingRowsMatrices2();
+}
+
+
 void test_function_matrix(){
     test_swapRowsWithMaxAndMinElements();
     test_sortRowsByMaxElement();
@@ -957,6 +1016,7 @@ void test_function_matrix(){
     test_countEqClassesByRowsSum();
     test_getNSpecialElement();
     test_swapPenultimateRow();
+    test_countNonDescendingRowsMatrices();
 }
 
 

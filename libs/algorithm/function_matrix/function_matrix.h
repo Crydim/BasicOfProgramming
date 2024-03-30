@@ -73,4 +73,13 @@ position getLeftMin(matrix m);
 //Задание 12
 void swapPenultimateRow(matrix m, int n);
 
+//Задание 13
+bool isNonDescendingSorted(int *a, int n);
+
+//Задание 13
+bool hasAllNonDescendingRows(matrix m);
+
+//Задание 13
+int countNonDescendingRowsMatrices(matrix *ms, int nMatrix);
+
 #endif //STRUCTURES_FUNCTION_MATRIX_H
