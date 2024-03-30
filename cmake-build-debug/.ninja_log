@@ -15,3 +15,6 @@
 190	404	7335442813843537	structures.exe	b2e00687f0070425
 4	224	7335442887018682	CMakeFiles/structures.dir/main.c.obj	73db6b6f8ee2ff68
 225	414	7335442888899165	structures.exe	b2e00687f0070425
+13	196	7335448480331385	CMakeFiles/structures.dir/libs/algorithm/function_matrix/function_matrix.c.obj	261e83cd86a1aaf7
+4	243	7335448480831506	CMakeFiles/structures.dir/main.c.obj	73db6b6f8ee2ff68
+243	432	7335448482681914	structures.exe	b2e00687f0070425

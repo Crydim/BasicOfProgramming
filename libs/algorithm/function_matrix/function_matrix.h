@@ -82,4 +82,13 @@ bool hasAllNonDescendingRows(matrix m);
 //Задание 13
 int countNonDescendingRowsMatrices(matrix *ms, int nMatrix);
 
+//Задание 14
+int countValues(const int *a, int n, int value);
+
+//Задание 14
+int countZeroRows(matrix m);
+
+//Задание 14
+void printMatrixWithMaxZeroRows(matrix *ms, int nMatrix);
+
 #endif //STRUCTURES_FUNCTION_MATRIX_H
