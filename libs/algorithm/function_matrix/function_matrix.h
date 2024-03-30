@@ -46,4 +46,13 @@ long long findSumOfMaxesOfPseudoDiagonal(matrix m);
 //Задание 8
 int getMinInArea(matrix m);
 
+//Задание 9
+float getDistance(int *a, int n);
+
+//Задание 9
+void insertionSortRowsMatrixByRowCriteriaF(matrix m, float (*criteria)(int *, int));
+
+//Задание 9
+void sortByDistances(matrix m);
+
 #endif //STRUCTURES_FUNCTION_MATRIX_H

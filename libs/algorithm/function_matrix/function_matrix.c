@@ -1,5 +1,6 @@
 #include "function_matrix.h"
 #include <stdlib.h>
+#include <stdio.h>
 
 void swapRowsWithMaxAndMinElements(matrix m){
     position max = getMaxValuePos(m);
@@ -158,4 +159,34 @@ int getMinInArea(matrix m){
         }
     }
     return min;
+}
+
+float getDistance(int *a, int n){
+    float dis = 0;
+    for(int i = 0; i < n; i++){
+        dis += a[i]*a[i];
+    }
+    return sqrt(dis);
+}
+
+void insertionSortRowsMatrixByRowCriteriaF(matrix m, float (*criteria)(int *, int)){
+    float *a = (float *) malloc(sizeof (float) * m.nRows);
+    for (int i = 0; i < m.nRows; i++){
+        a[i] = criteria(m.values[i],  m.nCols);
+    }
+    for (size_t i = 1; i < m.nRows; i++) {
+        float t = a[i];
+        int j = i;
+        while (j > 0 && a[j - 1] > t) {
+            a[j] = a[j - 1];
+            swapRows(m, j, j-1);
+            j--;
+        }
+        a[j] = t;
+    }
+    free(a);
+}
+
+void sortByDistances(matrix m){
+    insertionSortRowsMatrixByRowCriteriaF(m, getDistance);
 }

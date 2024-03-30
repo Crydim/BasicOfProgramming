@@ -706,6 +706,85 @@ void test_getMinInArea(){
     test_getMinInArea3();
 }
 
+void test_sortByDistances1(){
+    matrix A = createMatrixFromArray(
+            (int []) {
+                    6, 23, 3, 2, 4,
+                    1, 12, 7, 13, 21,
+                    13,0, 4, 6, 9
+            },
+            3, 5
+    );
+    sortByDistances(A);
+    matrix expected = createMatrixFromArray(
+            (int []) {
+                    13, 0, 4, 6, 9,
+                    6, 23, 3, 2, 4,
+                    1,12, 7, 13, 21
+            },
+            3, 5
+    );
+    assert(areTwoMatricesEqual(&A, &expected));
+    freeMemMatrix(&A);
+    freeMemMatrix(&expected);
+}
+
+void test_sortByDistances2(){
+    matrix A = createMatrixFromArray(
+            (int []) {
+                    1, 5, 3, 2, 4,
+                    1, 8, 7, 9, 5,
+                    13,3, 4, 6, 11
+            },
+            3, 5
+    );
+    sortByDistances(A);
+    matrix expected = createMatrixFromArray(
+            (int []) {
+                    1, 5, 3, 2, 4,
+                    1, 8, 7, 9, 5,
+                    13,3, 4, 6, 11
+            },
+            3, 5
+    );
+    assert(areTwoMatricesEqual(&A, &expected));
+    freeMemMatrix(&A);
+    freeMemMatrix(&expected);
+}
+
+void test_sortByDistances3(){
+    matrix A = createMatrixFromArray(
+            (int []) {
+                    1, 5, 3,
+                    1, 8, 7,
+                    13,3, 4,
+                    21, 4, 5,
+                    12, 14, 1
+            },
+            5, 3
+    );
+    sortByDistances(A);
+    matrix expected = createMatrixFromArray(
+            (int []) {
+                    1, 5, 3,
+                    1, 8, 7,
+                    13,3, 4,
+                    12, 14, 1,
+                    21, 4, 5
+            },
+            5, 3
+    );
+    assert(areTwoMatricesEqual(&A, &expected));
+    freeMemMatrix(&A);
+    freeMemMatrix(&expected);
+}
+
+void test_sortByDistances(){
+    test_sortByDistances1();
+    test_sortByDistances2();
+    test_sortByDistances3();
+}
+
 void test_function_matrix(){
     test_swapRowsWithMaxAndMinElements();
     test_sortRowsByMaxElement();
@@ -715,6 +794,7 @@ void test_function_matrix(){
     test_isMutuallyInverseMatrices();
     test_findSumOfMaxesOfPseudoDiagonal();
     test_getMinInArea();
+    test_sortByDistances();
 }
 
 
