@@ -1038,6 +1038,41 @@ void test_countZeroRows(){
     test_countZeroRows2();
 }
 
+void test_getMaxAbsoluteValue1(){
+    matrix A = createMatrixFromArray(
+            (int []) {
+                    -15, 3, 9,
+                    4, 5, 8,
+                    3,19, -7
+            },
+            3, 3
+    );
+    int res = getMaxAbsoluteValue(A);
+    int expected = 19;
+    assert(res == expected);
+    freeMemMatrix(&A);
+}
+
+void test_getMaxAbsoluteValue2(){
+    matrix A = createMatrixFromArray(
+            (int []) {
+                    -15, 0, 4,
+                    3, 7, 8,
+                    -1,15, -7
+            },
+            3, 3
+    );
+    int res = getMaxAbsoluteValue(A);
+    int expected = 15;
+    assert(res == expected);
+    freeMemMatrix(&A);
+}
+
+void test_getMaxAbsoluteValue(){
+    test_getMaxAbsoluteValue1();
+    test_getMaxAbsoluteValue2();
+}
+
 void test_function_matrix(){
     test_swapRowsWithMaxAndMinElements();
     test_sortRowsByMaxElement();
@@ -1053,6 +1088,7 @@ void test_function_matrix(){
     test_swapPenultimateRow();
     test_countNonDescendingRowsMatrices();
     test_countZeroRows();
+    test_getMaxAbsoluteValue();
 }
 
 

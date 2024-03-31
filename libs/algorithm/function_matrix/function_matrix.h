@@ -91,4 +91,10 @@ int countZeroRows(matrix m);
 //Задание 14
 void printMatrixWithMaxZeroRows(matrix *ms, int nMatrix);
 
+//Задание 15
+int getMaxAbsoluteValue(matrix m);
+
+//Задание 15
+void printMatrixWithMinStandard(matrix *ms, int nMatrix);
+
 #endif //STRUCTURES_FUNCTION_MATRIX_H

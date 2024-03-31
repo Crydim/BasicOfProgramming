@@ -338,3 +338,36 @@ void printMatrixWithMaxZeroRows(matrix *ms, int nMatrix){
     }
     free(a);
 }
+
+int getMaxAbsoluteValue(matrix m){
+    int max_value = abs(m.values[0][0]);
+    for (int i = 0; i < m.nRows; i++){
+        for (int j = 0; j < m.nCols; j++){
+            if (abs(m.values[i][j]) > max_value){
+                max_value = abs(m.values[i][j]);
+            }
+        }
+    }
+    return max_value;
+}
+
+void printMatrixWithMinStandard(matrix *ms, int nMatrix){
+    int counter_min = 0;
+    int lowest_rate = getMaxAbsoluteValue(ms[0]);
+    for (int i = 1; i < nMatrix; i++){
+        if (getMaxAbsoluteValue(ms[i]) < lowest_rate){
+            lowest_rate = getMaxAbsoluteValue(ms[i]);
+        }
+    }
+    int *a = (int *) malloc(sizeof (int)*nMatrix);
+    for (int i = 0; i < nMatrix; i++){
+        if (getMaxAbsoluteValue(ms[i]) == lowest_rate){
+            a[counter_min] = i;
+            counter_min++;
+        }
+    }
+    for (int i = 0; i < counter_min; i++){
+        outputMatrix(ms[a[i]]);
+    }
+    free(a);
+}
