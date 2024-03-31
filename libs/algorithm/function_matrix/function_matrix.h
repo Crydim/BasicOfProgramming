@@ -97,4 +97,10 @@ int getMaxAbsoluteValue(matrix m);
 //Задание 15
 void printMatrixWithMinStandard(matrix *ms, int nMatrix);
 
+//Задание 16
+int min2(int a, int b);
+
+//Задание 16
+int getNSpecialElement2(matrix m);
+
 #endif //STRUCTURES_FUNCTION_MATRIX_H

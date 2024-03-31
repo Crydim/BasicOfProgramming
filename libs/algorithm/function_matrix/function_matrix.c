@@ -371,3 +371,32 @@ void printMatrixWithMinStandard(matrix *ms, int nMatrix){
     }
     free(a);
 }
+
+int min2(int a, int b){
+    return a > b ? b : a;
+}
+
+int getNSpecialElement2(matrix m){
+    int counter = 0;
+    for (int i = 0; i < m.nRows; i++){
+        for (int j = 0; j < m.nCols; j++){
+            bool is_uniq = true;
+            for (int right = j+1; right < m.nCols; right++){
+                if (m.values[i][j] >= m.values[i][right]){
+                    is_uniq = false;
+                    break;
+                }
+            }
+            for (int left = j-1; left >= 0; left--){
+                if (m.values[i][j] <= m.values[i][left] || !is_uniq){
+                    is_uniq = false;
+                    break;
+                }
+            }
+            if (is_uniq){
+                counter++;
+            }
+        }
+    }
+    return counter;
+}

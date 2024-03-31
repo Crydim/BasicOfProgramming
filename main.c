@@ -1073,6 +1073,60 @@ void test_getMaxAbsoluteValue(){
     test_getMaxAbsoluteValue2();
 }
 
+void test_getNSpecialElement21(){
+    matrix A = createMatrixFromArray(
+            (int []) {
+                    1, 15, 3, 2, 4,
+                    5, 6, 7, 9, 2,
+                    9,3, 17, 5, 12
+            },
+            3, 5
+    );
+    int res = getNSpecialElement2(A);
+    int expected = 1;
+    assert(res == expected);
+    freeMemMatrix(&A);
+}
+
+void test_getNSpecialElement22(){
+    matrix A = createMatrixFromArray(
+            (int []) {
+                    1, 4, 5, 9, 11,
+                    12, 13, 15, 17, 20,
+                    6,8, 10, 15, 20
+            },
+            3, 5
+    );
+    int res = getNSpecialElement2(A);
+    int expected = 15;
+    assert(res == expected);
+    freeMemMatrix(&A);
+}
+
+void test_getNSpecialElement23(){
+    matrix A = createMatrixFromArray(
+            (int []) {
+                    5, 4, 1,
+                    7, 3, 2,
+                    10,5, 2,
+                    24, 21, 6,
+                    9, 4, 1
+
+            },
+            5, 3
+    );
+    int res = getNSpecialElement2(A);
+    int expected = 0;
+    assert(res == expected);
+    freeMemMatrix(&A);
+}
+
+void test_getNSpecialElement2t(){
+    test_getNSpecialElement21();
+    test_getNSpecialElement22();
+    test_getNSpecialElement23();
+}
+
 void test_function_matrix(){
     test_swapRowsWithMaxAndMinElements();
     test_sortRowsByMaxElement();
@@ -1089,6 +1143,7 @@ void test_function_matrix(){
     test_countNonDescendingRowsMatrices();
     test_countZeroRows();
     test_getMaxAbsoluteValue();
+    test_getNSpecialElement2t();
 }
 
 
