@@ -1127,6 +1127,46 @@ void test_getNSpecialElement2t(){
     test_getNSpecialElement23();
 }
 
+void test_getVectorIndexWithMaxAngle1(){
+    matrix A = createMatrixFromArray(
+            (int []) {
+                    10, 4, 2, 1, 9,
+                    14, 0, 7, 9, 2,
+                    3,6, 8, 11, 9
+            },
+            3, 5
+    );
+    int b[5] = {9, 7, 4, 3, 6};
+    int res = getVectorIndexWithMaxAngle(A, b);
+    int expected = 1;
+    assert(res == expected);
+    freeMemMatrix(&A);
+}
+
+void test_getVectorIndexWithMaxAngle2(){
+    matrix A = createMatrixFromArray(
+            (int []) {
+                    10, 4, 2,
+                    2, 0, 7,
+                    3,6, 8,
+                    10, 4, 2,
+                    2, 3, 1
+
+            },
+            5, 3
+    );
+    int b[3] = {9, 7, 4};
+    int res = getVectorIndexWithMaxAngle(A, b);
+    int expected = 1;
+    assert(res == expected);
+    freeMemMatrix(&A);
+}
+
+void test_getVectorIndexWithMaxAngle(){
+    test_getVectorIndexWithMaxAngle1();
+    test_getVectorIndexWithMaxAngle2();
+}
+
 void test_function_matrix(){
     test_swapRowsWithMaxAndMinElements();
     test_sortRowsByMaxElement();
@@ -1144,6 +1184,7 @@ void test_function_matrix(){
     test_countZeroRows();
     test_getMaxAbsoluteValue();
     test_getNSpecialElement2t();
+    test_getVectorIndexWithMaxAngle();
 }
 
 

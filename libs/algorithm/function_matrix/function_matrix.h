@@ -103,4 +103,17 @@ int min2(int a, int b);
 //Задание 16
 int getNSpecialElement2(matrix m);
 
+//Задание 17
+double getScalarProduct(int *a, int *b, int n);
+
+//Задание 17
+double getVectorLength(int *a, int n);
+
+//Задание 17
+double getCosine(int *a, int *b, int n);
+
+//Задание 17
+int getVectorIndexWithMaxAngle(matrix m, int *b);
+
+
 #endif //STRUCTURES_FUNCTION_MATRIX_H
