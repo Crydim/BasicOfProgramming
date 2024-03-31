@@ -115,5 +115,10 @@ double getCosine(int *a, int *b, int n);
 //Задание 17
 int getVectorIndexWithMaxAngle(matrix m, int *b);
 
+//Задание 18
+long long getScalarProductRowAndCol(matrix m, int i, int j);
+
+//Задание 18
+long long getSpecialScalarProduct(matrix m, int n);
 
 #endif //STRUCTURES_FUNCTION_MATRIX_H

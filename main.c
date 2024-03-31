@@ -1167,6 +1167,41 @@ void test_getVectorIndexWithMaxAngle(){
     test_getVectorIndexWithMaxAngle2();
 }
 
+void test_getSpecialScalarProduct1(){
+    matrix A = createMatrixFromArray(
+            (int []) {
+                    10, 15, 9,
+                    4, 17, 5,
+                    6,12, 1
+            },
+            3, 3
+    );
+    long long res = getSpecialScalarProduct(A, A.nCols);
+    long long expected = 126;
+    assert(res == expected);
+    freeMemMatrix(&A);
+}
+
+void test_getSpecialScalarProduct2(){
+    matrix A = createMatrixFromArray(
+            (int []) {
+                    11, 3, 9,
+                    4, 8, 5,
+                    0,7, 10
+            },
+            3, 3
+    );
+    long long res = getSpecialScalarProduct(A, A.nCols);
+    long long expected = 133;
+    assert(res == expected);
+    freeMemMatrix(&A);
+}
+
+void test_getSpecialScalarProduct(){
+    test_getSpecialScalarProduct1();
+    test_getSpecialScalarProduct2();
+}
+
 void test_function_matrix(){
     test_swapRowsWithMaxAndMinElements();
     test_sortRowsByMaxElement();
@@ -1185,6 +1220,7 @@ void test_function_matrix(){
     test_getMaxAbsoluteValue();
     test_getNSpecialElement2t();
     test_getVectorIndexWithMaxAngle();
+    test_getSpecialScalarProduct();
 }
 
 
