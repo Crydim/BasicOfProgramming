@@ -10,4 +10,6 @@ char* find(char *begin, char *end, int ch);
 
 char* findNonSpace(char *begin);
 
+char* findSpace(char *begin);
+
 #endif //STRUCTURES_STRING__H

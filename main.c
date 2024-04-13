@@ -1248,8 +1248,33 @@ void test_findNonSpace(){
     test_findNonSpace3();
 }
 
+void test_findSpace1(){
+    char s[4] = " 453";
+    char *res = findSpace(&s[0]);
+    assert(*res == ' ');
+}
+
+void test_findSpace2(){
+    char s[4] = "165 ";
+    char *res = findSpace(&s[1]);
+    assert(*res == ' ');
+}
+
+void test_findSpace3(){
+    char s[4] = "914";
+    char *res = findSpace(&s[1]);
+    assert(*res == '\0');
+}
+
+void test_findSpace(){
+    test_findSpace1();
+    test_findSpace2();
+    test_findSpace3();
+}
+
 void test_string_(){
     test_findNonSpace();
+    test_findSpace();
 }
 
 int main() {
