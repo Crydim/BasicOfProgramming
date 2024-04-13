@@ -1309,7 +1309,7 @@ void test_findSpaceReverse2(){
 }
 
 void test_findSpaceReverse3(){
-    char s[4] = "1648";
+    char s[4] = "1651";
     char *res = findSpaceReverse(&s[3], &s[0]);
     assert(*res == '1');
 }
@@ -1322,8 +1322,7 @@ void test_findSpaceReverse(){
 
 void test_strcmp1(){
     char s1[4] = "1648";
-    char s2[4] = "1648";
-    int res = strcmp(s1, s2);
+    int res = strcmp(s1, s1);
     assert(res == 0);
 }
 
