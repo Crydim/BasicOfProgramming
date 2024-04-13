@@ -1272,9 +1272,34 @@ void test_findSpace(){
     test_findSpace3();
 }
 
+void test_findNonSpaceReverse1(){
+    char s[4] = " 432";
+    char *res = findNonSpaceReverse(&s[3], &s[0]);
+    assert(*res == '2');
+}
+
+void test_findNonSpaceReverse2(){
+    char s[4] = "134 ";
+    char *res = findNonSpaceReverse(&s[3], &s[1]);
+    assert(*res == '4');
+}
+
+void test_findNonSpaceReverse3(){
+    char s[4] = "   ";
+    char *res = findNonSpaceReverse(&s[3], &s[0]);
+    assert(*res == '\0');
+}
+
+void test_findNonSpaceReverse(){
+    test_findNonSpaceReverse1();
+    test_findNonSpaceReverse2();
+    test_findNonSpaceReverse3();
+}
+
 void test_string_(){
     test_findNonSpace();
     test_findSpace();
+    test_findNonSpaceReverse();
 }
 
 int main() {

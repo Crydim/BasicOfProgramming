@@ -12,4 +12,6 @@ char* findNonSpace(char *begin);
 
 char* findSpace(char *begin);
 
+char* findNonSpaceReverse(char *rbegin, const char *rend);
+
 #endif //STRUCTURES_STRING__H
