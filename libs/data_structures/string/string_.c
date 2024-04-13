@@ -19,3 +19,10 @@ char* findNonSpace(char *begin){
     }
     return begin;
 }
+
+char* findSpace(char *begin){
+    while(*begin != '\0' && !isspace(*begin)){
+        begin++;
+    }
+    return begin;
+}
