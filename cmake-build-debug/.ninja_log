@@ -9,3 +9,10 @@
 12	172	7322466801079721	CMakeFiles/structures.dir/test_matrix.c.obj	34ede163c70a16f
 137	3522	7334520570890327	CMakeFiles/structures.dir/libs/data_structures/matrix/matrix.c.obj	661cab5941e6e5ec
 17	293	7336178251579802	CMakeFiles/structures.dir/libs/algorithm/function_matrix/function_matrix.c.obj	261e83cd86a1aaf7
+38	885	7347468539412712	CMakeFiles/structures.dir/libs/data_structures/string/string_.c.obj	d64124a7848e4135
+5	1037	7347468540899945	CMakeFiles/structures.dir/libs/data_structures/vector/vector.c.obj	1a7572c87d735cd1
+57	1153	7347468542061228	CMakeFiles/structures.dir/libs/algorithm/array/array.c.obj	1e01a7341b57febc
+24	1247	7347468543061522	CMakeFiles/structures.dir/libs/data_structures/matrix/matrix.c.obj	699232a6bee0ae69
+14	1259	7347468543191545	CMakeFiles/structures.dir/main.c.obj	7fab3ca19ad223c3
+84	1542	7347468545992794	CMakeFiles/structures.dir/libs/algorithm/function_matrix/function_matrix.c.obj	4ae98e140a826cca
+1542	2185	7347468552409515	structures.exe	cafc552052d36d27
