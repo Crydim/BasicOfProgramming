@@ -2,6 +2,7 @@
 #include "matrix.h"
 #include "function_matrix.h"
 #include <stdio.h>
+#include "string_.h"
 
 void test_pushBack_emptyVector(){
     vector v = createVector(0);
@@ -1223,6 +1224,33 @@ void test_function_matrix(){
     test_getSpecialScalarProduct();
 }
 
+void test_findNonSpace1(){
+    char s[4] = " 129";
+    char *res = findNonSpace(&s[0]);
+    assert(*res == '1');
+}
+
+void test_findNonSpace2(){
+    char s[4] = "785 ";
+    char *res = findNonSpace(&s[1]);
+    assert(*res == '8');
+}
+
+void test_findNonSpace3(){
+    char s[4] = "   ";
+    char *res = findNonSpace(&s[1]);
+    assert(*res == '\0');
+}
+
+void test_findNonSpace(){
+    test_findNonSpace1();
+    test_findNonSpace2();
+    test_findNonSpace3();
+}
+
+void test_string_(){
+    test_findNonSpace();
+}
 
 int main() {
     vector a = createVector(5);
@@ -1230,5 +1258,6 @@ int main() {
     test_vector();
     test_matrix();
     test_function_matrix();
+    test_string_();
     return 0;
 }

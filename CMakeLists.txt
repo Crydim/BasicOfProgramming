@@ -8,9 +8,12 @@ add_executable(structures main.c
         libs/algorithm/array/array.c
         libs/data_structures/matrix/matrix.c
         libs/algorithm/function_matrix/function_matrix.c
+        libs/data_structures/string/string_.c
+        libs/data_structures/string/string_.h
 )
 
 include_directories(libs/algorithm/array)
 include_directories(libs/algorithm/function_matrix)
 include_directories(libs/data_structures/vector)
 include_directories(libs/data_structures/matrix)
+include_directories(libs/data_structures/string)

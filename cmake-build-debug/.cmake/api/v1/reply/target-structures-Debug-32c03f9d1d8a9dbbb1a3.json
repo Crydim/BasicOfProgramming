@@ -34,18 +34,6 @@
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 13,
-				"parent" : 0
-			},
-			{
-				"command" : 1,
-				"file" : 0,
-				"line" : 14,
-				"parent" : 0
-			},
-			{
-				"command" : 1,
-				"file" : 0,
 				"line" : 15,
 				"parent" : 0
 			},
@@ -53,6 +41,24 @@
 				"command" : 1,
 				"file" : 0,
 				"line" : 16,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 17,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 18,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 19,
 				"parent" : 0
 			}
 		]
@@ -83,6 +89,10 @@
 				{
 					"backtrace" : 5,
 					"path" : "D:/Clion/11/structures/libs/data_structures/matrix"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "D:/Clion/11/structures/libs/data_structures/string"
 				}
 			],
 			"language" : "C",
@@ -100,7 +110,8 @@
 				1,
 				2,
 				3,
-				4
+				4,
+				5
 			]
 		}
 	],
@@ -141,7 +152,15 @@
 				1,
 				2,
 				3,
-				4
+				4,
+				5
+			]
+		},
+		{
+			"name" : "Header Files",
+			"sourceIndexes" : 
+			[
+				6
 			]
 		}
 	],
@@ -176,6 +195,17 @@
 			"compileGroupIndex" : 0,
 			"path" : "libs/algorithm/function_matrix/function_matrix.c",
 			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "libs/data_structures/string/string_.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "libs/data_structures/string/string_.h",
+			"sourceGroupIndex" : 1
 		}
 	],
 	"type" : "EXECUTABLE"
