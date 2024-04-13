@@ -1320,11 +1320,39 @@ void test_findSpaceReverse(){
     test_findSpaceReverse3();
 }
 
+void test_strcmp1(){
+    char s1[4] = "1648";
+    char s2[4] = "1648";
+    int res = strcmp(s1, s2);
+    assert(res == 0);
+}
+
+void test_strcmp2(){
+    char s1[4] = "1648";
+    char s2[4] = "6487";
+    int res = strcmp(s1, s2);
+    assert(res == -5);
+}
+
+void test_strcmp3(){
+    char s1[4] = "stop";
+    char s2[4] = "free";
+    int res = strcmp(s1, s2);
+    assert(res == 13);
+}
+
+void test_strcmp(){
+    test_strcmp1();
+    test_strcmp2();
+    test_strcmp3();
+}
+
 void test_string_(){
     test_findNonSpace();
     test_findSpace();
     test_findNonSpaceReverse();
     test_findSpaceReverse();
+    test_strcmp();
 }
 
 int main() {
