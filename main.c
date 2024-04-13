@@ -1326,6 +1326,7 @@ void test_strcmp1(){
     assert(res == 0);
 }
 
+
 void test_strcmp2(){
     char s1[4] = "1648";
     char s2[4] = "6487";
