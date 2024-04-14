@@ -48,3 +48,8 @@ int strcmp(const char *lhs, const char *rhs) {
     }
     return *(unsigned char *)lhs - *(unsigned char *)rhs;
 }
+
+char* copy(const char *beginSource, const char *endSource, char *beginDestination) {
+    memcpy(beginDestination, beginSource, endSource - beginSource);
+    return beginDestination + (endSource - beginSource);
+}

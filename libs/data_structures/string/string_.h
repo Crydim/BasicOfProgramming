@@ -1,8 +1,9 @@
 #ifndef STRUCTURES_STRING__H
 #define STRUCTURES_STRING__H
 
-# include <stddef.h>
+#include <stddef.h>
 #include <ctype.h>
+#include <memory.h>
 
 size_t strlen_(const char *begin);
 
