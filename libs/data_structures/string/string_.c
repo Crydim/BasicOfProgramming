@@ -66,3 +66,14 @@ char* copyIf(char *beginSource, const char *endSource, char *beginDestination, i
     }
     return pDest;
 }
+
+char* copyIfReverse(char *rbeginSource, const char *rendSource, char *beginDestination, int (*f)(int)) {
+    while (rbeginSource != rendSource){
+        if (f(*rbeginSource)){
+            memcpy(beginDestination, rbeginSource, 1);
+            beginDestination++;
+        }
+        rbeginSource--;
+    }
+    return beginDestination;
+}
