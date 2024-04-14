@@ -50,3 +50,6 @@
 14	288	7348082176794776	CMakeFiles/structures.dir/libs/data_structures/string/string_.c.obj	d64124a7848e4135
 4	1309	7348082187047235	CMakeFiles/structures.dir/main.c.obj	7fab3ca19ad223c3
 1309	2042	7348082194348883	structures.exe	cafc552052d36d27
+12	302	7348086586650117	CMakeFiles/structures.dir/libs/data_structures/string/string_.c.obj	d64124a7848e4135
+4	323	7348086586840153	CMakeFiles/structures.dir/main.c.obj	7fab3ca19ad223c3
+324	770	7348086591326226	structures.exe	cafc552052d36d27

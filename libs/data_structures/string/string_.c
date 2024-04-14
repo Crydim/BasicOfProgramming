@@ -53,3 +53,16 @@ char* copy(const char *beginSource, const char *endSource, char *beginDestinatio
     memcpy(beginDestination, beginSource, endSource - beginSource);
     return beginDestination + (endSource - beginSource);
 }
+
+char* copyIf(char *beginSource, const char *endSource, char *beginDestination, int (*f)(int)) {
+    char *pSrc = beginSource;
+    char *pDest = beginDestination;
+    while (pSrc != endSource) {
+        if (f(*pSrc)) {
+            memcpy(pDest, pSrc, 1);
+            pDest++;
+        }
+        pSrc++;
+    }
+    return pDest;
+}
