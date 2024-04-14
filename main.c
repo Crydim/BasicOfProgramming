@@ -1347,12 +1347,49 @@ void test_strcmp(){
     test_strcmp3();
 }
 
+void test_copy1(){
+    char s1[4] = "2024";
+    char res[4];
+    char expected[4] = "20";
+    copy(&s1[0], &s1[2], res);
+    for (int i = 0; i < 2; i++){
+        assert(expected[i] == res[i]);
+    }
+}
+
+void test_copy2(){
+    char s1[5] = "Hello";
+    char res[5];
+    char expected[3] = "llo";
+    copy(&s1[2], &s1[5], res);
+    for (int i = 0; i < 3; i++){
+        assert(expected[i] == res[i]);
+    }
+}
+
+void test_copy3(){
+    char s1[11] = "Hello world";
+    char res[11];
+    char expected[11] = "Hello world";
+    copy(&s1[0], &s1[11], res);
+    for (int i = 0; i < 11; i++){
+        assert(expected[i] == res[i]);
+    }
+}
+
+void test_copy(){
+    test_copy1();
+    test_copy2();
+    test_copy3();
+}
+
 void test_string_(){
     test_findNonSpace();
     test_findSpace();
     test_findNonSpaceReverse();
     test_findSpaceReverse();
     test_strcmp();
+    test_copy();
 }
 
 int main() {

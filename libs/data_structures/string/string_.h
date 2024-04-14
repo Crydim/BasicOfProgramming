@@ -18,4 +18,6 @@ char* findSpaceReverse(char *rbegin, const char *rend);
 
 int strcmp(const char *lhs, const char *rhs);
 
+char* copy(const char *beginSource, const char *endSource, char *beginDestination);
+
 #endif //STRUCTURES_STRING__H
