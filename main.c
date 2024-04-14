@@ -1427,6 +1427,42 @@ void test_copyIf(){
     test_copyIf3();
 }
 
+void test_copyIfReverse1(){
+    char s1[4] = "2078";
+    char res[4];
+    char expected[4] = "7";
+    copyIfReverse(&s1[3], &s1[0], res, isOdd);
+    for (int i = 0; i < 1; i++){
+        assert(expected[i] == res[i]);
+    }
+}
+
+void test_copyIfReverse2(){
+    char s1[5] = "woRDS";
+    char res[5];
+    char expected[3] = "SDR";
+    copyIfReverse(&s1[4], &s1[1], res, isCapital);
+    for (int i = 0; i < 3; i++){
+        assert(expected[i] == res[i]);
+    }
+}
+
+void test_copyIfReverse3(){
+    char s1[11] = "hellO worLd";
+    char res[11];
+    char expected[2] = "LO";
+    copyIfReverse(&s1[11], &s1[0], res, isCapital);
+    for (int i = 0; i < 2; i++){
+        assert(expected[i] == res[i]);
+    }
+}
+
+void test_copyIfReverse(){
+    test_copyIfReverse1();
+    test_copyIfReverse2();
+    test_copyIfReverse3();
+}
+
 void test_string_(){
     test_findNonSpace();
     test_findSpace();
@@ -1435,6 +1471,7 @@ void test_string_(){
     test_strcmp();
     test_copy();
     test_copyIf();
+    test_copyIfReverse();
 }
 
 int main() {

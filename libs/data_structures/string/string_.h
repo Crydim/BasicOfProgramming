@@ -23,4 +23,6 @@ char* copy(const char *beginSource, const char *endSource, char *beginDestinatio
 
 char* copyIf(char *beginSource, const char *endSource, char *beginDestination, int (*f)(int));
 
+char* copyIfReverse(char *rbeginSource, const char *rendSource, char *beginDestination, int (*f)(int));
+
 #endif //STRUCTURES_STRING__H
