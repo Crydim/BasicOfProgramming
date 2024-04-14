@@ -21,4 +21,6 @@ int strcmp(const char *lhs, const char *rhs);
 
 char* copy(const char *beginSource, const char *endSource, char *beginDestination);
 
+char* copyIf(char *beginSource, const char *endSource, char *beginDestination, int (*f)(int));
+
 #endif //STRUCTURES_STRING__H
