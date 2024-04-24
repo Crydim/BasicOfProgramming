@@ -231,3 +231,29 @@ int countWordsPalindromes(char *s) {
     }
     return palindromes;
 }
+
+//9
+char *alternatingWordsInString(char *string1, char *string2, char *s) {
+    WordDescriptor word1, word2;
+    bool isW1Found, isW2Found;
+    char *beginCopy = s;
+    char *beginSearch1 = string1, *beginSearch2 = string2;
+    while ((isW1Found = getWord(beginSearch1, &word1)),
+            (isW2Found = getWord(beginSearch2, &word2)),
+            isW1Found || isW2Found) {
+        if (isW1Found) {
+            s = copy(word1.begin, word1.end, s);
+            *s++ = ' ';
+            beginSearch1 = word1.end;
+        }
+        if (isW2Found) {
+            s = copy(word2.begin, word2.end, s);
+            *s++ = ' ';
+            beginSearch2 = word2.end;
+        }
+    }
+    if (s != beginCopy)
+        --s;
+    *s = '\0';
+    return beginCopy;
+}

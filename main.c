@@ -1658,6 +1658,36 @@ void test_countWordsPalindromes(){
     test_countWordsPalindromes3();
 }
 
+void test_alternatingWordsInString1(){
+    char s1[] = "stop messing";
+    char s2[] = "around with box";
+    char s[MAX_STRING_SIZE];
+    alternatingWordsInString(s1, s2, s);
+    ASSERT_STRING("stop around messing with box", s);
+}
+
+void test_alternatingWordsInString2(){
+    char s1[] = "";
+    char s2[] = "";
+    char s[MAX_STRING_SIZE];
+    alternatingWordsInString(s1, s2, s);
+    ASSERT_STRING("", s);
+}
+
+void test_alternatingWordsInString3(){
+    char s1[] = "forward vikings the";
+    char s2[] = "78 to 65";
+    char s[MAX_STRING_SIZE];
+    alternatingWordsInString(s1, s2, s);
+    ASSERT_STRING("forward 78 vikings to the 65", s);
+}
+
+void test_alternatingWordsInString(){
+    test_alternatingWordsInString1();
+    test_alternatingWordsInString2();
+    test_alternatingWordsInString3();
+}
+
 void test_function__string(){
     test_adjacentEqualLetters();
     test_lettersToStart();
@@ -1666,6 +1696,7 @@ void test_function__string(){
     test_areWordsOrdered();
     test_printWordsInReverseOrder();
     test_countWordsPalindromes();
+    test_alternatingWordsInString();
 }
 
 int main() {

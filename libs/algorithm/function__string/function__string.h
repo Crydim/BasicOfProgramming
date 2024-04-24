@@ -67,4 +67,7 @@ bool isPalindrome(char *begin, char *end);
 //8
 int countWordsPalindromes(char *s);
 
+//9
+char *alternatingWordsInString(char *string1, char *string2, char *s);
+
 #endif //STRUCTURES_FUNCTION__STRING_H
