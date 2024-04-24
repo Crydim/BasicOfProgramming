@@ -18,3 +18,6 @@
 33	3043	7357015706915117	CMakeFiles/structures.dir/libs/data_structures/string/string_.c.obj	e171631d1dd029e7
 24	3052	7357015707005135	CMakeFiles/structures.dir/libs/algorithm/function_matrix/function_matrix.c.obj	6dfd68c459324f46
 3052	5429	7357015730770873	structures.exe	63c6d119284e0ff2
+13	227	7357018704389681	CMakeFiles/structures.dir/libs/algorithm/function__string/function__string.c.obj	9fe011ce96c541b6
+4	375	7357018705860024	CMakeFiles/structures.dir/main.c.obj	bde71544e390f8f5
+376	821	7357018710326091	structures.exe	63c6d119284e0ff2

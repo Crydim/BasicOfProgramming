@@ -1518,8 +1518,33 @@ void test_adjacentEqualLetters(){
     test_adjacentEqualLetters3();
 }
 
+void test_lettersToStart1(){
+    char s[] = "12He43llo Stop89";
+    stringDigitsToEnd(s);
+    ASSERT_STRING("Hello1243 Stop89", s);
+}
+
+void test_lettersToStart2(){
+    char s[] = "forward78 time23";
+    stringDigitsToEnd(s);
+    ASSERT_STRING("forward78 time23", s);
+}
+
+void test_lettersToStart3(){
+    char s[] = "";
+    stringDigitsToEnd(s);
+    ASSERT_STRING("", s);
+}
+
+void test_lettersToStart(){
+    test_lettersToStart1();
+    test_lettersToStart2();
+    test_lettersToStart3();
+}
+
 void test_function__string(){
     test_adjacentEqualLetters();
+    test_lettersToStart();
 }
 
 int main() {
@@ -1530,5 +1555,6 @@ int main() {
     test_function_matrix();
     test_string_();
     test_function__string();
+    test_lettersToStart();
     return 0;
 }
