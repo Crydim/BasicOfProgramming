@@ -41,4 +41,7 @@ int areWordsEqual(WordDescriptor w1, WordDescriptor w2);
 //5
 void replace(char *source, char *w1, char *w2);
 
+//6
+bool areWordsOrdered(char *string);
+
 #endif //STRUCTURES_FUNCTION__STRING_H

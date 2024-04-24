@@ -152,3 +152,21 @@ void replace(char *source, char *w1, char *w2) {
     }
     *recPtr = '\0';
 }
+
+//6
+bool areWordsOrdered(char *string) {
+    WordDescriptor word1;
+    WordDescriptor word2;
+    if (getWord(string, &word1)) {
+        word2 = word1;
+        while (getWord(string, &word1)) {
+            if (areWordsEqual(word1, word2) < 0)
+                return false;
+            word2 = word1;
+            string = word1.end;
+        }
+        return true;
+    } else{
+        return true;
+    }
+}

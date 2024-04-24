@@ -1601,11 +1601,33 @@ void test_replace(){
     test_replace3();
 }
 
+void test_areWordsOrdered1(){
+    char s[MAX_STRING_SIZE] = "hello stop";
+    assert(areWordsOrdered(s) == true);
+}
+
+void test_areWordsOrdered2(){
+    char s[MAX_STRING_SIZE] = "";
+    assert(areWordsOrdered(s) == true);
+}
+
+void test_areWordsOrdered3(){
+    char s[MAX_STRING_SIZE] = "is trap hello stop";
+    assert(areWordsOrdered(s) == false);
+}
+
+void test_areWordsOrdered(){
+    test_areWordsOrdered1();
+    test_areWordsOrdered2();
+    test_areWordsOrdered3();
+}
+
 void test_function__string(){
     test_adjacentEqualLetters();
     test_lettersToStart();
     test_transformDigitsInSpace();
     test_replace();
+    test_areWordsOrdered();
 }
 
 int main() {
