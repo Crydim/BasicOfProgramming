@@ -52,44 +52,51 @@ build cmake_object_order_depends_target_structures: phony || CMakeFiles/structur
 build CMakeFiles/structures.dir/main.c.obj: C_COMPILER__structures_unscanned_Debug D$:/Clion/11/structures/main.c || cmake_object_order_depends_target_structures
   DEP_FILE = CMakeFiles\structures.dir\main.c.obj.d
   FLAGS = -g -std=gnu11 -fdiagnostics-color=always
-  INCLUDES = -ID:/Clion/11/structures/libs/algorithm/array -ID:/Clion/11/structures/libs/algorithm/function_matrix -ID:/Clion/11/structures/libs/data_structures/vector -ID:/Clion/11/structures/libs/data_structures/matrix -ID:/Clion/11/structures/libs/data_structures/string
+  INCLUDES = -ID:/Clion/11/structures/libs/algorithm/array -ID:/Clion/11/structures/libs/algorithm/function_matrix -ID:/Clion/11/structures/libs/data_structures/vector -ID:/Clion/11/structures/libs/data_structures/matrix -ID:/Clion/11/structures/libs/data_structures/string -ID:/Clion/11/structures/libs/algorithm/function__string
   OBJECT_DIR = CMakeFiles\structures.dir
   OBJECT_FILE_DIR = CMakeFiles\structures.dir
 
 build CMakeFiles/structures.dir/libs/data_structures/vector/vector.c.obj: C_COMPILER__structures_unscanned_Debug D$:/Clion/11/structures/libs/data_structures/vector/vector.c || cmake_object_order_depends_target_structures
   DEP_FILE = CMakeFiles\structures.dir\libs\data_structures\vector\vector.c.obj.d
   FLAGS = -g -std=gnu11 -fdiagnostics-color=always
-  INCLUDES = -ID:/Clion/11/structures/libs/algorithm/array -ID:/Clion/11/structures/libs/algorithm/function_matrix -ID:/Clion/11/structures/libs/data_structures/vector -ID:/Clion/11/structures/libs/data_structures/matrix -ID:/Clion/11/structures/libs/data_structures/string
+  INCLUDES = -ID:/Clion/11/structures/libs/algorithm/array -ID:/Clion/11/structures/libs/algorithm/function_matrix -ID:/Clion/11/structures/libs/data_structures/vector -ID:/Clion/11/structures/libs/data_structures/matrix -ID:/Clion/11/structures/libs/data_structures/string -ID:/Clion/11/structures/libs/algorithm/function__string
   OBJECT_DIR = CMakeFiles\structures.dir
   OBJECT_FILE_DIR = CMakeFiles\structures.dir\libs\data_structures\vector
 
 build CMakeFiles/structures.dir/libs/algorithm/array/array.c.obj: C_COMPILER__structures_unscanned_Debug D$:/Clion/11/structures/libs/algorithm/array/array.c || cmake_object_order_depends_target_structures
   DEP_FILE = CMakeFiles\structures.dir\libs\algorithm\array\array.c.obj.d
   FLAGS = -g -std=gnu11 -fdiagnostics-color=always
-  INCLUDES = -ID:/Clion/11/structures/libs/algorithm/array -ID:/Clion/11/structures/libs/algorithm/function_matrix -ID:/Clion/11/structures/libs/data_structures/vector -ID:/Clion/11/structures/libs/data_structures/matrix -ID:/Clion/11/structures/libs/data_structures/string
+  INCLUDES = -ID:/Clion/11/structures/libs/algorithm/array -ID:/Clion/11/structures/libs/algorithm/function_matrix -ID:/Clion/11/structures/libs/data_structures/vector -ID:/Clion/11/structures/libs/data_structures/matrix -ID:/Clion/11/structures/libs/data_structures/string -ID:/Clion/11/structures/libs/algorithm/function__string
   OBJECT_DIR = CMakeFiles\structures.dir
   OBJECT_FILE_DIR = CMakeFiles\structures.dir\libs\algorithm\array
 
 build CMakeFiles/structures.dir/libs/data_structures/matrix/matrix.c.obj: C_COMPILER__structures_unscanned_Debug D$:/Clion/11/structures/libs/data_structures/matrix/matrix.c || cmake_object_order_depends_target_structures
   DEP_FILE = CMakeFiles\structures.dir\libs\data_structures\matrix\matrix.c.obj.d
   FLAGS = -g -std=gnu11 -fdiagnostics-color=always
-  INCLUDES = -ID:/Clion/11/structures/libs/algorithm/array -ID:/Clion/11/structures/libs/algorithm/function_matrix -ID:/Clion/11/structures/libs/data_structures/vector -ID:/Clion/11/structures/libs/data_structures/matrix -ID:/Clion/11/structures/libs/data_structures/string
+  INCLUDES = -ID:/Clion/11/structures/libs/algorithm/array -ID:/Clion/11/structures/libs/algorithm/function_matrix -ID:/Clion/11/structures/libs/data_structures/vector -ID:/Clion/11/structures/libs/data_structures/matrix -ID:/Clion/11/structures/libs/data_structures/string -ID:/Clion/11/structures/libs/algorithm/function__string
   OBJECT_DIR = CMakeFiles\structures.dir
   OBJECT_FILE_DIR = CMakeFiles\structures.dir\libs\data_structures\matrix
 
 build CMakeFiles/structures.dir/libs/algorithm/function_matrix/function_matrix.c.obj: C_COMPILER__structures_unscanned_Debug D$:/Clion/11/structures/libs/algorithm/function_matrix/function_matrix.c || cmake_object_order_depends_target_structures
   DEP_FILE = CMakeFiles\structures.dir\libs\algorithm\function_matrix\function_matrix.c.obj.d
   FLAGS = -g -std=gnu11 -fdiagnostics-color=always
-  INCLUDES = -ID:/Clion/11/structures/libs/algorithm/array -ID:/Clion/11/structures/libs/algorithm/function_matrix -ID:/Clion/11/structures/libs/data_structures/vector -ID:/Clion/11/structures/libs/data_structures/matrix -ID:/Clion/11/structures/libs/data_structures/string
+  INCLUDES = -ID:/Clion/11/structures/libs/algorithm/array -ID:/Clion/11/structures/libs/algorithm/function_matrix -ID:/Clion/11/structures/libs/data_structures/vector -ID:/Clion/11/structures/libs/data_structures/matrix -ID:/Clion/11/structures/libs/data_structures/string -ID:/Clion/11/structures/libs/algorithm/function__string
   OBJECT_DIR = CMakeFiles\structures.dir
   OBJECT_FILE_DIR = CMakeFiles\structures.dir\libs\algorithm\function_matrix
 
 build CMakeFiles/structures.dir/libs/data_structures/string/string_.c.obj: C_COMPILER__structures_unscanned_Debug D$:/Clion/11/structures/libs/data_structures/string/string_.c || cmake_object_order_depends_target_structures
   DEP_FILE = CMakeFiles\structures.dir\libs\data_structures\string\string_.c.obj.d
   FLAGS = -g -std=gnu11 -fdiagnostics-color=always
-  INCLUDES = -ID:/Clion/11/structures/libs/algorithm/array -ID:/Clion/11/structures/libs/algorithm/function_matrix -ID:/Clion/11/structures/libs/data_structures/vector -ID:/Clion/11/structures/libs/data_structures/matrix -ID:/Clion/11/structures/libs/data_structures/string
+  INCLUDES = -ID:/Clion/11/structures/libs/algorithm/array -ID:/Clion/11/structures/libs/algorithm/function_matrix -ID:/Clion/11/structures/libs/data_structures/vector -ID:/Clion/11/structures/libs/data_structures/matrix -ID:/Clion/11/structures/libs/data_structures/string -ID:/Clion/11/structures/libs/algorithm/function__string
   OBJECT_DIR = CMakeFiles\structures.dir
   OBJECT_FILE_DIR = CMakeFiles\structures.dir\libs\data_structures\string
+
+build CMakeFiles/structures.dir/libs/algorithm/function__string/function__string.c.obj: C_COMPILER__structures_unscanned_Debug D$:/Clion/11/structures/libs/algorithm/function__string/function__string.c || cmake_object_order_depends_target_structures
+  DEP_FILE = CMakeFiles\structures.dir\libs\algorithm\function__string\function__string.c.obj.d
+  FLAGS = -g -std=gnu11 -fdiagnostics-color=always
+  INCLUDES = -ID:/Clion/11/structures/libs/algorithm/array -ID:/Clion/11/structures/libs/algorithm/function_matrix -ID:/Clion/11/structures/libs/data_structures/vector -ID:/Clion/11/structures/libs/data_structures/matrix -ID:/Clion/11/structures/libs/data_structures/string -ID:/Clion/11/structures/libs/algorithm/function__string
+  OBJECT_DIR = CMakeFiles\structures.dir
+  OBJECT_FILE_DIR = CMakeFiles\structures.dir\libs\algorithm\function__string
 
 
 # =============================================================================
@@ -99,7 +106,7 @@ build CMakeFiles/structures.dir/libs/data_structures/string/string_.c.obj: C_COM
 #############################################
 # Link the executable structures.exe
 
-build structures.exe: C_EXECUTABLE_LINKER__structures_Debug CMakeFiles/structures.dir/main.c.obj CMakeFiles/structures.dir/libs/data_structures/vector/vector.c.obj CMakeFiles/structures.dir/libs/algorithm/array/array.c.obj CMakeFiles/structures.dir/libs/data_structures/matrix/matrix.c.obj CMakeFiles/structures.dir/libs/algorithm/function_matrix/function_matrix.c.obj CMakeFiles/structures.dir/libs/data_structures/string/string_.c.obj
+build structures.exe: C_EXECUTABLE_LINKER__structures_Debug CMakeFiles/structures.dir/main.c.obj CMakeFiles/structures.dir/libs/data_structures/vector/vector.c.obj CMakeFiles/structures.dir/libs/algorithm/array/array.c.obj CMakeFiles/structures.dir/libs/data_structures/matrix/matrix.c.obj CMakeFiles/structures.dir/libs/algorithm/function_matrix/function_matrix.c.obj CMakeFiles/structures.dir/libs/data_structures/string/string_.c.obj CMakeFiles/structures.dir/libs/algorithm/function__string/function__string.c.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\structures.dir

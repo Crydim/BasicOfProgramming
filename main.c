@@ -2,7 +2,22 @@
 #include "matrix.h"
 #include "function_matrix.h"
 #include <stdio.h>
+#include "function__string.h"
 #include "string_.h"
+#define ASSERT_STRING(expected, got) assertString(expected, got, \
+__FILE__, __FUNCTION__, __LINE__)
+
+void assertString(const char *expected, char *got,
+                  char const *fileName, char const *funcName,
+                  int line) {
+    if (strcmp(expected, got)) {
+        fprintf(stderr, "File %s\n", fileName);
+        fprintf(stderr, "%s - failed on line %d\n", funcName, line);
+        fprintf(stderr, "Expected: \"%s\"\n", expected);
+        fprintf(stderr, "Got: \"%s\"\n\n", got);
+    } else
+        fprintf(stderr, "%s - OK\n", funcName);
+}
 
 void test_pushBack_emptyVector(){
     vector v = createVector(0);
@@ -1474,6 +1489,39 @@ void test_string_(){
     test_copyIfReverse();
 }
 
+void test_digitToStartTransform_oneWord() {
+    char s[] = "Hi123 ";
+    ASSERT_STRING("321Hi", s);
+}
+
+void test_adjacentEqualLetters1(){
+    char s[] = "aaabbb";
+    adjacentEqualLetters(s);
+    ASSERT_STRING("ab", s);
+}
+
+void test_adjacentEqualLetters2(){
+    char s[] = "hf";
+    adjacentEqualLetters(s);
+    ASSERT_STRING("hf", s);
+}
+
+void test_adjacentEqualLetters3(){
+    char s[] = "";
+    adjacentEqualLetters(s);
+    ASSERT_STRING("", s);
+}
+
+void test_adjacentEqualLetters(){
+    test_adjacentEqualLetters1();
+    test_adjacentEqualLetters2();
+    test_adjacentEqualLetters3();
+}
+
+void test_function__string(){
+    test_adjacentEqualLetters();
+}
+
 int main() {
     vector a = createVector(5);
     reserve(&a, 5);
@@ -1481,5 +1529,6 @@ int main() {
     test_matrix();
     test_function_matrix();
     test_string_();
+    test_function__string();
     return 0;
 }
