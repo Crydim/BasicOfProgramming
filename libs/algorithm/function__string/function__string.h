@@ -70,4 +70,7 @@ int countWordsPalindromes(char *s);
 //9
 char *alternatingWordsInString(char *string1, char *string2, char *s);
 
+//10
+void reverseWordOrder(char *string);
+
 #endif //STRUCTURES_FUNCTION__STRING_H

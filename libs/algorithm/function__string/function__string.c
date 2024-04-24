@@ -257,3 +257,17 @@ char *alternatingWordsInString(char *string1, char *string2, char *s) {
     *s = '\0';
     return beginCopy;
 }
+
+//10
+void reverseWordOrder(char *string) {
+    *copy(string, getEndOfString(string)+1, _stringBuffer) = '\0';
+    getBagOfWords(&_bag, _stringBuffer);
+    char *beginSearch = string;
+    for (int i = _bag.size - 1; i >= 0; --i) {
+        string = copy(_bag.words[i].begin, _bag.words[i].end, string);
+        *string++ = ' ';
+    }
+    if (string != beginSearch)
+        --string;
+    *string = '\0';
+}

@@ -1688,6 +1688,30 @@ void test_alternatingWordsInString(){
     test_alternatingWordsInString3();
 }
 
+void test_reverseWordOrder1(){
+    char s[MAX_STRING_SIZE] = "glory to forward";
+    reverseWordOrder(s);
+    ASSERT_STRING("forward to glory", s);
+}
+
+void test_reverseWordOrder2(){
+    char s[] = "";
+    reverseWordOrder(s);
+    ASSERT_STRING("", s);
+}
+
+void test_reverseWordOrder3(){
+    char s[] = "98 equal not 101";
+    reverseWordOrder(s);
+    ASSERT_STRING("101 not equal 98", s);
+}
+
+void test_reverseWordOrder(){
+    test_reverseWordOrder1();
+    test_reverseWordOrder2();
+    test_reverseWordOrder3();
+}
+
 void test_function__string(){
     test_adjacentEqualLetters();
     test_lettersToStart();
@@ -1697,6 +1721,7 @@ void test_function__string(){
     test_printWordsInReverseOrder();
     test_countWordsPalindromes();
     test_alternatingWordsInString();
+    test_reverseWordOrder();
 }
 
 int main() {
