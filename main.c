@@ -6,6 +6,9 @@
 #include "string_.h"
 #define ASSERT_STRING(expected, got) assertString(expected, got, \
 __FILE__, __FUNCTION__, __LINE__)
+#define MAX_STRING_SIZE 100
+#define MAX_N_WORDS_IN_STRING 100
+#define MAX_WORD_SIZE 20
 
 void assertString(const char *expected, char *got,
                   char const *fileName, char const *funcName,
@@ -1542,9 +1545,36 @@ void test_lettersToStart(){
     test_lettersToStart3();
 }
 
+void test_transformDigitsInSpace1(){
+    char s[MAX_STRING_SIZE] = "A3B0C1";
+    transformDigitsInSpace(s);
+    ASSERT_STRING("A   BC ", s);
+    *s = ' ';
+}
+
+void test_transformDigitsInSpace2(){
+    char s3[MAX_STRING_SIZE] = "A30CI2";
+    transformDigitsInSpace(s3);
+    ASSERT_STRING("A   CI  ", s3);
+    *s3 = ' ';
+}
+
+void test_transformDigitsInSpace3(){
+    char s1[MAX_STRING_SIZE] = "1111";
+    transformDigitsInSpace(s1);
+    ASSERT_STRING("    ", s1);
+}
+
+void test_transformDigitsInSpace(){
+    test_transformDigitsInSpace1();
+    test_transformDigitsInSpace2();
+    test_transformDigitsInSpace3();
+}
+
 void test_function__string(){
     test_adjacentEqualLetters();
     test_lettersToStart();
+    test_transformDigitsInSpace();
 }
 
 int main() {

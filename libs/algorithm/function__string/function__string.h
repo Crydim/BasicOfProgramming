@@ -32,4 +32,7 @@ void stringDigitsToEnd(char *beginString);
 //3
 bool getWordReverse(char *rbegin, char *rend, WordDescriptor *word);
 
+//4
+void transformDigitsInSpace(char *s);
+
 #endif //STRUCTURES_FUNCTION__STRING_H

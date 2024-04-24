@@ -91,3 +91,25 @@ bool getWordReverse(char *rbegin, char *rend, WordDescriptor *word) {
     word->begin = findSpaceReverse(word->end, rend)+1;
     return true;
 }
+
+//4
+void transformDigitsInSpace(char *s){
+    char *recPtr = s;
+    char stringS[MAX_STRING_SIZE+1];
+    copy(s, getEndOfString(s)+1, stringS);
+    char *readPtr = stringS;
+    while (*readPtr != '\0'){
+        if (isdigit(*readPtr)) {
+            int digit = *readPtr - '0';
+            for (int i = 0; i < digit; i++){
+                *recPtr = ' ';
+                recPtr++;
+            }
+        } else {
+            *recPtr = *readPtr;
+            recPtr++;
+        }
+        readPtr++;
+    }
+    *recPtr = '\0';
+}
