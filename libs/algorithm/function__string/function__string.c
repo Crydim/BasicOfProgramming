@@ -5,6 +5,8 @@
 #define MAX_WORD_SIZE 20
 
 char _stringBuffer[MAX_STRING_SIZE + 1];
+BagOfWords _bag;
+BagOfWords _bag2;
 
 char* getEndOfString(char  *s){
     while (*s != '\0'){
@@ -168,5 +170,33 @@ bool areWordsOrdered(char *string) {
         return true;
     } else{
         return true;
+    }
+}
+
+//7
+void getBagOfWords(BagOfWords *bag, char *s) {
+    bag->size = 0;
+    WordDescriptor w;
+    char *beginSearch = s;
+    while (getWord(beginSearch, &w)) {
+        bag->words[bag->size++] = w;
+        beginSearch = w.end;
+    }
+}
+
+//7
+void printWord(WordDescriptor word) {
+    while (word.begin != word.end) {
+        putchar(*word.begin);
+        word.begin++;
+    }
+    printf("\n");
+}
+
+//7
+void printWordsInReverseOrder(char *s) {
+    getBagOfWords(&_bag, s);
+    for (int i = _bag.size - 1; i >= 0; i--) {
+        printWord(_bag.words[i]);
     }
 }

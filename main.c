@@ -1622,12 +1622,28 @@ void test_areWordsOrdered(){
     test_areWordsOrdered3();
 }
 
+void test_printWordsInReverseOrder1(){
+    char s[] = "emperor the for";
+    printWordsInReverseOrder(s);
+}
+
+void test_printWordsInReverseOrder2(){
+    char s[] = "for";
+    printWordsInReverseOrder(s);
+}
+
+void test_printWordsInReverseOrder(){
+    test_printWordsInReverseOrder1();
+    test_printWordsInReverseOrder2();
+}
+
 void test_function__string(){
     test_adjacentEqualLetters();
     test_lettersToStart();
     test_transformDigitsInSpace();
     test_replace();
     test_areWordsOrdered();
+    test_printWordsInReverseOrder();
 }
 
 int main() {

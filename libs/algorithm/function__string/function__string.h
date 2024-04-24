@@ -1,6 +1,9 @@
 #include "string.h"
 #include <stdbool.h>
 #include <stdio.h>
+#define MAX_STRING_SIZE 100
+#define MAX_N_WORDS_IN_STRING 100
+#define MAX_WORD_SIZE 20
 
 #ifndef STRUCTURES_FUNCTION__STRING_H
 #define STRUCTURES_FUNCTION__STRING_H
@@ -43,5 +46,20 @@ void replace(char *source, char *w1, char *w2);
 
 //6
 bool areWordsOrdered(char *string);
+
+typedef struct BagOfWords {
+    WordDescriptor words[MAX_N_WORDS_IN_STRING];
+    size_t size;
+} BagOfWords;
+
+//7
+void getBagOfWords(BagOfWords *bag, char *s);
+
+//7
+void printWord(WordDescriptor word);
+
+//7
+void printWordsInReverseOrder(char *s);
+
 
 #endif //STRUCTURES_FUNCTION__STRING_H
