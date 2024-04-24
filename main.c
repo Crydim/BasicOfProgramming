@@ -1571,10 +1571,41 @@ void test_transformDigitsInSpace(){
     test_transformDigitsInSpace3();
 }
 
+void test_replace1(){
+    char s[MAX_STRING_SIZE] = "forward to glory forward";
+    char w1[] = "forward";
+    char w2[] = "stop";
+    replace(s, w1, w2);
+    ASSERT_STRING("stop to glory stop", s);
+}
+
+void test_replace2(){
+    char s[MAX_STRING_SIZE] = "forward forward forward";
+    char w1[] = "forward";
+    char w2[] = "stop";
+    replace(s, w1, w2);
+    ASSERT_STRING("stop stop stop", s);
+}
+
+void test_replace3(){
+    char s[MAX_STRING_SIZE] = "hello stop";
+    char w1[] = "stop";
+    char w2[] = "forward";
+    replace(s, w1, w2);
+    ASSERT_STRING("hello forward", s);
+}
+
+void test_replace(){
+    test_replace1();
+    test_replace2();
+    test_replace3();
+}
+
 void test_function__string(){
     test_adjacentEqualLetters();
     test_lettersToStart();
     test_transformDigitsInSpace();
+    test_replace();
 }
 
 int main() {

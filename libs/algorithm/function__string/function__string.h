@@ -35,4 +35,10 @@ bool getWordReverse(char *rbegin, char *rend, WordDescriptor *word);
 //4
 void transformDigitsInSpace(char *s);
 
+//5
+int areWordsEqual(WordDescriptor w1, WordDescriptor w2);
+
+//5
+void replace(char *source, char *w1, char *w2);
+
 #endif //STRUCTURES_FUNCTION__STRING_H
