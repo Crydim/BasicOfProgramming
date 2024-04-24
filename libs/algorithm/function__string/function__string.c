@@ -200,3 +200,34 @@ void printWordsInReverseOrder(char *s) {
         printWord(_bag.words[i]);
     }
 }
+
+//8
+bool isPalindrome(char *begin, char *end) {
+    while (begin < end) {
+        if (*begin != *end)
+            return false;
+        begin++;
+        end--;
+    }
+    return true;
+}
+
+//8
+int countWordsPalindromes(char *s) {
+    int palindromes = 0;
+    char *endS = getEndOfString(s)+1;
+    char *commaPosition = find(s, endS, ',');
+    char *lastWord = findNonSpaceReverse(endS, s);
+    char *currentPosition = findNonSpace(s);
+    while (*currentPosition != '\0') {
+        if (*commaPosition == '\0') {
+            palindromes += isPalindrome(currentPosition,lastWord - 1);
+            currentPosition = endS;
+        } else {
+            palindromes += isPalindrome(currentPosition, commaPosition - 1);
+            currentPosition = commaPosition+1;
+            commaPosition = find(currentPosition, endS, ',');
+        }
+    }
+    return palindromes;
+}

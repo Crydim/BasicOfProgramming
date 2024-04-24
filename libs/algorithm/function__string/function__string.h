@@ -61,5 +61,10 @@ void printWord(WordDescriptor word);
 //7
 void printWordsInReverseOrder(char *s);
 
+//8
+bool isPalindrome(char *begin, char *end);
+
+//8
+int countWordsPalindromes(char *s);
 
 #endif //STRUCTURES_FUNCTION__STRING_H

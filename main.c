@@ -1637,6 +1637,27 @@ void test_printWordsInReverseOrder(){
     test_printWordsInReverseOrder2();
 }
 
+void test_countWordsPalindromes1() {
+    char s[] = "stop";
+    assert(countWordsPalindromes(s) == 0);
+}
+
+void test_countWordsPalindromes2(){
+    char s[] = "civic,radar,level";
+    assert(countWordsPalindromes(s) == 3);
+}
+
+void test_countWordsPalindromes3(){
+    char s[] = "stop,tree";
+    assert(countWordsPalindromes(s) == 0);
+}
+
+void test_countWordsPalindromes(){
+    test_countWordsPalindromes1();
+    test_countWordsPalindromes2();
+    test_countWordsPalindromes3();
+}
+
 void test_function__string(){
     test_adjacentEqualLetters();
     test_lettersToStart();
@@ -1644,6 +1665,7 @@ void test_function__string(){
     test_replace();
     test_areWordsOrdered();
     test_printWordsInReverseOrder();
+    test_countWordsPalindromes();
 }
 
 int main() {
