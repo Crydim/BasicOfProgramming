@@ -348,3 +348,23 @@ bool haveWordsMadeUpSameLetters(char *s) {
               sizeof(char), cmp);
     return isStringHasEqualWords(_stringBuffer);
 }
+
+//15
+void getStringWithoutLastWordAndSamesWithLast(char *s){
+    WordDescriptor lastWord, word;
+    if (!getWordReverse(getEndOfString(s), s-1, &lastWord)){
+        return;
+    }
+    char *beginSearch = s;
+    while (getWord(beginSearch, &word)){
+        if (areWordsEqual(lastWord, word) != 0){
+            s = copy(word.begin, word.end, s);
+            *s++ = ' ';
+        }
+        beginSearch = word.end;
+    }
+    if (findNonSpace(s) != '\0'){
+        s--;
+    }
+    *s = '\0';
+}

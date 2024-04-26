@@ -97,4 +97,7 @@ bool isStringHasEqualWords(char *s);
 //14
 bool haveWordsMadeUpSameLetters(char *s);
 
+//15
+void getStringWithoutLastWordAndSamesWithLast(char *s);
+
 #endif //STRUCTURES_FUNCTION__STRING_H

@@ -1796,6 +1796,30 @@ void test_haveWordsMadeUpSameLetters(){
     test_haveWordsMadeUpSameLetters3();
 }
 
+void test_getStringWithoutLastWordAndSamesWithLast1(){
+    char s[] = "stop getting over here stop stop";
+    getStringWithoutLastWordAndSamesWithLast(s);
+    ASSERT_STRING("getting over here", s);
+}
+
+void test_getStringWithoutLastWordAndSamesWithLast2(){
+    char s[] = "forward to glory";
+    getStringWithoutLastWordAndSamesWithLast(s);
+    ASSERT_STRING("forward to", s);
+}
+
+void test_getStringWithoutLastWordAndSamesWithLast3(){
+    char s[] = "";
+    getStringWithoutLastWordAndSamesWithLast(s);
+    ASSERT_STRING("", s);
+}
+
+void test_getStringWithoutLastWordAndSamesWithLast(){
+    test_getStringWithoutLastWordAndSamesWithLast1();
+    test_getStringWithoutLastWordAndSamesWithLast2();
+    test_getStringWithoutLastWordAndSamesWithLast3();
+}
+
 void test_function__string(){
     test_adjacentEqualLetters();
     test_lettersToStart();
@@ -1810,6 +1834,7 @@ void test_function__string(){
     test_lastWordInFirstStringIsInSecondString();
     test_isStringHasEqualWords();
     test_haveWordsMadeUpSameLetters();
+    test_getStringWithoutLastWordAndSamesWithLast();
 }
 
 
