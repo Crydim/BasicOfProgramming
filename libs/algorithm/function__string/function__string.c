@@ -368,3 +368,26 @@ void getStringWithoutLastWordAndSamesWithLast(char *s){
     }
     *s = '\0';
 }
+
+//16
+WordDescriptor findWordPreviousFirstWordInString1InString2(char *string1, char *string2){
+    getBagOfWords(&_bag, string1);
+    getBagOfWords(&_bag2, string2);
+    WordDescriptor word = {NULL, NULL};
+    int condition = -1;
+    for (int i = 0; i < _bag.size; i++){
+        for (int j = 0; j < _bag2.size; j++){
+            condition = areWordsEqual(_bag.words[i], _bag2.words[j]);
+            if (condition == 0){
+                if (i != 0){
+                    return _bag.words[i-1];
+                }
+                break;
+            }
+        }
+        if (condition == 0){
+            break;
+        }
+    }
+    return word;
+}

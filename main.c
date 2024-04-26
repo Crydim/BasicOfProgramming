@@ -1820,6 +1820,49 @@ void test_getStringWithoutLastWordAndSamesWithLast(){
     test_getStringWithoutLastWordAndSamesWithLast3();
 }
 
+void test_findWordPreviousFirstWordInString1InString21(){
+    char s1[] = "first into sea and lake";
+    char s2[] = "getting second into the sea";
+    WordDescriptor word = findWordPreviousFirstWordInString1InString2(s1, s2);
+    char res [MAX_STRING_SIZE];
+    wordDescriptorToString(word, res);
+    ASSERT_STRING("first", res);
+}
+
+void test_findWordPreviousFirstWordInString1InString22(){
+    char s1[] = "first into sea and lake";
+    char s2[] = "getting first into the sea";
+    WordDescriptor word = findWordPreviousFirstWordInString1InString2(s1, s2);
+    char res [MAX_STRING_SIZE];
+    wordDescriptorToString(word, res);
+    ASSERT_STRING("", res);
+}
+
+void test_findWordPreviousFirstWordInString1InString23(){
+    char s1[] = "first into sea and lake";
+    char s2[] = "gooder lake has more fish";
+    WordDescriptor word = findWordPreviousFirstWordInString1InString2(s1, s2);
+    char res [MAX_STRING_SIZE];
+    wordDescriptorToString(word, res);
+    ASSERT_STRING("and", res);
+}
+
+void test_findWordPreviousFirstWordInString1InString24(){
+    char s1[] = "";
+    char s2[] = "";
+    WordDescriptor word = findWordPreviousFirstWordInString1InString2(s1, s2);
+    char res [MAX_STRING_SIZE];
+    wordDescriptorToString(word, res);
+    ASSERT_STRING("", res);
+}
+
+void test_findWordPreviousFirstWordInString1InString2(){
+    test_findWordPreviousFirstWordInString1InString21();
+    test_findWordPreviousFirstWordInString1InString22();
+    test_findWordPreviousFirstWordInString1InString23();
+    test_findWordPreviousFirstWordInString1InString24();
+}
+
 void test_function__string(){
     test_adjacentEqualLetters();
     test_lettersToStart();
@@ -1835,8 +1878,8 @@ void test_function__string(){
     test_isStringHasEqualWords();
     test_haveWordsMadeUpSameLetters();
     test_getStringWithoutLastWordAndSamesWithLast();
+    test_findWordPreviousFirstWordInString1InString2();
 }
-
 
 int main() {
     vector a = createVector(5);

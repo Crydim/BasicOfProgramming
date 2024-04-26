@@ -100,4 +100,7 @@ bool haveWordsMadeUpSameLetters(char *s);
 //15
 void getStringWithoutLastWordAndSamesWithLast(char *s);
 
+//16
+WordDescriptor findWordPreviousFirstWordInString1InString2(char *string1, char *string2);
+
 #endif //STRUCTURES_FUNCTION__STRING_H
