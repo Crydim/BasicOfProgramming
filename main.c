@@ -1712,6 +1712,18 @@ void test_reverseWordOrder(){
     test_reverseWordOrder3();
 }
 
+void testAll_getWordBeforeFirstWordWithA() {
+    WordDescriptor word;
+    char s1[] = "";
+    assert(getWordBeforeFirstWordWithA(s1, &word.begin, &word.end)== EMPTY_STRING);
+    char s2[] = "ABRDC";
+    assert(getWordBeforeFirstWordWithA(s2, &word.begin, &word.end)== FIRST_WORD_WITH_A);
+    char s3[] = "BCWQ A";
+    assert(getWordBeforeFirstWordWithA(s3, &word.begin, &word.end)== WORD_FOUND);
+    char s4[] = "B QD WEC YRX OW IUWR";
+    assert(getWordBeforeFirstWordWithA(s4, &word.begin, &word.end) == NOT_FOUND_A_WORD_WITH_A);
+}
+
 void test_function__string(){
     test_adjacentEqualLetters();
     test_lettersToStart();
@@ -1722,6 +1734,7 @@ void test_function__string(){
     test_countWordsPalindromes();
     test_alternatingWordsInString();
     test_reverseWordOrder();
+    testAll_getWordBeforeFirstWordWithA();
 }
 
 int main() {

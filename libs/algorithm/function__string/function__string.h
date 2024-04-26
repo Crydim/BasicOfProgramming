@@ -73,4 +73,15 @@ char *alternatingWordsInString(char *string1, char *string2, char *s);
 //10
 void reverseWordOrder(char *string);
 
+//11
+typedef enum WordBeforeFirstWordWithAReturnCode {
+    FIRST_WORD_WITH_A,
+    NOT_FOUND_A_WORD_WITH_A,
+    WORD_FOUND,
+    EMPTY_STRING
+} WordBeforeFirstWordWithAReturnCode;
+
+//11
+WordBeforeFirstWordWithAReturnCode getWordBeforeFirstWordWithA(char *s, char **beginWordBefore, char **endWordBefore);
+
 #endif //STRUCTURES_FUNCTION__STRING_H

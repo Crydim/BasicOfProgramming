@@ -271,3 +271,25 @@ void reverseWordOrder(char *string) {
         --string;
     *string = '\0';
 }
+
+//11
+WordBeforeFirstWordWithAReturnCode getWordBeforeFirstWordWithA(char *s, char **beginWordBefore, char **endWordBefore) {
+    WordDescriptor word;
+    char *begin = s;
+    WordDescriptor nextWord;
+    if (!getWord(begin, &word))
+        return EMPTY_STRING;
+    else if (find(word.begin, word.end, 'A') != word.end || find(word.begin, word.end, 'a') != word.end)
+        return FIRST_WORD_WITH_A;
+    while (getWord(begin, &nextWord)) {
+        if (find(nextWord.begin, nextWord.end, 'A') != nextWord.end ||
+            find(nextWord.begin, nextWord.end, 'a') != nextWord.end) {
+            *beginWordBefore = word.begin;
+            *endWordBefore = word.end;
+            return WORD_FOUND;
+        }
+        begin = word.end;
+        word = nextWord;
+    }
+    return NOT_FOUND_A_WORD_WITH_A;
+}
