@@ -1754,6 +1754,27 @@ void test_lastWordInFirstStringIsInSecondString(){
     test_lastWordInFirstStringIsInSecondString3();
 }
 
+void test_isStringHasEqualWords1(){
+    char s[] = "Hello my friend Hello";
+    assert(isStringHasEqualWords(s) == true);
+}
+
+void test_isStringHasEqualWords2(){
+    char s[] = "Hello my friend";
+    assert(isStringHasEqualWords(s) == false);
+}
+
+void test_isStringHasEqualWords3(){
+    char s[] = "";
+    assert(isStringHasEqualWords(s) == false);
+}
+
+void test_isStringHasEqualWords(){
+    test_isStringHasEqualWords1();
+    test_isStringHasEqualWords2();
+    test_isStringHasEqualWords3();
+}
+
 void test_function__string(){
     test_adjacentEqualLetters();
     test_lettersToStart();
@@ -1766,6 +1787,7 @@ void test_function__string(){
     test_reverseWordOrder();
     testAll_getWordBeforeFirstWordWithA();
     test_lastWordInFirstStringIsInSecondString();
+    test_isStringHasEqualWords();
 }
 
 
