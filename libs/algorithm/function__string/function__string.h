@@ -84,4 +84,10 @@ typedef enum WordBeforeFirstWordWithAReturnCode {
 //11
 WordBeforeFirstWordWithAReturnCode getWordBeforeFirstWordWithA(char *s, char **beginWordBefore, char **endWordBefore);
 
+//12
+void wordDescriptorToString(WordDescriptor word, char *destination);
+
+//12
+WordDescriptor lastWordInFirstStringIsInSecondString(char *string1, char *string2);
+
 #endif //STRUCTURES_FUNCTION__STRING_H

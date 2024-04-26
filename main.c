@@ -1737,6 +1737,36 @@ void test_function__string(){
     testAll_getWordBeforeFirstWordWithA();
 }
 
+void test_lastWordInFirstStringIsInSecondString1(){
+    char s1[MAX_STRING_SIZE] = "Hello time to stop";
+    char s2[MAX_STRING_SIZE] = "No stop is not exit";
+    char s3[MAX_STRING_SIZE];
+    wordDescriptorToString(lastWordInFirstStringIsInSecondString(s1, s2), s3);
+    ASSERT_STRING("stop", s3);
+}
+
+void test_lastWordInFirstStringIsInSecondString2(){
+    char s1[MAX_STRING_SIZE] = "";
+    char s2[MAX_STRING_SIZE] = "";
+    char s3[MAX_STRING_SIZE];
+    wordDescriptorToString(lastWordInFirstStringIsInSecondString(s1, s2), s3);
+    ASSERT_STRING("", s3);
+}
+
+void test_lastWordInFirstStringIsInSecondString3(){
+    char s1[MAX_STRING_SIZE] = "Forward to glory";
+    char s2[MAX_STRING_SIZE] = "Stop it is not to glory";
+    char s3[MAX_STRING_SIZE];
+    wordDescriptorToString(lastWordInFirstStringIsInSecondString(s1, s2), s3);
+    ASSERT_STRING("glory", s3);
+}
+
+void test_lastWordInFirstStringIsInSecondString(){
+    test_lastWordInFirstStringIsInSecondString1();
+    test_lastWordInFirstStringIsInSecondString2();
+    test_lastWordInFirstStringIsInSecondString3();
+}
+
 int main() {
     vector a = createVector(5);
     reserve(&a, 5);
@@ -1746,5 +1776,6 @@ int main() {
     test_string_();
     test_function__string();
     test_lettersToStart();
+    test_lastWordInFirstStringIsInSecondString();
     return 0;
 }

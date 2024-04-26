@@ -293,3 +293,25 @@ WordBeforeFirstWordWithAReturnCode getWordBeforeFirstWordWithA(char *s, char **b
     }
     return NOT_FOUND_A_WORD_WITH_A;
 }
+
+//12
+void wordDescriptorToString(WordDescriptor word, char *destination) {
+    *copy(word.begin, word.end, destination) = '\0';
+}
+
+//12
+WordDescriptor lastWordInFirstStringIsInSecondString(char *string1, char *string2) {
+    getBagOfWords(&_bag, string1);
+    for (int i = _bag.size - 1; i >= 0; --i) {
+        char *beginSearch = string2;
+        WordDescriptor wordSting2;
+        while(getWord(beginSearch, &wordSting2)) {
+            if (areWordsEqual(_bag.words[i], wordSting2) == 0) {
+                return _bag.words[i];
+            }
+            beginSearch = wordSting2.end;
+        }
+    }
+    WordDescriptor word = {NULL, NULL};
+    return word;
+}
