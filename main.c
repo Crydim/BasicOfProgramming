@@ -1775,6 +1775,27 @@ void test_isStringHasEqualWords(){
     test_isStringHasEqualWords3();
 }
 
+void test_haveWordsMadeUpSameLetters1(){
+    char s[] = "are";
+    assert(haveWordsMadeUpSameLetters(s) == false);
+}
+
+void test_haveWordsMadeUpSameLetters2(){
+    char s[] = "stop lift it";
+    assert(haveWordsMadeUpSameLetters(s) == false);
+}
+
+void test_haveWordsMadeUpSameLetters3(){
+    char s[] = "officer post has stop";
+    assert(haveWordsMadeUpSameLetters(s) == true);
+}
+
+void test_haveWordsMadeUpSameLetters(){
+    test_haveWordsMadeUpSameLetters1();
+    test_haveWordsMadeUpSameLetters2();
+    test_haveWordsMadeUpSameLetters3();
+}
+
 void test_function__string(){
     test_adjacentEqualLetters();
     test_lettersToStart();
@@ -1788,6 +1809,7 @@ void test_function__string(){
     testAll_getWordBeforeFirstWordWithA();
     test_lastWordInFirstStringIsInSecondString();
     test_isStringHasEqualWords();
+    test_haveWordsMadeUpSameLetters();
 }
 
 

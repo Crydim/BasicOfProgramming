@@ -333,3 +333,18 @@ bool isStringHasEqualWords(char *s){
     }
     return false;
 }
+
+//14
+int cmp(const void *a, const void *b) {
+    return *(const char *) a - *(const char *) b;
+}
+
+//14
+bool haveWordsMadeUpSameLetters(char *s) {
+    *copy(s, getEndOfString(s)+1, _stringBuffer) = '\0';
+    getBagOfWords(&_bag, _stringBuffer);
+    for (size_t i = 0; i < _bag.size; i++)
+        qsort(_bag.words[i].begin, _bag.words[i].end - _bag.words[i].begin,
+              sizeof(char), cmp);
+    return isStringHasEqualWords(_stringBuffer);
+}

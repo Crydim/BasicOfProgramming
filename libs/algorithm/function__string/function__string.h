@@ -1,6 +1,7 @@
 #include "string.h"
 #include <stdbool.h>
 #include <stdio.h>
+#include <stdlib.h>
 #define MAX_STRING_SIZE 100
 #define MAX_N_WORDS_IN_STRING 100
 #define MAX_WORD_SIZE 20
@@ -92,5 +93,8 @@ WordDescriptor lastWordInFirstStringIsInSecondString(char *string1, char *string
 
 //13
 bool isStringHasEqualWords(char *s);
+
+//14
+bool haveWordsMadeUpSameLetters(char *s);
 
 #endif //STRUCTURES_FUNCTION__STRING_H
