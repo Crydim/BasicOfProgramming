@@ -1724,19 +1724,6 @@ void testAll_getWordBeforeFirstWordWithA() {
     assert(getWordBeforeFirstWordWithA(s4, &word.begin, &word.end) == NOT_FOUND_A_WORD_WITH_A);
 }
 
-void test_function__string(){
-    test_adjacentEqualLetters();
-    test_lettersToStart();
-    test_transformDigitsInSpace();
-    test_replace();
-    test_areWordsOrdered();
-    test_printWordsInReverseOrder();
-    test_countWordsPalindromes();
-    test_alternatingWordsInString();
-    test_reverseWordOrder();
-    testAll_getWordBeforeFirstWordWithA();
-}
-
 void test_lastWordInFirstStringIsInSecondString1(){
     char s1[MAX_STRING_SIZE] = "Hello time to stop";
     char s2[MAX_STRING_SIZE] = "No stop is not exit";
@@ -1767,6 +1754,21 @@ void test_lastWordInFirstStringIsInSecondString(){
     test_lastWordInFirstStringIsInSecondString3();
 }
 
+void test_function__string(){
+    test_adjacentEqualLetters();
+    test_lettersToStart();
+    test_transformDigitsInSpace();
+    test_replace();
+    test_areWordsOrdered();
+    test_printWordsInReverseOrder();
+    test_countWordsPalindromes();
+    test_alternatingWordsInString();
+    test_reverseWordOrder();
+    testAll_getWordBeforeFirstWordWithA();
+    test_lastWordInFirstStringIsInSecondString();
+}
+
+
 int main() {
     vector a = createVector(5);
     reserve(&a, 5);
@@ -1775,7 +1777,5 @@ int main() {
     test_function_matrix();
     test_string_();
     test_function__string();
-    test_lettersToStart();
-    test_lastWordInFirstStringIsInSecondString();
     return 0;
 }

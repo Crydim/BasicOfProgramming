@@ -90,4 +90,7 @@ void wordDescriptorToString(WordDescriptor word, char *destination);
 //12
 WordDescriptor lastWordInFirstStringIsInSecondString(char *string1, char *string2);
 
+//13
+bool isStringHasEqualWords(char *s);
+
 #endif //STRUCTURES_FUNCTION__STRING_H

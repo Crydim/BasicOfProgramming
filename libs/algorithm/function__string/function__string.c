@@ -315,3 +315,21 @@ WordDescriptor lastWordInFirstStringIsInSecondString(char *string1, char *string
     WordDescriptor word = {NULL, NULL};
     return word;
 }
+
+//13
+bool isStringHasEqualWords(char *s){
+    getBagOfWords(&_bag, s);
+    char *beginSearch = s;
+    WordDescriptor word;
+    int counter = 0;
+    while(getWord(beginSearch, &word)){
+        for (int i = 0; i < _bag.size; i++){
+            if (areWordsEqual(_bag.words[i], word) == 0 && i != counter){
+                return true;
+            }
+        }
+        counter++;
+        beginSearch = word.end;
+    }
+    return false;
+}
