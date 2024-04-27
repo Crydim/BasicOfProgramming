@@ -1887,6 +1887,7 @@ void test_removePalindromes(){
     test_removePalindromes3();
 }
 
+<<<<<<< HEAD
 void test_addStringWithLowerCountWords1(){
     char s1[MAX_STRING_SIZE] = "stop fating";
     char s2[MAX_STRING_SIZE] = "make it easy";
@@ -1914,7 +1915,9 @@ void test_addStringWithLowerCountWords(){
     test_addStringWithLowerCountWords3();
 }
 
-void test_function__string(){
+=======
+>>>>>>> d16b7d0b7b48f98e4f85707be3db3a84b909f411
+void test_function__string() {
     test_adjacentEqualLetters();
     test_lettersToStart();
     test_transformDigitsInSpace();
@@ -1933,7 +1936,6 @@ void test_function__string(){
     test_removePalindromes();
     test_addStringWithLowerCountWords();
 }
-
 int main() {
     vector a = createVector(5);
     reserve(&a, 5);

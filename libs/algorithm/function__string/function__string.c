@@ -392,7 +392,10 @@ WordDescriptor findWordPreviousFirstWordInString1InString2(char *string1, char *
     return word;
 }
 
+<<<<<<< HEAD
 //17
+=======
+>>>>>>> d16b7d0b7b48f98e4f85707be3db3a84b909f411
 void removePalindromes(char *s){
     char *beginSearch = s;
     char *result = _stringBuffer;
@@ -408,6 +411,7 @@ void removePalindromes(char *s){
     s = copy(beginCopy, result, s);
     s--;
     *s = '\0';
+<<<<<<< HEAD
 }
 
 //18
@@ -433,4 +437,6 @@ void addStringWithLowerCountWords(char *s1, char *s2){
         s1--;
         *s1 = '\0';
     }
+=======
+>>>>>>> d16b7d0b7b48f98e4f85707be3db3a84b909f411
 }
