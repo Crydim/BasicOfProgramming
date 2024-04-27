@@ -1887,6 +1887,33 @@ void test_removePalindromes(){
     test_removePalindromes3();
 }
 
+void test_addStringWithLowerCountWords1(){
+    char s1[MAX_STRING_SIZE] = "stop fating";
+    char s2[MAX_STRING_SIZE] = "make it easy";
+    addStringWithLowerCountWords(s1, s2);
+    ASSERT_STRING("stop fating easy", s1);
+}
+
+void test_addStringWithLowerCountWords2(){
+    char s1[MAX_STRING_SIZE] = "stop easy fating";
+    char s2[MAX_STRING_SIZE] = "forward to";
+    addStringWithLowerCountWords(s1, s2);
+    ASSERT_STRING("forward to fating", s2);
+}
+
+void test_addStringWithLowerCountWords3(){
+    char s1[MAX_STRING_SIZE] = "";
+    char s2[MAX_STRING_SIZE] = "";
+    addStringWithLowerCountWords(s1, s2);
+    ASSERT_STRING("", s1);
+}
+
+void test_addStringWithLowerCountWords(){
+    test_addStringWithLowerCountWords1();
+    test_addStringWithLowerCountWords2();
+    test_addStringWithLowerCountWords3();
+}
+
 void test_function__string(){
     test_adjacentEqualLetters();
     test_lettersToStart();
@@ -1904,6 +1931,7 @@ void test_function__string(){
     test_getStringWithoutLastWordAndSamesWithLast();
     test_findWordPreviousFirstWordInString1InString2();
     test_removePalindromes();
+    test_addStringWithLowerCountWords();
 }
 
 int main() {

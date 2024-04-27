@@ -392,6 +392,7 @@ WordDescriptor findWordPreviousFirstWordInString1InString2(char *string1, char *
     return word;
 }
 
+//17
 void removePalindromes(char *s){
     char *beginSearch = s;
     char *result = _stringBuffer;
@@ -407,4 +408,29 @@ void removePalindromes(char *s){
     s = copy(beginCopy, result, s);
     s--;
     *s = '\0';
+}
+
+//18
+void addStringWithLowerCountWords(char *s1, char *s2){
+    getBagOfWords(&_bag, s1);
+    getBagOfWords(&_bag2, s2);
+    if (_bag.size > _bag2.size){
+        s2 = _bag2.words[_bag2.size-1].end;
+        *s2++ = ' ';
+        for (int i = _bag2.size; i < _bag.size; i++){
+            s2 = copy(_bag.words[i].begin, _bag.words[i].end, s2);
+            *s2++ = ' ';
+        }
+        s2--;
+        *s2 = '\0';
+    } else if (_bag.size < _bag2.size){
+        s1 = _bag.words[_bag.size-1].end;
+        *s1++ = ' ';
+        for (int i = _bag.size; i < _bag2.size; i++){
+            s1 = copy(_bag2.words[i].begin, _bag2.words[i].end, s1);
+            *s1++ = ' ';
+        }
+        s1--;
+        *s1 = '\0';
+    }
 }
