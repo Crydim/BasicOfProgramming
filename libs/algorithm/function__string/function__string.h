@@ -103,4 +103,7 @@ void getStringWithoutLastWordAndSamesWithLast(char *s);
 //16
 WordDescriptor findWordPreviousFirstWordInString1InString2(char *string1, char *string2);
 
+//17
+void removePalindromes(char *s);
+
 #endif //STRUCTURES_FUNCTION__STRING_H
