@@ -1863,6 +1863,30 @@ void test_findWordPreviousFirstWordInString1InString2(){
     test_findWordPreviousFirstWordInString1InString24();
 }
 
+void test_removePalindromes1(){
+    char s[] = "level to world";
+    removePalindromes(s);
+    ASSERT_STRING("to world", s);
+}
+
+void test_removePalindromes2(){
+    char s[] = "peace to world";
+    removePalindromes(s);
+    ASSERT_STRING("peace to world", s);
+}
+
+void test_removePalindromes3(){
+    char s[] = "";
+    removePalindromes(s);
+    ASSERT_STRING("", s);
+}
+
+void test_removePalindromes(){
+    test_removePalindromes1();
+    test_removePalindromes2();
+    test_removePalindromes3();
+}
+
 void test_function__string(){
     test_adjacentEqualLetters();
     test_lettersToStart();
@@ -1879,6 +1903,7 @@ void test_function__string(){
     test_haveWordsMadeUpSameLetters();
     test_getStringWithoutLastWordAndSamesWithLast();
     test_findWordPreviousFirstWordInString1InString2();
+    test_removePalindromes();
 }
 
 int main() {

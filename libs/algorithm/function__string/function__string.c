@@ -391,3 +391,20 @@ WordDescriptor findWordPreviousFirstWordInString1InString2(char *string1, char *
     }
     return word;
 }
+
+void removePalindromes(char *s){
+    char *beginSearch = s;
+    char *result = _stringBuffer;
+    char *beginCopy = result;
+    WordDescriptor word;
+    while(getWord(beginSearch, &word)){
+        if (!isPalindrome(word.begin, word.end-1)){
+            result = copy(word.begin, word.end, result);
+            *result++ = ' ';
+        }
+        beginSearch = word.end;
+    }
+    s = copy(beginCopy, result, s);
+    s--;
+    *s = '\0';
+}
