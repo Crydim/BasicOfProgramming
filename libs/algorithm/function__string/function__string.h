@@ -106,10 +106,10 @@ WordDescriptor findWordPreviousFirstWordInString1InString2(char *string1, char *
 //17
 void removePalindromes(char *s);
 
-<<<<<<< HEAD
 //18
 void addStringWithLowerCountWords(char *s1, char *s2);
 
-=======
->>>>>>> d16b7d0b7b48f98e4f85707be3db3a84b909f411
+//19
+bool isStringHasAllLettersWord(char *s, WordDescriptor word);
+
 #endif //STRUCTURES_FUNCTION__STRING_H

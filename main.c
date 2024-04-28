@@ -1887,7 +1887,6 @@ void test_removePalindromes(){
     test_removePalindromes3();
 }
 
-<<<<<<< HEAD
 void test_addStringWithLowerCountWords1(){
     char s1[MAX_STRING_SIZE] = "stop fating";
     char s2[MAX_STRING_SIZE] = "make it easy";
@@ -1915,8 +1914,36 @@ void test_addStringWithLowerCountWords(){
     test_addStringWithLowerCountWords3();
 }
 
-=======
->>>>>>> d16b7d0b7b48f98e4f85707be3db3a84b909f411
+void test_isStringHasAllLettersWord1(){
+    WordDescriptor word;
+    char s1[] = "stop to gaming";
+    char s2[] = "got";
+    getWord(s2, &word);
+    assert(isStringHasAllLettersWord(s1, word) == true);
+}
+
+void test_isStringHasAllLettersWord2(){
+    WordDescriptor word;
+    char s1[] = "home to forward";
+    char s2[] = "apple";
+    getWord(s2, &word);
+    assert(isStringHasAllLettersWord(s1, word) == false);
+}
+
+void test_isStringHasAllLettersWord3(){
+    WordDescriptor word;
+    char s1[] = "";
+    char s2[] = "";
+    getWord(s2, &word);
+    assert(isStringHasAllLettersWord(s1, word) == false);
+}
+
+void test_isStringHasAllLettersWord(){
+    test_isStringHasAllLettersWord1();
+    test_isStringHasAllLettersWord2();
+    test_isStringHasAllLettersWord3();
+}
+
 void test_function__string() {
     test_adjacentEqualLetters();
     test_lettersToStart();
@@ -1935,7 +1962,9 @@ void test_function__string() {
     test_findWordPreviousFirstWordInString1InString2();
     test_removePalindromes();
     test_addStringWithLowerCountWords();
+    test_isStringHasAllLettersWord();
 }
+
 int main() {
     vector a = createVector(5);
     reserve(&a, 5);

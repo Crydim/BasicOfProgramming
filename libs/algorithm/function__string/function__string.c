@@ -392,10 +392,7 @@ WordDescriptor findWordPreviousFirstWordInString1InString2(char *string1, char *
     return word;
 }
 
-<<<<<<< HEAD
 //17
-=======
->>>>>>> d16b7d0b7b48f98e4f85707be3db3a84b909f411
 void removePalindromes(char *s){
     char *beginSearch = s;
     char *result = _stringBuffer;
@@ -411,7 +408,6 @@ void removePalindromes(char *s){
     s = copy(beginCopy, result, s);
     s--;
     *s = '\0';
-<<<<<<< HEAD
 }
 
 //18
@@ -437,6 +433,39 @@ void addStringWithLowerCountWords(char *s1, char *s2){
         s1--;
         *s1 = '\0';
     }
-=======
->>>>>>> d16b7d0b7b48f98e4f85707be3db3a84b909f411
+}
+
+//19
+bool isStringHasAllLettersWord(char *s, WordDescriptor word){
+    char *beginSearch = s;
+    char *beginSearchLetters = s;
+    WordDescriptor words;
+    if (*s == '\0' || *word.begin == '\0'){
+        return false;
+    }
+    while(getWord(beginSearch, &words)){
+        s = copy(words.begin, words.end, s);
+        beginSearch = words.end;
+    }
+    *s = '\0';
+    char wordLetters[MAX_STRING_SIZE];
+    char *beginSearchLettersInWord = wordLetters;
+    wordDescriptorToString(word, wordLetters);
+    qsort(beginSearchLetters, getEndOfString(s)+1-beginSearchLetters, sizeof(char ), cmp);
+    qsort(wordLetters, getEndOfString(wordLetters)+1-wordLetters, sizeof(char ), cmp);
+    int counter = 0;
+    adjacentEqualLetters(beginSearch);
+    adjacentEqualLetters(beginSearchLettersInWord);
+    while(*beginSearchLetters != '\0' && *beginSearchLettersInWord != '\0'){
+        if (*beginSearchLetters > *beginSearchLettersInWord){
+            beginSearchLettersInWord++;
+        } else if (*beginSearchLetters < *beginSearchLettersInWord){
+            beginSearchLetters++;
+        } else {
+            beginSearchLetters++;
+            beginSearchLettersInWord++;
+            counter++;
+        }
+    }
+    return strlen_(wordLetters) == counter;
 }
