@@ -97,3 +97,53 @@ void transformNumbersWithFixedDotIntoNumbersWithFloatedDot(char *file){
     fclose(result);
     fclose(fp);
 }
+
+//3
+int operation(int a, int b, char symbol_operation){
+    if (symbol_operation == '+'){
+        return a+b;
+    }
+    if (symbol_operation == '-'){
+        return a-b;
+    }
+    if (symbol_operation == '*'){
+        return a*b;
+    }
+    if (symbol_operation == '/'){
+        return a/b;
+    }
+}
+
+//3
+void calculateValueOfExpressionInFile(char *file){
+    FILE *fp = fopen(file, "r");
+    int numbers[5];
+    int quantity_numbers = 0;
+    char operations[2];
+    int quantity_operations = 0;
+    int numbers_and_operations_in_file = 0;
+    while(!feof(fp)){
+        if (numbers_and_operations_in_file % 2 == 0){
+            fscanf(fp, "%d ", &numbers[quantity_numbers++]);
+        } else {
+            fscanf(fp, "%c ", &operations[quantity_operations++]);
+        }
+        numbers_and_operations_in_file++;
+    }
+    fclose(fp);
+    fp = fopen(file, "a");
+    if (quantity_operations > 1){
+        int result = 0;
+        if ((operations[1] == '/' || operations[1] == '*') && operations[0] != '*' && operations[0] != '/'){
+            result = operation(numbers[1], numbers[2], operations[1]);
+            result = operation(numbers[0], result, operations[0]);
+        } else {
+            result = operation(numbers[0], numbers[1], operations[0]);
+            result = operation(result, numbers[2], operations[1]);
+        }
+        fprintf(fp, " = %d", result);
+    } else {
+        fprintf(fp, " = %d", operation(numbers[0], numbers[1], operations[0]));
+    }
+    fclose(fp);
+}

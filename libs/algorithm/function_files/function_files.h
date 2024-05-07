@@ -14,4 +14,10 @@ void transposeMatrixInFile(char *file);
 //2
 void transformNumbersWithFixedDotIntoNumbersWithFloatedDot(char *file);
 
+//3
+int operation(int a, int b, char symbol_operation);
+
+//3
+void calculateValueOfExpressionInFile(char *file);
+
 #endif //STRUCTURES_FUNCTION_FILES_H

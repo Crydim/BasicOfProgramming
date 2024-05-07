@@ -2017,9 +2017,40 @@ void test_transformNumbersWithFixedDotIntoNumbersWithFloatedDot(){
     test_transformNumbersWithFixedDotIntoNumbersWithFloatedDot2();
 }
 
+void test_calculateValueOfExpressionInFile1(){
+    calculateValueOfExpressionInFile("D:\\Clion\\11\\structures\\test_files\\task_3_test_1.txt");
+    assert_TXT("D:\\Clion\\11\\structures\\test_files\\task_3_test_1.txt",
+               "D:\\Clion\\11\\structures\\test_files\\task_3_test_1_result.txt", "calculateValueOfExpressionInFile");
+    copyFile("D:\\Clion\\11\\structures\\test_files\\task_3_test_1_cop.txt",
+             "D:\\Clion\\11\\structures\\test_files\\task_3_test_1.txt");
+}
+
+void test_calculateValueOfExpressionInFile2(){
+    calculateValueOfExpressionInFile("D:\\Clion\\11\\structures\\test_files\\task_3_test_2.txt");
+    assert_TXT("D:\\Clion\\11\\structures\\test_files\\task_3_test_2.txt",
+               "D:\\Clion\\11\\structures\\test_files\\task_3_test_2_result.txt", "calculateValueOfExpressionInFile");
+    copyFile("D:\\Clion\\11\\structures\\test_files\\task_3_test_2_cop.txt",
+             "D:\\Clion\\11\\structures\\test_files\\task_3_test_2.txt");
+}
+
+void test_calculateValueOfExpressionInFile3(){
+    calculateValueOfExpressionInFile("D:\\Clion\\11\\structures\\test_files\\task_3_test_3.txt");
+    assert_TXT("D:\\Clion\\11\\structures\\test_files\\task_3_test_3.txt",
+               "D:\\Clion\\11\\structures\\test_files\\task_3_test_3_result.txt", "calculateValueOfExpressionInFile");
+    copyFile("D:\\Clion\\11\\structures\\test_files\\task_3_test_3_cop.txt",
+             "D:\\Clion\\11\\structures\\test_files\\task_3_test_3.txt");
+}
+
+void test_calculateValueOfExpressionInFile(){
+    test_calculateValueOfExpressionInFile1();
+    test_calculateValueOfExpressionInFile2();
+    test_calculateValueOfExpressionInFile3();
+}
+
 void test_function_files(){
     test_transposeMatrixInFile();
     test_transformNumbersWithFixedDotIntoNumbersWithFloatedDot();
+    test_calculateValueOfExpressionInFile();
 }
 
 int main() {
