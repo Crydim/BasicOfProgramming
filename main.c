@@ -2047,10 +2047,41 @@ void test_calculateValueOfExpressionInFile(){
     test_calculateValueOfExpressionInFile3();
 }
 
+void test_deleteInFIleWordsWithoutGivenSymbols1(){
+    deleteInFIleWordsWithoutGivenSymbols("D:\\Clion\\11\\structures\\test_files\\task_4_test_1.txt", "feg");
+    assert_TXT("D:\\Clion\\11\\structures\\test_files\\task_4_test_1.txt",
+               "D:\\Clion\\11\\structures\\test_files\\task_4_test_1_result.txt", "deleteInFIleWordsWithoutGivenSymbols");
+    copyFile("D:\\Clion\\11\\structures\\test_files\\task_4_test_1_cop.txt",
+             "D:\\Clion\\11\\structures\\test_files\\task_4_test_1.txt");
+}
+
+void test_deleteInFIleWordsWithoutGivenSymbols2(){
+    deleteInFIleWordsWithoutGivenSymbols("D:\\Clion\\11\\structures\\test_files\\task_4_test_2.txt", "mue");
+    assert_TXT("D:\\Clion\\11\\structures\\test_files\\task_4_test_2.txt",
+               "D:\\Clion\\11\\structures\\test_files\\task_4_test_2_result.txt", "deleteInFIleWordsWithoutGivenSymbols");
+    copyFile("D:\\Clion\\11\\structures\\test_files\\task_4_test_2_cop.txt",
+             "D:\\Clion\\11\\structures\\test_files\\task_4_test_2.txt");
+}
+
+void test_deleteInFIleWordsWithoutGivenSymbols3(){
+    deleteInFIleWordsWithoutGivenSymbols("D:\\Clion\\11\\structures\\test_files\\task_4_test_3.txt", "fzx");
+    assert_TXT("D:\\Clion\\11\\structures\\test_files\\task_4_test_3.txt",
+               "D:\\Clion\\11\\structures\\test_files\\task_4_test_3_result.txt", "deleteInFIleWordsWithoutGivenSymbols");
+    copyFile("D:\\Clion\\11\\structures\\test_files\\task_4_test_3_cop.txt",
+             "D:\\Clion\\11\\structures\\test_files\\task_4_test_3.txt");
+}
+
+void test_deleteInFIleWordsWithoutGivenSymbols(){
+    test_deleteInFIleWordsWithoutGivenSymbols1();
+    test_deleteInFIleWordsWithoutGivenSymbols2();
+    test_deleteInFIleWordsWithoutGivenSymbols3();
+}
+
 void test_function_files(){
     test_transposeMatrixInFile();
     test_transformNumbersWithFixedDotIntoNumbersWithFloatedDot();
     test_calculateValueOfExpressionInFile();
+    test_deleteInFIleWordsWithoutGivenSymbols();
 }
 
 int main() {

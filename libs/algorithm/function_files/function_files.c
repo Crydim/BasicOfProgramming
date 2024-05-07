@@ -147,3 +147,43 @@ void calculateValueOfExpressionInFile(char *file){
     }
     fclose(fp);
 }
+
+//4
+void deleteInFIleWordsWithoutGivenSymbols(char *file, char* symbols){
+    FILE* fp;
+    fp = fopen(file, "r");
+    if (fp == NULL){
+        printf("%d", 1);
+        return;
+    }
+    char str_file[MAX_STRING_SIZE];
+    fgets(str_file, MAX_STRING_SIZE, fp);
+    fclose(fp);
+    fp = fopen(file, "w");
+    WordDescriptor word;
+    char *beginSearch = str_file;
+    while (getWord(beginSearch, &word)){
+        bool has_symbols = true;
+        for (char *i = symbols; i < symbols+strlen(symbols); i++){
+            bool is_find = false;
+            for (char *j = word.begin; j < word.end; j++){
+                if (*j == *i){
+                    is_find = true;
+                    break;
+                }
+            }
+            if (!is_find){
+                has_symbols = false;
+                break;
+            }
+        }
+        if (has_symbols){
+            for (char *j = word.begin; j < word.end; j++){
+                fputc(*j, fp);
+            }
+            fputc(' ', fp);
+        }
+        beginSearch = word.end;
+    }
+    fclose(fp);
+}
