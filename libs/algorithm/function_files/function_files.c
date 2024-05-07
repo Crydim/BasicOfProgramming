@@ -71,3 +71,29 @@ void transposeMatrixInFile(char *file){
     copyFile("task1.txt", file);
 
 }
+
+//2
+void transformNumbersWithFixedDotIntoNumbersWithFloatedDot(char *file){
+    FILE* fp, *result;
+    fp = fopen(file, "r");
+    if (fp == NULL) {
+        printf("File opening error\n");
+        return;
+    }
+    result = fopen("task2.txt", "w");
+    if (result == NULL) {
+        printf("File creation error\n");
+        return;
+    }
+    while (!feof(fp)){
+        float n;
+        fscanf(fp, "%f ", &n);
+        if (feof(fp)){
+            break;
+        }
+        fprintf(result, "%.2f ", n);
+    }
+    copyFile("task2.txt", file);
+    fclose(result);
+    fclose(fp);
+}

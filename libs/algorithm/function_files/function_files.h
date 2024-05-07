@@ -11,4 +11,7 @@ void copyFile(const char* sourceFile, const char* destinationFile);
 //1
 void transposeMatrixInFile(char *file);
 
+//2
+void transformNumbersWithFixedDotIntoNumbersWithFloatedDot(char *file);
+
 #endif //STRUCTURES_FUNCTION_FILES_H

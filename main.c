@@ -1982,7 +1982,6 @@ void test_transposeMatrixInFile2(){
              "D:\\Clion\\11\\structures\\test_files\\task_1_test_2.txt");
 }
 
-
 void test_transposeMatrixInFile3(){
     transposeMatrixInFile("D:\\Clion\\11\\structures\\test_files\\task_1_test_3.txt");
     assert_TXT("D:\\Clion\\11\\structures\\test_files\\task_1_test_3.txt",
@@ -1991,10 +1990,36 @@ void test_transposeMatrixInFile3(){
              "D:\\Clion\\11\\structures\\test_files\\task_1_test_3.txt");
 }
 
-void test_function_files(){
+void test_transposeMatrixInFile(){
     test_transposeMatrixInFile1();
     test_transposeMatrixInFile2();
     test_transposeMatrixInFile3();
+}
+
+void test_transformNumbersWithFixedDotIntoNumbersWithFloatedDot1(){
+    transformNumbersWithFixedDotIntoNumbersWithFloatedDot("D:\\Clion\\11\\structures\\test_files\\task_2_test_1.txt");
+    assert_TXT("D:\\Clion\\11\\structures\\test_files\\task_2_test_1.txt",
+               "D:\\Clion\\11\\structures\\test_files\\task_2_test_1_result.txt", "transformNumbersWithFixedDotIntoNumbersWithFloatedDot");
+    copyFile("D:\\Clion\\11\\structures\\test_files\\task_2_test_1_cop.txt",
+             "D:\\Clion\\11\\structures\\test_files\\task_2_test_1.txt");
+}
+
+void test_transformNumbersWithFixedDotIntoNumbersWithFloatedDot2(){
+    transformNumbersWithFixedDotIntoNumbersWithFloatedDot("D:\\Clion\\11\\structures\\test_files\\task_2_test_2.txt");
+    assert_TXT("D:\\Clion\\11\\structures\\test_files\\task_2_test_2.txt",
+               "D:\\Clion\\11\\structures\\test_files\\task_2_test_2_result.txt", "transformNumbersWithFixedDotIntoNumbersWithFloatedDot");
+    copyFile("D:\\Clion\\11\\structures\\test_files\\task_2_test_2_cop.txt",
+             "D:\\Clion\\11\\structures\\test_files\\task_2_test_2.txt");
+}
+
+void test_transformNumbersWithFixedDotIntoNumbersWithFloatedDot(){
+    test_transformNumbersWithFixedDotIntoNumbersWithFloatedDot1();
+    test_transformNumbersWithFixedDotIntoNumbersWithFloatedDot2();
+}
+
+void test_function_files(){
+    test_transposeMatrixInFile();
+    test_transformNumbersWithFixedDotIntoNumbersWithFloatedDot();
 }
 
 int main() {
