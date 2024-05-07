@@ -13,6 +13,10 @@ add_executable(structures main.c
         libs/algorithm/function__string/function__string.h
         libs/algorithm/function__string/function__string.h
         libs/algorithm/function__string/function__string.c
+        libs/algorithm/function_files/function_files.h
+        libs/algorithm/function_files/function_files.h
+        libs/algorithm/function_files/function_files.c
+        libs/algorithm/function_files/function_files.c
 )
 
 include_directories(libs/algorithm/array)
@@ -21,3 +25,4 @@ include_directories(libs/data_structures/vector)
 include_directories(libs/data_structures/matrix)
 include_directories(libs/data_structures/string)
 include_directories(libs/algorithm/function__string)
+include_directories(libs/algorithm/function_files)

@@ -4,6 +4,7 @@
 #include <stdio.h>
 #include "function__string.h"
 #include "string_.h"
+#include "function_files.h"
 #define ASSERT_STRING(expected, got) assertString(expected, got, \
 __FILE__, __FUNCTION__, __LINE__)
 #define MAX_STRING_SIZE 100
@@ -1965,13 +1966,40 @@ void test_function__string() {
     test_isStringHasAllLettersWord();
 }
 
+void test_transposeMatrixInFile1(){
+    transposeMatrixInFile("D:\\Clion\\11\\structures\\test_files\\task_1_test_1.txt");
+    assert_TXT("D:\\Clion\\11\\structures\\test_files\\task_1_test_1.txt",
+               "D:\\Clion\\11\\structures\\test_files\\task_1_test_1_result.txt", "transposeMatrixInFile");
+    copyFile("D:\\Clion\\11\\structures\\test_files\\task_1_test_1_cop.txt",
+             "D:\\Clion\\11\\structures\\test_files\\task_1_test_1.txt");
+}
+
+void test_transposeMatrixInFile2(){
+    transposeMatrixInFile("D:\\Clion\\11\\structures\\test_files\\task_1_test_2.txt");
+    assert_TXT("D:\\Clion\\11\\structures\\test_files\\task_1_test_2.txt",
+               "D:\\Clion\\11\\structures\\test_files\\task_1_test_2_result.txt", "transposeMatrixInFile");
+    copyFile("D:\\Clion\\11\\structures\\test_files\\task_1_test_2_cop.txt",
+             "D:\\Clion\\11\\structures\\test_files\\task_1_test_2.txt");
+}
+
+
+void test_transposeMatrixInFile3(){
+    transposeMatrixInFile("D:\\Clion\\11\\structures\\test_files\\task_1_test_3.txt");
+    assert_TXT("D:\\Clion\\11\\structures\\test_files\\task_1_test_3.txt",
+               "D:\\Clion\\11\\structures\\test_files\\task_1_test_3_result.txt", "transposeMatrixInFile");
+    copyFile("D:\\Clion\\11\\structures\\test_files\\task_1_test_3_cop.txt",
+             "D:\\Clion\\11\\structures\\test_files\\task_1_test_3.txt");
+}
+
+void test_function_files(){
+    test_transposeMatrixInFile1();
+    test_transposeMatrixInFile2();
+    test_transposeMatrixInFile3();
+}
+
 int main() {
     vector a = createVector(5);
     reserve(&a, 5);
-    test_vector();
-    test_matrix();
-    test_function_matrix();
-    test_string_();
-    test_function__string();
+    test_function_files();
     return 0;
 }
