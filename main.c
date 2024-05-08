@@ -2128,6 +2128,36 @@ void test_deletePolynomialsWithRootX(){
     test_deletePolynomialsWithRootX2();
 }
 
+void test_sortFileFirstPositiveNumbersSecondNegativeNumbers1(){
+    sortFileFirstPositiveNumbersSecondNegativeNumbers("D:\\Clion\\11\\structures\\test_files\\task_7_test_1.txt");
+    assert_TXT("D:\\Clion\\11\\structures\\test_files\\task_7_test_1.txt",
+               "D:\\Clion\\11\\structures\\test_files\\task_7_test_1_result.txt", "sortFileFirstPositiveNumbersSecondNegativeNumbers");
+    copyFile("D:\\Clion\\11\\structures\\test_files\\task_7_test_1_cop.txt",
+             "D:\\Clion\\11\\structures\\test_files\\task_7_test_1.txt");
+}
+
+void test_sortFileFirstPositiveNumbersSecondNegativeNumbers2(){
+    sortFileFirstPositiveNumbersSecondNegativeNumbers("D:\\Clion\\11\\structures\\test_files\\task_7_test_2.txt");
+    assert_TXT("D:\\Clion\\11\\structures\\test_files\\task_7_test_2.txt",
+               "D:\\Clion\\11\\structures\\test_files\\task_7_test_2_result.txt", "sortFileFirstPositiveNumbersSecondNegativeNumbers");
+    copyFile("D:\\Clion\\11\\structures\\test_files\\task_7_test_2_cop.txt",
+             "D:\\Clion\\11\\structures\\test_files\\task_7_test_2.txt");
+}
+
+void test_sortFileFirstPositiveNumbersSecondNegativeNumbers3(){
+    sortFileFirstPositiveNumbersSecondNegativeNumbers("D:\\Clion\\11\\structures\\test_files\\task_7_test_3.txt");
+    assert_TXT("D:\\Clion\\11\\structures\\test_files\\task_7_test_3.txt",
+               "D:\\Clion\\11\\structures\\test_files\\task_7_test_3_result.txt", "sortFileFirstPositiveNumbersSecondNegativeNumbers");
+    copyFile("D:\\Clion\\11\\structures\\test_files\\task_7_test_3_cop.txt",
+             "D:\\Clion\\11\\structures\\test_files\\task_7_test_3.txt");
+}
+
+void test_sortFileFirstPositiveNumbersSecondNegativeNumbers(){
+    test_sortFileFirstPositiveNumbersSecondNegativeNumbers1();
+    test_sortFileFirstPositiveNumbersSecondNegativeNumbers2();
+    test_sortFileFirstPositiveNumbersSecondNegativeNumbers3();
+}
+
 void test_function_files(){
     test_transposeMatrixInFile();
     test_transformNumbersWithFixedDotIntoNumbersWithFloatedDot();
@@ -2135,6 +2165,7 @@ void test_function_files(){
     test_deleteInFIleWordsWithoutGivenSymbols();
     test_saveMaxWordInEachString();
     test_deletePolynomialsWithRootX();
+    test_sortFileFirstPositiveNumbersSecondNegativeNumbers();
 }
 
 int main() {

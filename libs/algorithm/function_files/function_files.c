@@ -117,6 +117,10 @@ int operation(int a, int b, char symbol_operation){
 //3
 void calculateValueOfExpressionInFile(char *file){
     FILE *fp = fopen(file, "r");
+    if (fp == NULL) {
+        printf("Error opening file\n");
+        exit(-3);
+    }
     int numbers[5];
     int quantity_numbers = 0;
     char operations[2];
@@ -191,6 +195,10 @@ void deleteInFIleWordsWithoutGivenSymbols(char *file, char* symbols){
 //5
 void saveMaxWordInEachString(char *file){
     FILE *fp = fopen(file, "r");
+    if (fp == NULL) {
+        printf("Error opening file\n");
+        exit(-3);
+    }
     char buffer[MAX_STRING_SIZE];
     char *beginCopy = buffer;
     char *beginRemember = buffer;
@@ -276,4 +284,39 @@ void deletePolynomialsWithRootX(char *file, int x){
     copyFile("task6.txt", file);
     fclose(result);
     fclose(fp);
+}
+
+//7
+void sortFileFirstPositiveNumbersSecondNegativeNumbers(char *file){
+    FILE *fp, *result;
+    fp = fopen(file, "rb");
+    if (fp == NULL) {
+        printf("Error opening file\n");
+        exit(-3);
+    }
+    result = fopen("task7.txt", "wb");
+    if (result == NULL) {
+        printf("Error opening file\n");
+        exit(-3);
+    }
+    int positive[1000];
+    int quantity_positive = 0;
+    int negative[1000];
+    int quantity_negative = 0;
+    while(!feof(fp)){
+        int number;
+        fread(&number, sizeof(number), 1, fp);
+        if(number >= 0)
+            positive[quantity_positive++] = number;
+        else
+            negative[quantity_negative++] = number;
+    }
+    fclose(fp);
+    for(int i = 0; i < quantity_positive; i++)
+        fwrite(&positive[i], sizeof(positive[i]), 1, result);
+    for(int i = 0; i < quantity_negative; i++)
+        fwrite(&negative[i], sizeof(negative[i]), 1, result);
+    copyFile("task7.txt", file);
+    fclose(fp);
+    fclose(result);
 }

@@ -33,4 +33,7 @@ int pow_(int a, int n);
 //6
 void deletePolynomialsWithRootX(char *file, int x);
 
+//7
+void sortFileFirstPositiveNumbersSecondNegativeNumbers(char *file);
+
 #endif //STRUCTURES_FUNCTION_FILES_H
