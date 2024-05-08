@@ -1,5 +1,6 @@
 #include "function__string.h"
 #include "matrix.h"
+#include "string_.h"
 #define MAX_FILE_SIZE 1024
 #ifndef STRUCTURES_FUNCTION_FILES_H
 #define STRUCTURES_FUNCTION_FILES_H
@@ -22,5 +23,8 @@ void calculateValueOfExpressionInFile(char *file);
 
 //4
 void deleteInFIleWordsWithoutGivenSymbols(char *file, char* symbols);
+
+//5
+void saveMaxWordInEachString(char *file);
 
 #endif //STRUCTURES_FUNCTION_FILES_H

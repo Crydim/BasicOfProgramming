@@ -2077,11 +2077,43 @@ void test_deleteInFIleWordsWithoutGivenSymbols(){
     test_deleteInFIleWordsWithoutGivenSymbols3();
 }
 
+void test_saveMaxWordInEachString1(){
+    saveMaxWordInEachString("D:\\Clion\\11\\structures\\test_files\\task_5_test_1.txt");
+    assert_TXT("D:\\Clion\\11\\structures\\test_files\\task_5_test_1.txt",
+               "D:\\Clion\\11\\structures\\test_files\\task_5_test_1_result.txt", "saveMaxWordInEachString");
+    copyFile("D:\\Clion\\11\\structures\\test_files\\task_5_test_1_cop.txt",
+             "D:\\Clion\\11\\structures\\test_files\\task_5_test_1.txt");
+}
+
+void test_saveMaxWordInEachString2(){
+    saveMaxWordInEachString("D:\\Clion\\11\\structures\\test_files\\task_5_test_2.txt");
+    assert_TXT("D:\\Clion\\11\\structures\\test_files\\task_5_test_2.txt",
+               "D:\\Clion\\11\\structures\\test_files\\task_5_test_2_result.txt", "saveMaxWordInEachString");
+    copyFile("D:\\Clion\\11\\structures\\test_files\\task_5_test_2_cop.txt",
+             "D:\\Clion\\11\\structures\\test_files\\task_5_test_2.txt");
+}
+
+void test_saveMaxWordInEachString3(){
+    saveMaxWordInEachString("D:\\Clion\\11\\structures\\test_files\\task_5_test_3.txt");
+    assert_TXT("D:\\Clion\\11\\structures\\test_files\\task_5_test_3.txt",
+               "D:\\Clion\\11\\structures\\test_files\\task_5_test_3_result.txt", "saveMaxWordInEachString");
+    copyFile("D:\\Clion\\11\\structures\\test_files\\task_5_test_3_cop.txt",
+             "D:\\Clion\\11\\structures\\test_files\\task_5_test_3.txt");
+}
+
+void test_saveMaxWordInEachString(){
+    test_saveMaxWordInEachString1();
+    test_saveMaxWordInEachString2();
+    test_saveMaxWordInEachString3();
+}
+
+
 void test_function_files(){
     test_transposeMatrixInFile();
     test_transformNumbersWithFixedDotIntoNumbersWithFloatedDot();
     test_calculateValueOfExpressionInFile();
     test_deleteInFIleWordsWithoutGivenSymbols();
+    test_saveMaxWordInEachString();
 }
 
 int main() {

@@ -187,3 +187,40 @@ void deleteInFIleWordsWithoutGivenSymbols(char *file, char* symbols){
     }
     fclose(fp);
 }
+
+//5
+void saveMaxWordInEachString(char *file){
+    FILE *fp = fopen(file, "r");
+    char buffer[MAX_STRING_SIZE];
+    char *beginCopy = buffer;
+    char *beginRemember = buffer;
+    while(!feof(fp)){
+        char str[100];
+        fgets(str, 99, fp);
+        long long max = 0;
+        char max_str[30];
+        WordDescriptor word;
+        char *ptr = str;
+        while(getWord(ptr, &word)){
+            if(word.end - word.begin > max){
+                wordDescriptorToString(word, max_str);
+                max = word.end - word.begin;
+            }
+            ptr = word.end;
+        }
+        beginRemember = copy(max_str, getEndOfString(max_str)+1, beginRemember);
+        *beginRemember++ = ' ';
+    }
+    *beginRemember = '\0';
+    fclose(fp);
+    FILE *fpw = fopen(file, "w");
+    WordDescriptor word;
+    while (getWord(beginCopy, &word)){
+        char max_str[MAX_WORD_SIZE];
+        wordDescriptorToString(word, max_str);
+        fputs(max_str, fpw);
+        fputs("\n", fpw);
+        beginCopy = word.end;
+    }
+    fclose(fpw);
+}
