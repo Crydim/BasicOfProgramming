@@ -2107,6 +2107,26 @@ void test_saveMaxWordInEachString(){
     test_saveMaxWordInEachString3();
 }
 
+void test_deletePolynomialsWithRootX1(){
+    deletePolynomialsWithRootX("D:\\Clion\\11\\structures\\test_files\\task_6_test_1.txt", 2);
+    assert_TXT("D:\\Clion\\11\\structures\\test_files\\task_6_test_1.txt",
+               "D:\\Clion\\11\\structures\\test_files\\task_6_test_1_result.txt", "deletePolynomialsWithRootX");
+    copyFile("D:\\Clion\\11\\structures\\test_files\\task_6_test_1_cop.txt",
+             "D:\\Clion\\11\\structures\\test_files\\task_6_test_1.txt");
+}
+
+void test_deletePolynomialsWithRootX2(){
+    deletePolynomialsWithRootX("D:\\Clion\\11\\structures\\test_files\\task_6_test_2.txt", 4);
+    assert_TXT("D:\\Clion\\11\\structures\\test_files\\task_6_test_2.txt",
+               "D:\\Clion\\11\\structures\\test_files\\task_6_test_2_result.txt", "deletePolynomialsWithRootX");
+    copyFile("D:\\Clion\\11\\structures\\test_files\\task_6_test_2_cop.txt",
+             "D:\\Clion\\11\\structures\\test_files\\task_6_test_2.txt");
+}
+
+void test_deletePolynomialsWithRootX(){
+    test_deletePolynomialsWithRootX1();
+    test_deletePolynomialsWithRootX2();
+}
 
 void test_function_files(){
     test_transposeMatrixInFile();
@@ -2114,6 +2134,7 @@ void test_function_files(){
     test_calculateValueOfExpressionInFile();
     test_deleteInFIleWordsWithoutGivenSymbols();
     test_saveMaxWordInEachString();
+    test_deletePolynomialsWithRootX();
 }
 
 int main() {

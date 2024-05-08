@@ -27,4 +27,10 @@ void deleteInFIleWordsWithoutGivenSymbols(char *file, char* symbols);
 //5
 void saveMaxWordInEachString(char *file);
 
+//6
+int pow_(int a, int n);
+
+//6
+void deletePolynomialsWithRootX(char *file, int x);
+
 #endif //STRUCTURES_FUNCTION_FILES_H

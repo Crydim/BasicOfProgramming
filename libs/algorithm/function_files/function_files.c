@@ -224,3 +224,56 @@ void saveMaxWordInEachString(char *file){
     }
     fclose(fpw);
 }
+
+//6
+int pow_(int a, int n) {
+    int result = 1;
+    while (n > 0) {
+        result *= a;
+        n--;
+    }
+    return result;
+}
+
+//6
+typedef struct{
+    int degree;
+    int coefficient;
+} polynomial;
+
+//6
+void deletePolynomialsWithRootX(char *file, int x){
+    FILE *fp, *result;
+    fp = fopen(file, "rb");
+    if (fp == NULL) {
+        printf("Error opening file\n");
+        exit(-3);
+    }
+    result = fopen("task6.txt", "wb");
+    if (result == NULL) {
+        printf("Error opening file\n");
+        exit(-3);
+    }
+    while(!feof(fp)){
+        polynomial poly;
+        int sum = 0;
+        polynomial polys[100];
+        int size_polys = 0;
+        while (fread(&poly, sizeof (poly), 1, fp)){
+            polys[size_polys++] = poly;
+            int n = poly.degree;
+            sum += poly.coefficient * (pow_(x, n));
+            if (!n){
+                break;
+            }
+        }
+        if (sum != 0){
+            for (int i = 0; i < size_polys; i++){
+                fwrite(&polys[i], sizeof (polys[i]), 1, result);
+            }
+        }
+    }
+    copyFile("task6.txt", file);
+    fclose(result);
+    fclose(fp);
+}
