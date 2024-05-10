@@ -2158,6 +2158,36 @@ void test_sortFileFirstPositiveNumbersSecondNegativeNumbers(){
     test_sortFileFirstPositiveNumbersSecondNegativeNumbers3();
 }
 
+void test_transposeIfNotSymmetricalSquareMatrixInFile1(){
+    transposeIfNotSymmetricalSquareMatrixInFile("D:\\Clion\\11\\structures\\test_files\\task_8_test_1.txt", 3);
+    assert_TXT("D:\\Clion\\11\\structures\\test_files\\task_8_test_1.txt",
+               "D:\\Clion\\11\\structures\\test_files\\task_8_test_1_result.txt", "transposeIfNotSymmetricalSquareMatrixInFile");
+    copyFile("D:\\Clion\\11\\structures\\test_files\\task_8_test_1_cop.txt",
+             "D:\\Clion\\11\\structures\\test_files\\task_8_test_1.txt");
+}
+
+void test_transposeIfNotSymmetricalSquareMatrixInFile2(){
+    transposeIfNotSymmetricalSquareMatrixInFile("D:\\Clion\\11\\structures\\test_files\\task_8_test_2.txt", 3);
+    assert_TXT("D:\\Clion\\11\\structures\\test_files\\task_8_test_2.txt",
+               "D:\\Clion\\11\\structures\\test_files\\task_8_test_2_result.txt", "transposeIfNotSymmetricalSquareMatrixInFile");
+    copyFile("D:\\Clion\\11\\structures\\test_files\\task_8_test_2_cop.txt",
+             "D:\\Clion\\11\\structures\\test_files\\task_8_test_2.txt");
+}
+
+void test_transposeIfNotSymmetricalSquareMatrixInFile3(){
+    transposeIfNotSymmetricalSquareMatrixInFile("D:\\Clion\\11\\structures\\test_files\\task_8_test_3.txt", 3);
+    assert_TXT("D:\\Clion\\11\\structures\\test_files\\task_8_test_3.txt",
+               "D:\\Clion\\11\\structures\\test_files\\task_8_test_3_result.txt", "transposeIfNotSymmetricalSquareMatrixInFile");
+    copyFile("D:\\Clion\\11\\structures\\test_files\\task_8_test_3_cop.txt",
+             "D:\\Clion\\11\\structures\\test_files\\task_8_test_3.txt");
+}
+
+void test_transposeIfNotSymmetricalSquareMatrixInFile(){
+    test_transposeIfNotSymmetricalSquareMatrixInFile1();
+    test_transposeIfNotSymmetricalSquareMatrixInFile2();
+    test_transposeIfNotSymmetricalSquareMatrixInFile3();
+}
+
 void test_function_files(){
     test_transposeMatrixInFile();
     test_transformNumbersWithFixedDotIntoNumbersWithFloatedDot();
@@ -2166,6 +2196,7 @@ void test_function_files(){
     test_saveMaxWordInEachString();
     test_deletePolynomialsWithRootX();
     test_sortFileFirstPositiveNumbersSecondNegativeNumbers();
+    test_transposeIfNotSymmetricalSquareMatrixInFile();
 }
 
 int main() {

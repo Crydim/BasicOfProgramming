@@ -320,3 +320,37 @@ void sortFileFirstPositiveNumbersSecondNegativeNumbers(char *file){
     fclose(fp);
     fclose(result);
 }
+
+//8
+void transposeIfNotSymmetricalSquareMatrixInFile(char *file, int n){
+    FILE *fp, *result;
+    fp = fopen(file, "rb");
+    if (fp == NULL) {
+        printf("Error opening file\n");
+        exit(-3);
+    }
+    result = fopen("task8.txt", "wb");
+    if (result == NULL) {
+        printf("Error opening file\n");
+        exit(-3);
+    }
+    while(!feof(fp)){
+        matrix m = getMemMatrix(n, n);
+        for (int i  = 0; i < n; i++){
+            for(int j = 0; j < n; j++){
+                fread(&m.values[i][j], sizeof (m.values[i][j]), 1 ,fp);
+            }
+        }
+        if (!isSymmetricMatrix(&m)){
+            transposeSquareMatrix(&m);
+        }
+        for (int i  = 0; i < n; i++){
+            for(int j = 0; j < n; j++){
+                fwrite(&m.values[i][j], sizeof (m.values[i][j]), 1 ,result);
+            }
+        }
+    }
+    copyFile("task8.txt", file);
+    fclose(fp);
+    fclose(result);
+}

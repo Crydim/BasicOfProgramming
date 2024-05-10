@@ -2,6 +2,7 @@
 #include <stdbool.h>
 #include <stdlib.h>
 #include <string.h>
+#include <stdio.h>
 
 void swap (int *a, int *b){
     int t = *a;
@@ -70,8 +71,9 @@ void swapColumns(matrix m, int j1, int j2){
 
 matrix getMemMatrix(int nRows, int nCols) {
     int **values = (int **) malloc(sizeof(int*) * nRows);
-    for (int i = 0; i < nRows; i++)
+    for (int i = 0; i < nRows; i++) {
         values[i] = (int *) malloc(sizeof(int) * nCols);
+    }
     return (matrix){values, nRows, nCols};
 }
 
