@@ -400,3 +400,56 @@ void formTeamOfBestSportsmen(char *file, int n){
     fclose(fp);
     fclose(result);
 }
+
+//10
+typedef struct {
+    char *name;
+    int unit_price;
+    int all_price;
+    int amount;
+} products;
+
+//10
+typedef struct {
+    char *name;
+    int amount;
+} orderedProducts;
+
+//10
+void updateFileWithOrderedProducts(char *file_f, char *file_g) {
+    FILE *fp_f, *fp_g, *result;
+    fp_f = fopen(file_f, "rb");
+    if (fp_f == NULL) {
+        printf("Error opening file F\n");
+        exit(-3);
+    }
+    fp_g = fopen(file_g, "rb");
+    if (fp_g == NULL) {
+        printf("Error opening file G\n");
+        exit(-3);
+    }
+    result = fopen("task10.txt", "wb");
+    if (result == NULL) {
+        printf("Error opening file \n");
+        fclose(fp_f);
+        fclose(fp_g);
+        exit(-3);
+    }
+    products stored_stuff;
+    orderedProducts ordered_stuff;
+    while (fread(&stored_stuff, sizeof(products), 1, fp_g)) {
+        while (fread(&ordered_stuff, sizeof(orderedProducts), 1, fp_f)) {
+            if (ordered_stuff.name == stored_stuff.name) {
+                stored_stuff.amount = stored_stuff.amount - ordered_stuff.amount;
+                stored_stuff.all_price = stored_stuff.unit_price * stored_stuff.amount;
+            }
+        }
+        if (stored_stuff.amount > 0){
+            fwrite(&stored_stuff, sizeof (products), 1, result);
+        }
+    }
+    copyFile("task10.txt", file_f);
+    fclose(fp_f);
+    fclose(fp_g);
+    fclose(result);
+}

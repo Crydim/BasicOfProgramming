@@ -1966,7 +1966,7 @@ void test_function__string() {
     test_isStringHasAllLettersWord();
 }
 
-void test_transposeMatrixInFile1(){
+void test_transposeMatrixInFile1() {
     transposeMatrixInFile("D:\\Clion\\11\\structures\\test_files\\task_1_test_1.txt");
     assert_TXT("D:\\Clion\\11\\structures\\test_files\\task_1_test_1.txt",
                "D:\\Clion\\11\\structures\\test_files\\task_1_test_1_result.txt", "transposeMatrixInFile");
@@ -1974,7 +1974,7 @@ void test_transposeMatrixInFile1(){
              "D:\\Clion\\11\\structures\\test_files\\task_1_test_1.txt");
 }
 
-void test_transposeMatrixInFile2(){
+void test_transposeMatrixInFile2() {
     transposeMatrixInFile("D:\\Clion\\11\\structures\\test_files\\task_1_test_2.txt");
     assert_TXT("D:\\Clion\\11\\structures\\test_files\\task_1_test_2.txt",
                "D:\\Clion\\11\\structures\\test_files\\task_1_test_2_result.txt", "transposeMatrixInFile");
@@ -1982,7 +1982,7 @@ void test_transposeMatrixInFile2(){
              "D:\\Clion\\11\\structures\\test_files\\task_1_test_2.txt");
 }
 
-void test_transposeMatrixInFile3(){
+void test_transposeMatrixInFile3() {
     transposeMatrixInFile("D:\\Clion\\11\\structures\\test_files\\task_1_test_3.txt");
     assert_TXT("D:\\Clion\\11\\structures\\test_files\\task_1_test_3.txt",
                "D:\\Clion\\11\\structures\\test_files\\task_1_test_3_result.txt", "transposeMatrixInFile");
@@ -1990,34 +1990,36 @@ void test_transposeMatrixInFile3(){
              "D:\\Clion\\11\\structures\\test_files\\task_1_test_3.txt");
 }
 
-void test_transposeMatrixInFile(){
+void test_transposeMatrixInFile() {
     test_transposeMatrixInFile1();
     test_transposeMatrixInFile2();
     test_transposeMatrixInFile3();
 }
 
-void test_transformNumbersWithFixedDotIntoNumbersWithFloatedDot1(){
+void test_transformNumbersWithFixedDotIntoNumbersWithFloatedDot1() {
     transformNumbersWithFixedDotIntoNumbersWithFloatedDot("D:\\Clion\\11\\structures\\test_files\\task_2_test_1.txt");
     assert_TXT("D:\\Clion\\11\\structures\\test_files\\task_2_test_1.txt",
-               "D:\\Clion\\11\\structures\\test_files\\task_2_test_1_result.txt", "transformNumbersWithFixedDotIntoNumbersWithFloatedDot");
+               "D:\\Clion\\11\\structures\\test_files\\task_2_test_1_result.txt",
+               "transformNumbersWithFixedDotIntoNumbersWithFloatedDot");
     copyFile("D:\\Clion\\11\\structures\\test_files\\task_2_test_1_cop.txt",
              "D:\\Clion\\11\\structures\\test_files\\task_2_test_1.txt");
 }
 
-void test_transformNumbersWithFixedDotIntoNumbersWithFloatedDot2(){
+void test_transformNumbersWithFixedDotIntoNumbersWithFloatedDot2() {
     transformNumbersWithFixedDotIntoNumbersWithFloatedDot("D:\\Clion\\11\\structures\\test_files\\task_2_test_2.txt");
     assert_TXT("D:\\Clion\\11\\structures\\test_files\\task_2_test_2.txt",
-               "D:\\Clion\\11\\structures\\test_files\\task_2_test_2_result.txt", "transformNumbersWithFixedDotIntoNumbersWithFloatedDot");
+               "D:\\Clion\\11\\structures\\test_files\\task_2_test_2_result.txt",
+               "transformNumbersWithFixedDotIntoNumbersWithFloatedDot");
     copyFile("D:\\Clion\\11\\structures\\test_files\\task_2_test_2_cop.txt",
              "D:\\Clion\\11\\structures\\test_files\\task_2_test_2.txt");
 }
 
-void test_transformNumbersWithFixedDotIntoNumbersWithFloatedDot(){
+void test_transformNumbersWithFixedDotIntoNumbersWithFloatedDot() {
     test_transformNumbersWithFixedDotIntoNumbersWithFloatedDot1();
     test_transformNumbersWithFixedDotIntoNumbersWithFloatedDot2();
 }
 
-void test_calculateValueOfExpressionInFile1(){
+void test_calculateValueOfExpressionInFile1() {
     calculateValueOfExpressionInFile("D:\\Clion\\11\\structures\\test_files\\task_3_test_1.txt");
     assert_TXT("D:\\Clion\\11\\structures\\test_files\\task_3_test_1.txt",
                "D:\\Clion\\11\\structures\\test_files\\task_3_test_1_result.txt", "calculateValueOfExpressionInFile");
@@ -2025,7 +2027,7 @@ void test_calculateValueOfExpressionInFile1(){
              "D:\\Clion\\11\\structures\\test_files\\task_3_test_1.txt");
 }
 
-void test_calculateValueOfExpressionInFile2(){
+void test_calculateValueOfExpressionInFile2() {
     calculateValueOfExpressionInFile("D:\\Clion\\11\\structures\\test_files\\task_3_test_2.txt");
     assert_TXT("D:\\Clion\\11\\structures\\test_files\\task_3_test_2.txt",
                "D:\\Clion\\11\\structures\\test_files\\task_3_test_2_result.txt", "calculateValueOfExpressionInFile");
@@ -2033,7 +2035,7 @@ void test_calculateValueOfExpressionInFile2(){
              "D:\\Clion\\11\\structures\\test_files\\task_3_test_2.txt");
 }
 
-void test_calculateValueOfExpressionInFile3(){
+void test_calculateValueOfExpressionInFile3() {
     calculateValueOfExpressionInFile("D:\\Clion\\11\\structures\\test_files\\task_3_test_3.txt");
     assert_TXT("D:\\Clion\\11\\structures\\test_files\\task_3_test_3.txt",
                "D:\\Clion\\11\\structures\\test_files\\task_3_test_3_result.txt", "calculateValueOfExpressionInFile");
@@ -2041,43 +2043,46 @@ void test_calculateValueOfExpressionInFile3(){
              "D:\\Clion\\11\\structures\\test_files\\task_3_test_3.txt");
 }
 
-void test_calculateValueOfExpressionInFile(){
+void test_calculateValueOfExpressionInFile() {
     test_calculateValueOfExpressionInFile1();
     test_calculateValueOfExpressionInFile2();
     test_calculateValueOfExpressionInFile3();
 }
 
-void test_deleteInFIleWordsWithoutGivenSymbols1(){
+void test_deleteInFIleWordsWithoutGivenSymbols1() {
     deleteInFIleWordsWithoutGivenSymbols("D:\\Clion\\11\\structures\\test_files\\task_4_test_1.txt", "feg");
     assert_TXT("D:\\Clion\\11\\structures\\test_files\\task_4_test_1.txt",
-               "D:\\Clion\\11\\structures\\test_files\\task_4_test_1_result.txt", "deleteInFIleWordsWithoutGivenSymbols");
+               "D:\\Clion\\11\\structures\\test_files\\task_4_test_1_result.txt",
+               "deleteInFIleWordsWithoutGivenSymbols");
     copyFile("D:\\Clion\\11\\structures\\test_files\\task_4_test_1_cop.txt",
              "D:\\Clion\\11\\structures\\test_files\\task_4_test_1.txt");
 }
 
-void test_deleteInFIleWordsWithoutGivenSymbols2(){
+void test_deleteInFIleWordsWithoutGivenSymbols2() {
     deleteInFIleWordsWithoutGivenSymbols("D:\\Clion\\11\\structures\\test_files\\task_4_test_2.txt", "mue");
     assert_TXT("D:\\Clion\\11\\structures\\test_files\\task_4_test_2.txt",
-               "D:\\Clion\\11\\structures\\test_files\\task_4_test_2_result.txt", "deleteInFIleWordsWithoutGivenSymbols");
+               "D:\\Clion\\11\\structures\\test_files\\task_4_test_2_result.txt",
+               "deleteInFIleWordsWithoutGivenSymbols");
     copyFile("D:\\Clion\\11\\structures\\test_files\\task_4_test_2_cop.txt",
              "D:\\Clion\\11\\structures\\test_files\\task_4_test_2.txt");
 }
 
-void test_deleteInFIleWordsWithoutGivenSymbols3(){
+void test_deleteInFIleWordsWithoutGivenSymbols3() {
     deleteInFIleWordsWithoutGivenSymbols("D:\\Clion\\11\\structures\\test_files\\task_4_test_3.txt", "fzx");
     assert_TXT("D:\\Clion\\11\\structures\\test_files\\task_4_test_3.txt",
-               "D:\\Clion\\11\\structures\\test_files\\task_4_test_3_result.txt", "deleteInFIleWordsWithoutGivenSymbols");
+               "D:\\Clion\\11\\structures\\test_files\\task_4_test_3_result.txt",
+               "deleteInFIleWordsWithoutGivenSymbols");
     copyFile("D:\\Clion\\11\\structures\\test_files\\task_4_test_3_cop.txt",
              "D:\\Clion\\11\\structures\\test_files\\task_4_test_3.txt");
 }
 
-void test_deleteInFIleWordsWithoutGivenSymbols(){
+void test_deleteInFIleWordsWithoutGivenSymbols() {
     test_deleteInFIleWordsWithoutGivenSymbols1();
     test_deleteInFIleWordsWithoutGivenSymbols2();
     test_deleteInFIleWordsWithoutGivenSymbols3();
 }
 
-void test_saveMaxWordInEachString1(){
+void test_saveMaxWordInEachString1() {
     saveMaxWordInEachString("D:\\Clion\\11\\structures\\test_files\\task_5_test_1.txt");
     assert_TXT("D:\\Clion\\11\\structures\\test_files\\task_5_test_1.txt",
                "D:\\Clion\\11\\structures\\test_files\\task_5_test_1_result.txt", "saveMaxWordInEachString");
@@ -2085,7 +2090,7 @@ void test_saveMaxWordInEachString1(){
              "D:\\Clion\\11\\structures\\test_files\\task_5_test_1.txt");
 }
 
-void test_saveMaxWordInEachString2(){
+void test_saveMaxWordInEachString2() {
     saveMaxWordInEachString("D:\\Clion\\11\\structures\\test_files\\task_5_test_2.txt");
     assert_TXT("D:\\Clion\\11\\structures\\test_files\\task_5_test_2.txt",
                "D:\\Clion\\11\\structures\\test_files\\task_5_test_2_result.txt", "saveMaxWordInEachString");
@@ -2093,7 +2098,7 @@ void test_saveMaxWordInEachString2(){
              "D:\\Clion\\11\\structures\\test_files\\task_5_test_2.txt");
 }
 
-void test_saveMaxWordInEachString3(){
+void test_saveMaxWordInEachString3() {
     saveMaxWordInEachString("D:\\Clion\\11\\structures\\test_files\\task_5_test_3.txt");
     assert_TXT("D:\\Clion\\11\\structures\\test_files\\task_5_test_3.txt",
                "D:\\Clion\\11\\structures\\test_files\\task_5_test_3_result.txt", "saveMaxWordInEachString");
@@ -2101,13 +2106,13 @@ void test_saveMaxWordInEachString3(){
              "D:\\Clion\\11\\structures\\test_files\\task_5_test_3.txt");
 }
 
-void test_saveMaxWordInEachString(){
+void test_saveMaxWordInEachString() {
     test_saveMaxWordInEachString1();
     test_saveMaxWordInEachString2();
     test_saveMaxWordInEachString3();
 }
 
-void test_deletePolynomialsWithRootX1(){
+void test_deletePolynomialsWithRootX1() {
     deletePolynomialsWithRootX("D:\\Clion\\11\\structures\\test_files\\task_6_test_1.txt", 2);
     assert_TXT("D:\\Clion\\11\\structures\\test_files\\task_6_test_1.txt",
                "D:\\Clion\\11\\structures\\test_files\\task_6_test_1_result.txt", "deletePolynomialsWithRootX");
@@ -2115,7 +2120,7 @@ void test_deletePolynomialsWithRootX1(){
              "D:\\Clion\\11\\structures\\test_files\\task_6_test_1.txt");
 }
 
-void test_deletePolynomialsWithRootX2(){
+void test_deletePolynomialsWithRootX2() {
     deletePolynomialsWithRootX("D:\\Clion\\11\\structures\\test_files\\task_6_test_2.txt", 4);
     assert_TXT("D:\\Clion\\11\\structures\\test_files\\task_6_test_2.txt",
                "D:\\Clion\\11\\structures\\test_files\\task_6_test_2_result.txt", "deletePolynomialsWithRootX");
@@ -2123,72 +2128,78 @@ void test_deletePolynomialsWithRootX2(){
              "D:\\Clion\\11\\structures\\test_files\\task_6_test_2.txt");
 }
 
-void test_deletePolynomialsWithRootX(){
+void test_deletePolynomialsWithRootX() {
     test_deletePolynomialsWithRootX1();
     test_deletePolynomialsWithRootX2();
 }
 
-void test_sortFileFirstPositiveNumbersSecondNegativeNumbers1(){
+void test_sortFileFirstPositiveNumbersSecondNegativeNumbers1() {
     sortFileFirstPositiveNumbersSecondNegativeNumbers("D:\\Clion\\11\\structures\\test_files\\task_7_test_1.txt");
     assert_TXT("D:\\Clion\\11\\structures\\test_files\\task_7_test_1.txt",
-               "D:\\Clion\\11\\structures\\test_files\\task_7_test_1_result.txt", "sortFileFirstPositiveNumbersSecondNegativeNumbers");
+               "D:\\Clion\\11\\structures\\test_files\\task_7_test_1_result.txt",
+               "sortFileFirstPositiveNumbersSecondNegativeNumbers");
     copyFile("D:\\Clion\\11\\structures\\test_files\\task_7_test_1_cop.txt",
              "D:\\Clion\\11\\structures\\test_files\\task_7_test_1.txt");
 }
 
-void test_sortFileFirstPositiveNumbersSecondNegativeNumbers2(){
+void test_sortFileFirstPositiveNumbersSecondNegativeNumbers2() {
     sortFileFirstPositiveNumbersSecondNegativeNumbers("D:\\Clion\\11\\structures\\test_files\\task_7_test_2.txt");
     assert_TXT("D:\\Clion\\11\\structures\\test_files\\task_7_test_2.txt",
-               "D:\\Clion\\11\\structures\\test_files\\task_7_test_2_result.txt", "sortFileFirstPositiveNumbersSecondNegativeNumbers");
+               "D:\\Clion\\11\\structures\\test_files\\task_7_test_2_result.txt",
+               "sortFileFirstPositiveNumbersSecondNegativeNumbers");
     copyFile("D:\\Clion\\11\\structures\\test_files\\task_7_test_2_cop.txt",
              "D:\\Clion\\11\\structures\\test_files\\task_7_test_2.txt");
 }
 
-void test_sortFileFirstPositiveNumbersSecondNegativeNumbers3(){
+void test_sortFileFirstPositiveNumbersSecondNegativeNumbers3() {
     sortFileFirstPositiveNumbersSecondNegativeNumbers("D:\\Clion\\11\\structures\\test_files\\task_7_test_3.txt");
     assert_TXT("D:\\Clion\\11\\structures\\test_files\\task_7_test_3.txt",
-               "D:\\Clion\\11\\structures\\test_files\\task_7_test_3_result.txt", "sortFileFirstPositiveNumbersSecondNegativeNumbers");
+               "D:\\Clion\\11\\structures\\test_files\\task_7_test_3_result.txt",
+               "sortFileFirstPositiveNumbersSecondNegativeNumbers");
     copyFile("D:\\Clion\\11\\structures\\test_files\\task_7_test_3_cop.txt",
              "D:\\Clion\\11\\structures\\test_files\\task_7_test_3.txt");
 }
 
-void test_sortFileFirstPositiveNumbersSecondNegativeNumbers(){
+void test_sortFileFirstPositiveNumbersSecondNegativeNumbers() {
     test_sortFileFirstPositiveNumbersSecondNegativeNumbers1();
     test_sortFileFirstPositiveNumbersSecondNegativeNumbers2();
     test_sortFileFirstPositiveNumbersSecondNegativeNumbers3();
 }
 
-void test_transposeIfNotSymmetricalSquareMatrixInFile1(){
+void test_transposeIfNotSymmetricalSquareMatrixInFile1() {
     transposeIfNotSymmetricalSquareMatrixInFile("D:\\Clion\\11\\structures\\test_files\\task_8_test_1.txt", 3);
     assert_TXT("D:\\Clion\\11\\structures\\test_files\\task_8_test_1.txt",
-               "D:\\Clion\\11\\structures\\test_files\\task_8_test_1_result.txt", "transposeIfNotSymmetricalSquareMatrixInFile");
+               "D:\\Clion\\11\\structures\\test_files\\task_8_test_1_result.txt",
+               "transposeIfNotSymmetricalSquareMatrixInFile");
     copyFile("D:\\Clion\\11\\structures\\test_files\\task_8_test_1_cop.txt",
              "D:\\Clion\\11\\structures\\test_files\\task_8_test_1.txt");
 }
 
-void test_transposeIfNotSymmetricalSquareMatrixInFile2(){
+void test_transposeIfNotSymmetricalSquareMatrixInFile2() {
     transposeIfNotSymmetricalSquareMatrixInFile("D:\\Clion\\11\\structures\\test_files\\task_8_test_2.txt", 3);
     assert_TXT("D:\\Clion\\11\\structures\\test_files\\task_8_test_2.txt",
-               "D:\\Clion\\11\\structures\\test_files\\task_8_test_2_result.txt", "transposeIfNotSymmetricalSquareMatrixInFile");
+               "D:\\Clion\\11\\structures\\test_files\\task_8_test_2_result.txt",
+               "transposeIfNotSymmetricalSquareMatrixInFile");
     copyFile("D:\\Clion\\11\\structures\\test_files\\task_8_test_2_cop.txt",
              "D:\\Clion\\11\\structures\\test_files\\task_8_test_2.txt");
 }
 
-void test_transposeIfNotSymmetricalSquareMatrixInFile3(){
+void test_transposeIfNotSymmetricalSquareMatrixInFile3() {
     transposeIfNotSymmetricalSquareMatrixInFile("D:\\Clion\\11\\structures\\test_files\\task_8_test_3.txt", 3);
     assert_TXT("D:\\Clion\\11\\structures\\test_files\\task_8_test_3.txt",
-               "D:\\Clion\\11\\structures\\test_files\\task_8_test_3_result.txt", "transposeIfNotSymmetricalSquareMatrixInFile");
+               "D:\\Clion\\11\\structures\\test_files\\task_8_test_3_result.txt",
+               "transposeIfNotSymmetricalSquareMatrixInFile");
     copyFile("D:\\Clion\\11\\structures\\test_files\\task_8_test_3_cop.txt",
              "D:\\Clion\\11\\structures\\test_files\\task_8_test_3.txt");
 }
 
-void test_transposeIfNotSymmetricalSquareMatrixInFile(){
+void test_transposeIfNotSymmetricalSquareMatrixInFile() {
     test_transposeIfNotSymmetricalSquareMatrixInFile1();
     test_transposeIfNotSymmetricalSquareMatrixInFile2();
     test_transposeIfNotSymmetricalSquareMatrixInFile3();
 }
 
-void test_formTeamOfBestSportsmen1(){
+void test_formTeamOfBestSportsmen1() {
     formTeamOfBestSportsmen("D:\\Clion\\11\\structures\\test_files\\task_9_test_1.txt", 4);
     assert_TXT("D:\\Clion\\11\\structures\\test_files\\task_9_test_1.txt",
                "D:\\Clion\\11\\structures\\test_files\\task_9_test_1_result.txt", "formTeamOfBestSportsmen");
@@ -2196,7 +2207,7 @@ void test_formTeamOfBestSportsmen1(){
              "D:\\Clion\\11\\structures\\test_files\\task_9_test_1.txt");
 }
 
-void test_formTeamOfBestSportsmen2(){
+void test_formTeamOfBestSportsmen2() {
     formTeamOfBestSportsmen("D:\\Clion\\11\\structures\\test_files\\task_9_test_2.txt", 1);
     assert_TXT("D:\\Clion\\11\\structures\\test_files\\task_9_test_2.txt",
                "D:\\Clion\\11\\structures\\test_files\\task_9_test_2_result.txt", "formTeamOfBestSportsmen");
@@ -2204,7 +2215,7 @@ void test_formTeamOfBestSportsmen2(){
              "D:\\Clion\\11\\structures\\test_files\\task_9_test_2.txt");
 }
 
-void test_formTeamOfBestSportsmen3(){
+void test_formTeamOfBestSportsmen3() {
     formTeamOfBestSportsmen("D:\\Clion\\11\\structures\\test_files\\task_9_test_3.txt", 3);
     assert_TXT("D:\\Clion\\11\\structures\\test_files\\task_9_test_3.txt",
                "D:\\Clion\\11\\structures\\test_files\\task_9_test_3_result.txt", "formTeamOfBestSportsmen");
@@ -2212,13 +2223,46 @@ void test_formTeamOfBestSportsmen3(){
              "D:\\Clion\\11\\structures\\test_files\\task_9_test_3.txt");
 }
 
-void test_formTeamOfBestSportsmen(){
+void test_formTeamOfBestSportsmen() {
     test_formTeamOfBestSportsmen1();
     test_formTeamOfBestSportsmen2();
     test_formTeamOfBestSportsmen3();
 }
 
-void test_function_files(){
+void test_updateFileWithOrderedProducts1() {
+    updateFileWithOrderedProducts("D:\\Clion\\11\\structures\\test_files\\task_10_f_test_1.txt",
+                                  "D:\\Clion\\11\\structures\\test_files\\task_10_g_test_3.txt");
+    assert_TXT("D:\\Clion\\11\\structures\\test_files\\task_10_f_test_1.txt",
+               "D:\\Clion\\11\\structures\\test_files\\task_10_f_test_1_result.txt", "updateFileWithOrderedProducts");
+    copyFile("D:\\Clion\\11\\structures\\test_files\\task_10_f_test_1_cop.txt",
+             "D:\\Clion\\11\\structures\\test_files\\task_10_f_test_1.txt");
+}
+
+void test_updateFileWithOrderedProducts2() {
+    updateFileWithOrderedProducts("D:\\Clion\\11\\structures\\test_files\\task_10_f_test_2.txt",
+                                  "D:\\Clion\\11\\structures\\test_files\\task_10_g_test_3.txt");
+    assert_TXT("D:\\Clion\\11\\structures\\test_files\\task_10_f_test_2.txt",
+               "D:\\Clion\\11\\structures\\test_files\\task_10_f_test_2_result.txt", "updateFileWithOrderedProducts");
+    copyFile("D:\\Clion\\11\\structures\\test_files\\task_10_f_test_2_cop.txt",
+             "D:\\Clion\\11\\structures\\test_files\\task_10_f_test_2.txt");
+}
+
+void test_updateFileWithOrderedProducts3() {
+    updateFileWithOrderedProducts("D:\\Clion\\11\\structures\\test_files\\task_10_f_test_3.txt",
+                                  "D:\\Clion\\11\\structures\\test_files\\task_10_g_test_3.txt");
+    assert_TXT("D:\\Clion\\11\\structures\\test_files\\task_10_f_test_3.txt",
+               "D:\\Clion\\11\\structures\\test_files\\task_10_f_test_3_result.txt", "updateFileWithOrderedProducts");
+    copyFile("D:\\Clion\\11\\structures\\test_files\\task_10_f_test_3_cop.txt",
+             "D:\\Clion\\11\\structures\\test_files\\task_10_f_test_3.txt");
+}
+
+void test_updateFileWithOrderedProducts() {
+    test_updateFileWithOrderedProducts1();
+    test_updateFileWithOrderedProducts2();
+    test_updateFileWithOrderedProducts3();
+}
+
+void test_function_files() {
     test_transposeMatrixInFile();
     test_transformNumbersWithFixedDotIntoNumbersWithFloatedDot();
     test_calculateValueOfExpressionInFile();
@@ -2228,6 +2272,7 @@ void test_function_files(){
     test_sortFileFirstPositiveNumbersSecondNegativeNumbers();
     test_transposeIfNotSymmetricalSquareMatrixInFile();
     test_formTeamOfBestSportsmen();
+    test_updateFileWithOrderedProducts();
 }
 
 int main() {

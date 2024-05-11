@@ -43,4 +43,7 @@ void transposeIfNotSymmetricalSquareMatrixInFile(char *file, int n);
 //9
 void formTeamOfBestSportsmen(char *file, int n);
 
+//10
+void updateFileWithOrderedProducts(char *file_f, char *file_g);
+
 #endif //STRUCTURES_FUNCTION_FILES_H

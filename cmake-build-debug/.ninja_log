@@ -36,3 +36,6 @@
 676	927	7371665548878365	structures.exe	eaebd1b7aaa8fb5e
 5	545	7371665840156154	CMakeFiles/structures.dir/main.c.obj	79b8500dd0ef90ff
 546	763	7371665842346839	structures.exe	eaebd1b7aaa8fb5e
+14	305	7371706337694444	CMakeFiles/structures.dir/libs/algorithm/function_files/function_files.c.obj	e395a94a7342bf4a
+5	471	7371706339349936	CMakeFiles/structures.dir/main.c.obj	79b8500dd0ef90ff
+471	943	7371706344053305	structures.exe	eaebd1b7aaa8fb5e
