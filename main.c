@@ -2188,6 +2188,36 @@ void test_transposeIfNotSymmetricalSquareMatrixInFile(){
     test_transposeIfNotSymmetricalSquareMatrixInFile3();
 }
 
+void test_formTeamOfBestSportsmen1(){
+    formTeamOfBestSportsmen("D:\\Clion\\11\\structures\\test_files\\task_9_test_1.txt", 4);
+    assert_TXT("D:\\Clion\\11\\structures\\test_files\\task_9_test_1.txt",
+               "D:\\Clion\\11\\structures\\test_files\\task_9_test_1_result.txt", "formTeamOfBestSportsmen");
+    copyFile("D:\\Clion\\11\\structures\\test_files\\task_9_test_1_cop.txt",
+             "D:\\Clion\\11\\structures\\test_files\\task_9_test_1.txt");
+}
+
+void test_formTeamOfBestSportsmen2(){
+    formTeamOfBestSportsmen("D:\\Clion\\11\\structures\\test_files\\task_9_test_2.txt", 1);
+    assert_TXT("D:\\Clion\\11\\structures\\test_files\\task_9_test_2.txt",
+               "D:\\Clion\\11\\structures\\test_files\\task_9_test_2_result.txt", "formTeamOfBestSportsmen");
+    copyFile("D:\\Clion\\11\\structures\\test_files\\task_9_test_2_cop.txt",
+             "D:\\Clion\\11\\structures\\test_files\\task_9_test_2.txt");
+}
+
+void test_formTeamOfBestSportsmen3(){
+    formTeamOfBestSportsmen("D:\\Clion\\11\\structures\\test_files\\task_9_test_3.txt", 3);
+    assert_TXT("D:\\Clion\\11\\structures\\test_files\\task_9_test_3.txt",
+               "D:\\Clion\\11\\structures\\test_files\\task_9_test_3_result.txt", "formTeamOfBestSportsmen");
+    copyFile("D:\\Clion\\11\\structures\\test_files\\task_9_test_3_cop.txt",
+             "D:\\Clion\\11\\structures\\test_files\\task_9_test_3.txt");
+}
+
+void test_formTeamOfBestSportsmen(){
+    test_formTeamOfBestSportsmen1();
+    test_formTeamOfBestSportsmen2();
+    test_formTeamOfBestSportsmen3();
+}
+
 void test_function_files(){
     test_transposeMatrixInFile();
     test_transformNumbersWithFixedDotIntoNumbersWithFloatedDot();
@@ -2197,6 +2227,7 @@ void test_function_files(){
     test_deletePolynomialsWithRootX();
     test_sortFileFirstPositiveNumbersSecondNegativeNumbers();
     test_transposeIfNotSymmetricalSquareMatrixInFile();
+    test_formTeamOfBestSportsmen();
 }
 
 int main() {

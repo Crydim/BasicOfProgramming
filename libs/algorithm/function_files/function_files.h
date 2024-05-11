@@ -40,4 +40,7 @@ void sortFileFirstPositiveNumbersSecondNegativeNumbers(char *file);
 //8
 void transposeIfNotSymmetricalSquareMatrixInFile(char *file, int n);
 
+//9
+void formTeamOfBestSportsmen(char *file, int n);
+
 #endif //STRUCTURES_FUNCTION_FILES_H

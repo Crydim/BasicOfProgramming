@@ -354,3 +354,49 @@ void transposeIfNotSymmetricalSquareMatrixInFile(char *file, int n){
     fclose(fp);
     fclose(result);
 }
+
+//9
+typedef struct{
+    char *name;
+    int result;
+} sportsmen;
+
+//9
+void formTeamOfBestSportsmen(char *file, int n){
+    FILE *fp, *result;
+    fp = fopen(file, "rb");
+    if (fp == NULL) {
+        printf("Error opening file\n");
+        exit(-3);
+    }
+    result = fopen("task9.txt", "wb");
+    if (result == NULL) {
+        printf("Error opening file\n");
+        exit(-3);
+    }
+    sportsmen all_sportsmen[100];
+    int quantity_sportsmen = 0;
+    while(!feof(fp)){
+        sportsmen current_sportsmen;
+        fread(&current_sportsmen, sizeof(current_sportsmen), 1, fp);
+        all_sportsmen[quantity_sportsmen++] = current_sportsmen;
+    }
+    for(int i = 0; i < quantity_sportsmen - 1; i++){
+        int min_sportsmen_result_index = i;
+        for(int j = i; j < quantity_sportsmen; j++){
+            if(all_sportsmen[i].result < all_sportsmen[j].result)
+                min_sportsmen_result_index = j;
+        }
+        if(min_sportsmen_result_index != i){
+            sportsmen temp = all_sportsmen[i];
+            all_sportsmen[i] = all_sportsmen[min_sportsmen_result_index];
+            all_sportsmen[min_sportsmen_result_index] = temp;
+        }
+    }
+    for(int i = 0; i < n; i++){
+        fwrite(&all_sportsmen[quantity_sportsmen-1-i], sizeof(all_sportsmen[quantity_sportsmen-1-i]), 1, result);
+    }
+    copyFile("task9.txt", file);
+    fclose(fp);
+    fclose(result);
+}
