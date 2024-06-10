@@ -2275,9 +2275,80 @@ void test_function_files() {
     test_updateFileWithOrderedProducts();
 }
 
+void removeSingleLetterWordsAndExtraSpaces(char *file){
+    FILE *fp = fopen(file, "r");
+    if (fp == NULL) {
+        printf("Error opening file\n");
+        exit(-3);
+    }
+    char str_file[MAX_STRING_SIZE];
+    fgets(str_file, MAX_STRING_SIZE, fp);
+    fclose(fp);
+    fp = fopen(file, "w");
+    if (fp == NULL) {
+        printf("Error opening file\n");
+        exit(-3);
+    }
+    WordDescriptor word;
+    char *beginSearch = str_file;
+    bool single_letter_word = true;
+    while (getWord(beginSearch, &word)){
+        if (word.end - word.begin > 1){
+            if (!single_letter_word){
+                fputc(' ', fp);
+            }
+            for (char *j = word.begin; j < word.end; j++){
+                fputc(*j, fp);
+            }
+            single_letter_word = false;
+        } else {
+            single_letter_word = true;
+        }
+        beginSearch = word.end;
+    }
+    fclose(fp);
+}
+
+void test_removeSingleLetterWordsAndExtraSpaces1() {
+    removeSingleLetterWordsAndExtraSpaces("D:\\Clion\\11\\structures\\test_files\\exam_task_test_1.txt");
+    assert_TXT("D:\\Clion\\11\\structures\\test_files\\exam_task_test_1.txt",
+               "D:\\Clion\\11\\structures\\test_files\\exam_task_test_1_result.txt", "removeSingleLetterWordsAndExtraSpaces");
+    copyFile("D:\\Clion\\11\\structures\\test_files\\exam_task_test_1_cop.txt",
+             "D:\\Clion\\11\\structures\\test_files\\exam_task_test_1.txt");
+}
+
+void test_removeSingleLetterWordsAndExtraSpaces2() {
+    removeSingleLetterWordsAndExtraSpaces("D:\\Clion\\11\\structures\\test_files\\exam_task_test_2.txt");
+    assert_TXT("D:\\Clion\\11\\structures\\test_files\\exam_task_test_2.txt",
+               "D:\\Clion\\11\\structures\\test_files\\exam_task_test_2_result.txt", "removeSingleLetterWordsAndExtraSpaces");
+    copyFile("D:\\Clion\\11\\structures\\test_files\\exam_task_test_2_cop.txt",
+             "D:\\Clion\\11\\structures\\test_files\\exam_task_test_2.txt");
+}
+
+void test_removeSingleLetterWordsAndExtraSpaces3() {
+    removeSingleLetterWordsAndExtraSpaces("D:\\Clion\\11\\structures\\test_files\\exam_task_test_3.txt");
+    assert_TXT("D:\\Clion\\11\\structures\\test_files\\exam_task_test_3.txt",
+               "D:\\Clion\\11\\structures\\test_files\\exam_task_test_3_result.txt", "removeSingleLetterWordsAndExtraSpaces");
+    copyFile("D:\\Clion\\11\\structures\\test_files\\exam_task_test_3_cop.txt",
+             "D:\\Clion\\11\\structures\\test_files\\exam_task_test_3.txt");
+}
+
+void test_removeSingleLetterWordsAndExtraSpaces4() {
+    removeSingleLetterWordsAndExtraSpaces("D:\\Clion\\11\\structures\\test_files\\exam_task_test_4.txt");
+    assert_TXT("D:\\Clion\\11\\structures\\test_files\\exam_task_test_4.txt",
+               "D:\\Clion\\11\\structures\\test_files\\exam_task_test_4_result.txt", "removeSingleLetterWordsAndExtraSpaces");
+    copyFile("D:\\Clion\\11\\structures\\test_files\\exam_task_test_4_cop.txt",
+             "D:\\Clion\\11\\structures\\test_files\\exam_task_test_4.txt");
+}
+
+void test_removeSingleLetterWordsAndExtraSpaces() {
+    test_removeSingleLetterWordsAndExtraSpaces1();
+    test_removeSingleLetterWordsAndExtraSpaces2();
+    test_removeSingleLetterWordsAndExtraSpaces3();
+    test_removeSingleLetterWordsAndExtraSpaces4();
+}
+
 int main() {
-    vector a = createVector(5);
-    reserve(&a, 5);
-    test_function_files();
+    test_removeSingleLetterWordsAndExtraSpaces();
     return 0;
 }
